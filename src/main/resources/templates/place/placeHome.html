@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http//www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layouts/default}"
+>
+    <!-- index.html 고유 CSS 추가 -->
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/assets/css/facility.css">
+    </th:block>
+    <!-- index.html 고유 스크립트 추가 -->
+    <th:block layout:fragment="script">
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </th:block>
+
+    <div layout:fragment="content" class="hospiceContent">
+        <!-- Full Screen Search Start -->
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">施設探し</h1>
+                    <h5 class="text-white">全国の医修館</h5>
+                </div>
+            </div>
+        </div>
+        <!-- Full Screen Search End -->
+
+        <!-- placeHome Start -->
+        <div class="col-10 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+            <!-- Search Form Start -->
+                <!-- <div class="col-lg-12 mb-5 wow slideInUp" data-wow-delay="0.2s">
+                    <div class="input-group">
+                        <input type="text" class="form-control p-3" placeholder="Keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div> -->
+            <!-- Search Form End -->
+            
+            <!-- map start -->
+            <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
+                <div id="mapBox" class="cols-2" style="min-height: 350px; border:0;">
+                    <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM3EkIRxquQ5P4oVMeucj_UlVJCTO3-uA&callback=initMap&v=weekly"
+                    defer>
+                    </script>
+                </div>
+                <!-- <div id="mapInfo" class="p-4 cols-2" style="border:0; background-color: var(--bs-light);">
+                    <div class="mb-3">
+                        <h4>西芝</h4>
+                        <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
+                    </div>
+                    <div class="mb-3">
+                        <h4>埼玉県｜医修館</h4>
+                        <p>埼玉県鶴ヶ島市上広谷383</p>
+                    </div>
+                </div> -->
+
+            </div>
+            <!-- map End -->
+
+            <!-- placeHome list Start -->
+            <div class="col-lg-12 py-5">
+                <div class="row g-5">
+                    <!-- placeSaitama -->
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s" onclick="location.href='/placeSaitama.html'" style="cursor: pointer;">
+                        <div class="bg-light rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid" src="/assets/img/blog-1.jpg" alt="">
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">埼玉県｜医修館</h4>
+                                <p>埼玉県鶴ヶ島市上広谷383</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- placeTokyo -->
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
+                        <a href="">
+                            <div class="blog-item bg-light rounded overflow-hidden">
+                                <div class="blog-img position-relative overflow-hidden">
+                                    <img class="img-fluid" src="/assets/img/blog-2.jpg" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                    </div>
+                                    <h4 class="mb-3">東京｜医修館</h4>
+                                    <p>address</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- placeSapporo -->
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
+                        <a href="">
+                            <div class="blog-item bg-light rounded overflow-hidden">
+                                <div class="blog-img position-relative overflow-hidden">
+                                    <img class="img-fluid" src="/assets/img/blog-1.jpg" alt="">
+                                </div>
+                                <div class="p-4">
+                                    <div class="d-flex mb-3">
+                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                    </div>
+                                    <h4 class="mb-3">札幌｜医修館</h4>
+                                    <p>address</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- plan -->
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="/assets/img/blog-3.jpg" alt="">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">建設中</a>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">建設中</h4>
+                                <p>未定</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="/assets/img/blog-3.jpg" alt="">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4" href="">建設中</a>
+                            </div>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">建設中</h4>
+                                <p>未定</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- placeHome list End -->
+
+        </div>
+        <!-- placeHome End -->
+    </div>
+</html>
+
+
+<script>
+    // google-map
+    // Initialize and add the map
+    function initMap() {
+        // The map, centered at myLatLng
+        const map = new google.maps.Map(document.getElementById("mapBox"), {
+            zoom: 8,
+            center: { lat: 35.70410420663528, lng: 139.77242657030774 },
+        });
+        
+        setMarKers(map);
+    }
+    //Place List
+    const isyuukans = [
+        ["Nishiba", 35.70410420663528, 139.77242657030774, 1],
+        ["埼玉｜医修館", 35.93933743697428, 139.4200116547968, 2 ]
+    ];
+
+    function setMarKers(map){
+        // const image = {
+        //     url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+        //     // This marker is 20 pixels wide by 32 pixels high.
+        //     size: new google.maps.Size(20, 32),
+        //     // The origin for this image is (0, 0).
+        //     origin: new google.maps.Point(0, 0),
+        //     // The anchor for this image is the base of the flagpole at (0, 32).
+        //     anchor: new google.maps.Point(0, 32),
+        // };
+        // const shape = {
+        //     coords: [1, 1, 1, 20, 18, 20, 18, 1],
+        //     type: "poly",
+        // };
+
+        for (let i = 0; i < isyuukans.length; i++) {
+            const isyuukan = isyuukans[i];
+
+            new google.maps.Marker({
+            position: { lat: isyuukan[1], lng: isyuukan[2] },
+            map,
+            // icon: image,
+            // shape: shape,
+            title: isyuukan[0],
+            // label: {
+            //     text: isyuukan[0],
+            //     color: "#000000",
+            //     fontweight: "bold",
+            // },
+            zIndex: isyuukan[3],
+            });
+        }
+
+    }
+    window.initMap = initMap;
+
+</script>
+
+<script type="text/javascript">
+    
+    $(function() {
+        $("#inquiryA").click(function(){
+            location.href = '/#placeHome';
+            mainInquiry();
+        });
+        
+    });
+
+    $('.thumb-nav').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        centerPadding: '0px',
+        asNavFor: '.main-img-slider',
+        dots: false,
+        centerMode: false,
+        draggable: true,
+        speed:200,
+        focusOnSelect: true,
+        prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
+        nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'  
+    });
+
+    function officeTel(e) {
+        var tel = e.value;
+        $(".finderTel").text(tel);
+    }
+
+    function mainInquiry() {
+        var offset = $(".inquiry").offset(); //해당 위치 반환
+        $("html, body").animate({scrollTop: offset.top},500); 
+    }
+
+    /*--------------*/
+
+    // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+        Dots: false,
+    });
+
+    // Thumbnails
+    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: false,
+    });
+
+    // Customize Fancybox
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Carousel: {
+            on: {
+            change: (that) => {
+                mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                friction: 0,
+                });
+            },
+            },
+        },
+    });
+
+</script>
