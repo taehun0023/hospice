@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HospiceController {
 
-    @GetMapping(value = "/facility")
-    public String service() {
-        return "service/facility";
-    }
-
     @GetMapping(value = "/test")
     public String test() {
         return "test";

@@ -2,135 +2,209 @@
 <html
 xmlns:th="http//www.thymeleaf.org"
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layouts/default}"
+layout:decorate="~{layouts/main}"
 >
 
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
-    <link rel="stylesheet" href="/styles/vendor/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/css/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="/assets/css/test.css">
+
 </th:block>
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
-    <script src="/scripts/vendor/jquery.fancybox.min.js"></script>
+    <script type="text/javascript" src="/assets/js/fancybox/fancybox.js"></script>
+    <script type="text/javascript" src="/assets/js/slick/slick.js"></script>
+
 </th:block>
-<link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-<th:block layout:fragment="content">
-    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="/assets/img/carousel-1.jpg" alt="Image">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの特別なサービス</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">豊かな黄昏期</h1>
-                        <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">もっと見る</a>
-                        <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">もっと見る</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="w-100" src="/assets/img/carousel-2.jpg" alt="Image">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの愛の巣</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">安全な環境</h1>
-                        <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">もっと見る</a>
-                        <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">もっと見る</a>
-                    </div>
-                </div>
+
+<div layout:fragment="content" class="hospiceContent">
+    <!-- Full Screen Search Start -->
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">サービス</h1>
+                <h5 class="text-white">施設</h5>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-    <section id="detail">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 mx-auto">
-         <!-- Product Images & Alternates -->
-                <div class="product-images demo-gallery">
-                  <!-- Begin Product Images Slider -->
-                  <div class="main-img-slider">
-                     <a data-fancybox="gallery" href="http://via.placeholder.com/1920x1280"><img src="http://via.placeholder.com/840x480" class="img-fluid"></a>
-                     <a data-fancybox="gallery" href="http://via.placeholder.com/1920x1280"><img src="http://via.placeholder.com/840x480" class="img-fluid"></a>
-                     <a data-fancybox="gallery" href="http://via.placeholder.com/1920x1280"><img src="http://via.placeholder.com/840x480" class="img-fluid"></a>
-                     <a data-fancybox="gallery" href="http://via.placeholder.com/1920x1280"><img src="http://via.placeholder.com/840x480" class="img-fluid"></a>
-                     <a data-fancybox="gallery" href="http://via.placeholder.com/1920x1280"><img src="http://via.placeholder.com/840x480" class="img-fluid"></a>
-                     <a data-fancybox="gallery" href="http://via.placeholder.com/1920x1280"><img src="http://via.placeholder.com/840x480" class="img-fluid"></a>
-                    </div>
-                <!-- End Product Images Slider -->
-              
-                <!-- Begin product thumb nav -->
-                <ul class="thumb-nav">
-                  <li><img src="http://via.placeholder.com/72x50"></li>
-                  <li><img src="http://via.placeholder.com/72x50"></li>
-                  <li><img src="http://via.placeholder.com/72x50"></li>
-                  <li><img src="http://via.placeholder.com/72x50"></li>
-                  <li><img src="http://via.placeholder.com/72x50"></li>
-                </ul>
-                <!-- End product thumb nav -->
-              </div>
-              <!-- End Product Images & Alternates -->
-              
-            </div>
-          </div>
+    <!-- Full Screen Search End -->
+
+    <nav class="facilityNavbar facility-navbar-expand-custom facility-navbar-mainbg">
+        <button class="facility-navbar-toggler" type="button" aria-controls="facility-SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="facility-fas facility-fa-bars facility-text-white"></i>
+        </button>
+        <div class="facility-navbar-collapse" id="facility-SupportedContent">
+            <ul class="facility-navbar-nav facility-ml-auto">
+                <div class="facility-hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="active">
+                    <a href="javascript:void(0);" id="Atype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-medical"></i>A-Type</a>
+                </li>
+                <li class="">
+                    <a href="javascript:void(0);" id="Btype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-user"></i>B-Type</a>
+                </li>
+                <li class="">
+                    <a href="javascript:void(0);" id="Ctype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-window"></i>C-Type</a>
+                </li>
+            </ul>
         </div>
-      </section>
-
-</th:block>
+    </nav>
+    <div class="facility_fancy_box_wrap">
+        <div class="facilityFancy">
+            <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
+                <div class="carousel__slide" data-src="/assets/img/blog-1.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
+                    <img src="/assets/img/blog-1.jpg" />
+                </div>
+                <div class="carousel__slide" data-src="https://lipsum.app/id/2/900x600" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
+                    <img src="https://lipsum.app/id/2/600x400" />
+                </div>
+                <div class="carousel__slide" data-src="https://lipsum.app/id/3/900x600" data-fancybox="gallery" data-caption="Hello 🖐">
+                    <img src="https://lipsum.app/id/3/600x400" />
+                </div>
+                <div class="carousel__slide" data-src="https://lipsum.app/id/4/900x600" data-fancybox="gallery" data-caption="Another caption">
+                    <img src="https://lipsum.app/id/4/600x400" />
+                </div>
+                <div class="carousel__slide" data-src="https://lipsum.app/id/5/900x600" data-fancybox="gallery">
+                    <img data-lazy-src="https://lipsum.app/id/5/600x400" />
+                </div>
+                <div class="carousel__slide" data-src="https://lipsum.app/id/6/900x600" data-fancybox="gallery">
+                    <img src="https://lipsum.app/id/6/600x400" />
+                </div>
+                <div class="carousel__slide" data-src="https://lipsum.app/id/7/900x600" data-fancybox="gallery">
+                    <img src="https://lipsum.app/id/7/600x400" />
+                </div>
+            </div>
+            
+            <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="/assets/img/blog-1.jpg" />
+                </div>
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="https://lipsum.app/id/2/100x100" />
+                </div>
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="https://lipsum.app/id/3/100x100" />
+                </div>
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="https://lipsum.app/id/4/100x100" />
+                </div>
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="https://lipsum.app/id/5/100x100" />
+                </div>
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="https://lipsum.app/id/6/100x100" />
+                </div>
+                <div class="carousel__slide">
+                    <img class="panzoom__content" src="https://lipsum.app/id/7/100x100" />
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
 </html>
+
 <script type="text/javascript">
-    /*--------------*/
-// Main/Product image slider for product page
-$('#detail .main-img-slider').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: true,
-  arrows: true,
-  fade:true,
-  autoplay: true,
-  autoplaySpeed: 4000,
-  speed: 300,
-  lazyLoad: 'ondemand',
-  asNavFor: '.thumb-nav',
-  prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
-  nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'
-});
-// Thumbnail/alternates slider for product page
-$('.thumb-nav').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  infinite: true,
-  centerPadding: '0px',
-  asNavFor: '.main-img-slider',
-  dots: false,
-  centerMode: false,
-  draggable: true,
-  speed:200,
-  focusOnSelect: true,
-  prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
-  nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'  
+$(function() {
+    $("#inquiryA").click(function(){
+        location.href = '/#test';
+        mainInquiry();
+    });
+    
+    setTimeout(function(){ navbarActive(); });
+
+    $(window).on('resize', function(){
+        setTimeout(function(){ navbarActive(); }, 500);
+    });
+
+    $(".facility-navbar-toggler").click(function(){
+        $(".facility-navbar-collapse").slideToggle(300);
+        setTimeout(function(){ navbarActive(); });
+    });
+
+    facilityFancybox();
 });
 
+function officeTel(e) {
+    var tel = e.value;
+    $(".finderTel").text(tel);
+}
 
-//keeps thumbnails active when changing main image, via mouse/touch drag/swipe
-$('.main-img-slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-  //remove all active class
-  $('.thumb-nav .slick-slide').removeClass('slick-current');
-  //set active class for current slide
-  $('.thumb-nav .slick-slide:not(.slick-cloned)').eq(currentSlide).addClass('slick-current');  
-});
+function mainInquiry() {
+    var offset = $(".inquiry").offset(); //해당 위치 반환
+    $("html, body").animate({scrollTop: offset.top},500); 
+}
+
+function typeSelect(e) {
+    var typeCheck = $(e).attr("id");
+
+    $.post('/welfare/typeInview', {typeCheck:typeCheck}, function(data){
+        $('.facilityFancy').remove();
+        $('.facility_fancy_box_wrap').html(data);
+    });
+}
+
+// ---------Responsive-navbar-active-animation-----------
+function navbarActive(){
+	var tabsNewAnim = $('#facility-SupportedContent');
+	var selectorNewAnim = $('#facility-SupportedContent').find('li').length;
+	var activeItemNewAnim = tabsNewAnim.find('.active');
+	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+	var itemPosNewAnimTop = activeItemNewAnim.position();
+	var itemPosNewAnimLeft = activeItemNewAnim.position();
+
+	$(".facility-hori-selector").css({
+		"top":itemPosNewAnimTop.top + "px", 
+		"left":itemPosNewAnimLeft.left + "px",
+		"height": activeWidthNewAnimHeight + "px",
+		"width": activeWidthNewAnimWidth + "px"
+	});
+	$("#facility-SupportedContent").on("click","li",function(e){
+		$('#facility-SupportedContent ul li').removeClass("active");
+		$(this).addClass('active');
+		var activeWidthNewAnimHeight = $(this).innerHeight();
+		var activeWidthNewAnimWidth = $(this).innerWidth();
+		var itemPosNewAnimTop = $(this).position();
+		var itemPosNewAnimLeft = $(this).position();
+		$(".facility-hori-selector").css({
+			"top":itemPosNewAnimTop.top + "px", 
+			"left":itemPosNewAnimLeft.left + "px",
+			"height": activeWidthNewAnimHeight + "px",
+			"width": activeWidthNewAnimWidth + "px"
+		});
+	});
+}
+
+function facilityFancybox () {
+    // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+        Dots: false,
+    });
+    
+    // Thumbnails
+    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: false,
+    });
+    
+    // Customize Fancybox
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Carousel: {
+            on: {
+                change: (that) => {
+                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                        friction: 0,
+                    });
+                },
+            },
+        },
+    });
+}
 </script>

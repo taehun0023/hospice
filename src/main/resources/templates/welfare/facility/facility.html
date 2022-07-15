@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http//www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layouts/main}"
+>
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" href="/assets/css/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="/assets/css/facility.css">
+
+</th:block>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <script type="text/javascript" src="/assets/js/fancybox/fancybox.js"></script>
+    <script type="text/javascript" src="/assets/js/slick/slick.js"></script>
+
+</th:block>
+
+<div layout:fragment="content" class="hospiceContent">
+    <!-- Full Screen Search Start -->
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">サービス</h1>
+                <h5 class="text-white">施設</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+    
+    <div class="container py-5">
+        <div class="facilityBody"> 
+            <div class="light-mode ftmx-8 ftmy-4 fth-full ftbg-primary ftflex ftflex-col ftjustify-between ftpx-6 ftpy-12 ftrounded ftoverflow-hidden">
+                <div>
+                    <ul class="facilitySider ftmt-6 ftul">
+                    <li class="facilitySider-item active"><i class="fticon ftfas ftfa-user ftmr-5"></i>People</li>
+                    <li class="facilitySider-item"><i class="fticon ftfas ftfa-star ftmr-5"></i>Favourites</li>
+                    <li class="facilitySider-item"><i class="fticon ftfas ftfa-check-square ftmr-5"></i>Todos</li>
+                    <li class="facilitySider-item"><i class="fticon ftfas ftfa-compass ftmr-5"></i>Explore</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="facilityNavbar facility-navbar-expand-custom facility-navbar-mainbg">
+            <button class="facility-navbar-toggler" type="button" aria-controls="facility-SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="facility-fas facility-fa-bars facility-text-white"></i>
+            </button>
+            <div class="facility-navbar-collapse" id="facility-SupportedContent">
+                <ul class="facility-navbar-nav facility-ml-auto">
+                    <div class="facility-hori-selector"><div class="left"></div><div class="right"></div></div>
+                    <li class="active">
+                        <a href="javascript:void(0);" id="Atype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-medical"></i>A-Type</a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0);" id="Btype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-user"></i>B-Type</a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:void(0);" id="Ctype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-window"></i>C-Type</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="facility_fancy_box_wrap">    
+            <div class="facilityFancy">
+                <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
+                    <div class="carousel__slide" data-src="/assets/img/blog-1.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
+                        <img src="/assets/img/blog-1.jpg" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/2/900x600" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
+                        <img src="https://lipsum.app/id/2/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/3/900x600" data-fancybox="gallery" data-caption="Hello 🖐">
+                        <img src="https://lipsum.app/id/3/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/4/900x600" data-fancybox="gallery" data-caption="Another caption">
+                        <img src="https://lipsum.app/id/4/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/5/900x600" data-fancybox="gallery">
+                        <img data-lazy-src="https://lipsum.app/id/5/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/6/900x600" data-fancybox="gallery">
+                        <img src="https://lipsum.app/id/6/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/7/900x600" data-fancybox="gallery">
+                        <img src="https://lipsum.app/id/7/600x400" />
+                    </div>
+                </div>
+                
+                <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="/assets/img/blog-1.jpg" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/2/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/3/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/4/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/5/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/6/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/7/100x100" />
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h5 class="fw-bold text-primary text-uppercase">Pricing Plans</h5>
+                <h1 class="mb-0">We are Offering Competitive Prices for Our Clients</h1>
+            </div>
+            <div class="row g-0">
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Basic Plan</h4>
+                            <small class="text-uppercase">For Small Size Business</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                    <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Standard Plan</h4>
+                            <small class="text-uppercase">For Medium Size Business</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
+                    <div class="bg-light rounded">
+                        <div class="border-bottom py-4 px-5 mb-4">
+                            <h4 class="text-primary mb-1">Advanced Plan</h4>
+                            <small class="text-uppercase">For Large Size Business</small>
+                        </div>
+                        <div class="p-5 pt-0">
+                            <h1 class="display-5 mb-3">
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                            </h1>
+                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pricing Plan End -->
+    </div>
+</html>
+
+<script type="text/javascript">
+$(function() {
+    $("#inquiryA").click(function(){
+        location.href = '/#test';
+        mainInquiry();
+    });
+    
+    setTimeout(function(){ navbarActive(); });
+
+    $(window).on('resize', function(){
+        setTimeout(function(){ navbarActive(); }, 500);
+    });
+
+    $(".facility-navbar-toggler").click(function(){
+        $(".facility-navbar-collapse").slideToggle(300);
+        setTimeout(function(){ navbarActive(); });
+    });
+
+    facilityFancybox();
+});
+
+function officeTel(e) {
+    var tel = e.value;
+    $(".finderTel").text(tel);
+}
+
+function mainInquiry() {
+    var offset = $(".inquiry").offset(); //해당 위치 반환
+    $("html, body").animate({scrollTop: offset.top},500); 
+}
+
+function typeSelect(e) {
+    var typeCheck = $(e).attr("id");
+
+    $.post('/welfare/typeInview', {typeCheck:typeCheck}, function(data){
+        $('.facilityFancy').remove();
+        $('.facility_fancy_box_wrap').html(data);
+    });
+}
+
+// ---------Responsive-navbar-active-animation-----------
+function navbarActive(){
+	var tabsNewAnim = $('#facility-SupportedContent');
+	var selectorNewAnim = $('#facility-SupportedContent').find('li').length;
+	var activeItemNewAnim = tabsNewAnim.find('.active');
+	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
+	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
+	var itemPosNewAnimTop = activeItemNewAnim.position();
+	var itemPosNewAnimLeft = activeItemNewAnim.position();
+
+	$(".facility-hori-selector").css({
+		"top":itemPosNewAnimTop.top + "px", 
+		"left":itemPosNewAnimLeft.left + "px",
+		"height": activeWidthNewAnimHeight + "px",
+		"width": activeWidthNewAnimWidth + "px"
+	});
+	$("#facility-SupportedContent").on("click","li",function(e){
+		$('#facility-SupportedContent ul li').removeClass("active");
+		$(this).addClass('active');
+		var activeWidthNewAnimHeight = $(this).innerHeight();
+		var activeWidthNewAnimWidth = $(this).innerWidth();
+		var itemPosNewAnimTop = $(this).position();
+		var itemPosNewAnimLeft = $(this).position();
+		$(".facility-hori-selector").css({
+			"top":itemPosNewAnimTop.top + "px", 
+			"left":itemPosNewAnimLeft.left + "px",
+			"height": activeWidthNewAnimHeight + "px",
+			"width": activeWidthNewAnimWidth + "px"
+		});
+	});
+}
+
+function facilityFancybox () {
+    // Initialise Carousel
+    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
+        Dots: false,
+    });
+    
+    // Thumbnails
+    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
+        Sync: {
+            target: mainCarousel,
+            friction: 0,
+        },
+        Dots: false,
+        Navigation: false,
+        center: true,
+        slidesPerPage: 1,
+        infinite: false,
+    });
+    
+    // Customize Fancybox
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        Carousel: {
+            on: {
+                change: (that) => {
+                    mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
+                        friction: 0,
+                    });
+                },
+            },
+        },
+    });
+
+    // sider
+    const menus = document.querySelectorAll(".facilitySider");
+    menus.forEach((menu) => {
+        const menuItems = menu.querySelectorAll(".facilitySider-item");
+        menuItems.forEach((item) => {
+            item.addEventListener("click", (e) => {
+                menuItems.forEach((item) => item.classList.remove("active"));
+                const target = e.target;
+                target.classList.add("active");
+            });
+        });
+    });
+
+}
+</script>
