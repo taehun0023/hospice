@@ -18,4 +18,9 @@ public class PlaceController {
         return "place/placeSaitama";
     }
 
+    @RequestMapping(value = "/placeTokyo", method = RequestMethod.GET)
+    public String placeTokyo(){
+        return "place/placeTokyo";
+    }
+
 }

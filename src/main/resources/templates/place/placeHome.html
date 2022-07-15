@@ -29,7 +29,7 @@ layout:decorate="~{layouts/default}"
         <!-- Full Screen Search End -->
 
         <!-- placeHome Start -->
-        <div class="col-10 container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container wow fadeInUp" data-wow-delay="0.1s">
             <!-- Search Form Start -->
                 <!-- <div class="col-lg-12 mb-5 wow slideInUp" data-wow-delay="0.2s">
                     <div class="input-group">
@@ -65,9 +65,9 @@ layout:decorate="~{layouts/default}"
             <div class="col-lg-12 py-5">
                 <div class="row g-5">
                     <!-- placeSaitama -->
-                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s" onclick="location.href='/placeSaitama.html'" style="cursor: pointer;">
-                        <div class="bg-light rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s" onclick="location.href='/placeSaitama'" style="cursor: pointer;">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
                                 <img class="img-fluid" src="/assets/img/blog-1.jpg" alt="">
                             </div>
                             <div class="p-4">
@@ -81,22 +81,20 @@ layout:decorate="~{layouts/default}"
                         </div>
                     </div>
                     <!-- placeTokyo -->
-                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
-                        <a href="">
-                            <div class="blog-item bg-light rounded overflow-hidden">
-                                <div class="blog-img position-relative overflow-hidden">
-                                    <img class="img-fluid" src="/assets/img/blog-2.jpg" alt="">
-                                </div>
-                                <div class="p-4">
-                                    <div class="d-flex mb-3">
-                                        <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
-                                        <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                                    </div>
-                                    <h4 class="mb-3">東京｜医修館</h4>
-                                    <p>address</p>
-                                </div>
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s" onclick="location.href='/placeTokyo'" style="cursor: pointer;">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="/assets/img/blog-2.jpg" alt="">
                             </div>
-                        </a>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                                </div>
+                                <h4 class="mb-3">東京｜医修館</h4>
+                                <p>address</p>
+                            </div>
+                        </div>
                     </div>
                     <!-- placeSapporo -->
                     <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
@@ -171,12 +169,14 @@ layout:decorate="~{layouts/default}"
         
         setMarKers(map);
     }
+    
     //Place List
     const isyuukans = [
         ["Nishiba", 35.70410420663528, 139.77242657030774, 1],
         ["埼玉｜医修館", 35.93933743697428, 139.4200116547968, 2 ]
     ];
 
+    //multiple markers& open direction
     function setMarKers(map){
         // const image = {
         //     url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
@@ -210,6 +210,7 @@ layout:decorate="~{layouts/default}"
             });
         }
 
+        
     }
     window.initMap = initMap;
 
