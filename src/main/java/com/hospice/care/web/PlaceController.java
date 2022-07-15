@@ -15,7 +15,7 @@ public class PlaceController {
 
     @RequestMapping(value = "/placeSaitama", method = RequestMethod.GET)
     public String placeSaitama(){
-        return "/place/placeSaitama";
+        return "place/placeSaitama";
     }
 
 }
