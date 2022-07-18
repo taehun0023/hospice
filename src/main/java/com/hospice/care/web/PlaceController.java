@@ -1,26 +1,30 @@
 package com.hospice.care.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
-@RequestMapping(value = "/")
+@RequestMapping("/place")
 @Controller
 public class PlaceController {
 
-    @RequestMapping(value = "/placeHome", method = RequestMethod.GET)
+    @GetMapping(value = "/placeHome")
     public String placeHome(){
+        System.out.println("/placeHome");
         return "place/placeHome";
     }
 
-    @RequestMapping(value = "/placeSaitama", method = RequestMethod.GET)
+    @GetMapping(value = "/placeSaitama")
     public String placeSaitama(){
+        System.out.println("/placeSaitama");
         return "place/placeSaitama";
     }
 
-    @RequestMapping(value = "/placeTokyo", method = RequestMethod.GET)
+    @GetMapping(value = "/placeTokyo")
     public String placeTokyo(){
+        System.out.println("/placeTokyo");
         return "place/placeTokyo";
     }
+    
 
 }
