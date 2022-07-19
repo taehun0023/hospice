@@ -12,4 +12,25 @@ public class HospiceController {
     public String test() {
         return "test";
     }
+
+    @GetMapping(value = "/contact")
+    public String contact() {
+        return "contact/contact";
+    }
+
+    @GetMapping(value = "contact/contact")
+    public String contact2() {
+        return "contact/contact";
+    }
+
+    @GetMapping(value = "/information")
+    public String information() {
+        return "information/information";
+    }
+
+    @GetMapping(value = "information/information")
+    public String information2() {
+        return "information/information";
+    }
+
 }
