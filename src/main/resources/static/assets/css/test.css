@@ -154,7 +154,7 @@ dl, ol, ul { margin-top: 0; margin-bottom: 1rem; }
 }
 
 .ftpy-12 {
-  padding-top: 3rem !important;
+  /* padding-top: 3rem !important; */
   padding-bottom: 3rem !important;
 }
 
@@ -170,7 +170,7 @@ dl, ol, ul { margin-top: 0; margin-bottom: 1rem; }
 
 .ftmy-4 {
   margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
+  /* margin-bottom: 1rem !important; */
 }
 
 .ftjustify-between {
