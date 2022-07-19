@@ -33,4 +33,14 @@ public class HospiceController {
         return "information/information";
     }
 
+    @GetMapping(value = "/aisatsu")
+    public String aisatsu() {
+        return "information/aisatsu";
+    }
+
+    @GetMapping(value = "aisatsu/aisatsu")
+    public String aisatsu2() {
+        return "information/aisatsu";
+    }
+
 }
