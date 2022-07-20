@@ -1,3 +1,103 @@
 :root{
     --lt-gray:#eceff1;
 }
+
+/* table info */
+#tableInfo {
+    margin: auto;
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: max-content;
+    zoom: 1;
+}
+
+/* #tableInfo:before, #tableInfo:after {
+    content: "";
+    display: table
+}
+
+#tableInfo:after {
+    clear: both
+} */
+
+.infoT {
+    font: 13px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;     
+    background: #fff;      
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    width: auto;
+    float: left;
+    display: inline; /* IE6 double margin fix */
+    position: relative;
+    margin: 0 5px;
+    -moz-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+    box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);    
+}
+
+.infoT:after {
+    z-index: -1; 
+    position: relative; 
+    content: "";
+    bottom: 10px;
+    right: 4px;
+    width: 80%; 
+    top: 80%; 
+    -webkit-box-shadow: 0 12px 5px rgba(0, 0, 0, .3);   
+    -moz-box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+    -webkit-transform: rotate(3deg);    
+    -moz-transform: rotate(3deg);   
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);  
+} 
+
+.infoT-Header {
+    position: relative;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 40px;
+    margin: -20px -20px 20px -20px;
+    border-bottom: 8px solid;
+    background-color: #eee;
+    /* background-image: -moz-linear-gradient(#fff,#eee);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));    
+    background-image: -webkit-linear-gradient(#fff, #eee);
+    background-image: -o-linear-gradient(#fff, #eee);
+    background-image: -ms-linear-gradient(#fff, #eee);
+    background-image: linear-gradient(#fff, #eee); */
+}
+
+.infoT-Header:after {
+    position: relative;
+    bottom: -8px; left: 0;
+    height: 3px; width: 100%;
+    content: '';
+}
+
+.infoT1 .infoT-Header{
+    border-bottom-color: #B3E03F;
+}
+
+.infoT2 .infoT-Header{
+    border-bottom-color: #7BD553;
+}
+
+.infoT3 .infoT-Header{
+    border-bottom-color: #3AD5A0;
+}
+
+.infoT-body{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+
+/* @media (min-width:512px) {
+    .tableInfo{position: fixed; }
+} */
+
