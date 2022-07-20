@@ -29,134 +29,152 @@ layout:decorate="~{layouts/main}"
         </div>
     </div>
     <!-- Full Screen Search End -->
-    
-    <div class="container py-5">
-        <div class="facilityBody"> 
-            <div class="light-mode ftmx-8 ftmy-4 fth-full ftbg-primary ftflex ftflex-col ftjustify-between ftpx-6 ftpy-12 ftrounded ftoverflow-hidden">
-                <div>
-                    <ul class="facilitySider ftmt-6 ftul">
-                    <li class="facilitySider-item active"><i class="fticon ftfas ftfa-user ftmr-5"></i>People</li>
-                    <li class="facilitySider-item"><i class="fticon ftfas ftfa-star ftmr-5"></i>Favourites</li>
-                    <li class="facilitySider-item"><i class="fticon ftfas ftfa-check-square ftmr-5"></i>Todos</li>
-                    <li class="facilitySider-item"><i class="fticon ftfas ftfa-compass ftmr-5"></i>Explore</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <nav class="facilityNavbar facility-navbar-expand-custom facility-navbar-mainbg">
-            <button class="facility-navbar-toggler" type="button" aria-controls="facility-SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="facility-fas facility-fa-bars facility-text-white"></i>
-            </button>
-            <div class="facility-navbar-collapse" id="facility-SupportedContent">
-                <ul class="facility-navbar-nav facility-ml-auto">
-                    <div class="facility-hori-selector"><div class="left"></div><div class="right"></div></div>
-                    <li class="active">
-                        <a href="javascript:void(0);" id="Atype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-medical"></i>A-Type</a>
-                    </li>
-                    <li class="">
-                        <a href="javascript:void(0);" id="Btype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-user"></i>B-Type</a>
-                    </li>
-                    <li class="">
-                        <a href="javascript:void(0);" id="Ctype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-window"></i>C-Type</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="facility_fancy_box_wrap">    
-            <div class="facilityFancy">
-                <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
-                    <div class="carousel__slide" data-src="/assets/img/blog-1.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
-                        <img src="/assets/img/blog-1.jpg" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/2/900x600" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
-                        <img src="https://lipsum.app/id/2/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/3/900x600" data-fancybox="gallery" data-caption="Hello 🖐">
-                        <img src="https://lipsum.app/id/3/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/4/900x600" data-fancybox="gallery" data-caption="Another caption">
-                        <img src="https://lipsum.app/id/4/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/5/900x600" data-fancybox="gallery">
-                        <img data-lazy-src="https://lipsum.app/id/5/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/6/900x600" data-fancybox="gallery">
-                        <img src="https://lipsum.app/id/6/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/7/900x600" data-fancybox="gallery">
-                        <img src="https://lipsum.app/id/7/600x400" />
+
+    <!-- 시설 종류 Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="border-width:1px">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="faccol-lg-7">
+                    <div class="section-title-center position-relative pb-3 mb-5 facilityBody"> 
+                        <div class="light-mode ftmx-8 ftmy-4 ftbg-primary ftflex ftflex-col ftjustify-between ftpx-6 ftpy-12 ftrounded ftoverflow-hidden">
+                            <div>
+                                <ul class="facilitySider ftmt-6 ftul">
+                                <li class="mb-0"><i class="fticon ftfas ftfa-user ftmr-5"></i>サービス案内</li>
+                                <li class="facilitySider-item active"><i class="fticon ftfas ftfa-star ftmr-5"></i>施設紹介</li>
+                                <li class="facilitySider-item"><i class="fticon ftfas ftfa-check-square ftmr-5"></i>設備紹介</li>
+                                <li class="facilitySider-item"><i class="fticon ftfas ftfa-compass ftmr-5"></i>看護紹介</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="/assets/img/blog-1.jpg" />
+                <div class="faccol-lg-5">
+                    <div class="rounded h-100 facd-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                        <div class="nav_fancy">
+                            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                                <h5 class="fw-bold text-primary text-uppercase">地域によって価格差がある場合があります。</h5>
+                                <h1 class="mb-0">施設紹介</h1>
+                            </div>
+                            <nav class="facilityNavbar facility-navbar-expand-custom facility-navbar-mainbg">
+                                <button class="facility-navbar-toggler" type="button" aria-controls="facility-SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="facility-fas facility-fa-bars facility-text-white"></i>
+                                </button>
+                                <div class="facility-navbar-collapse" id="facility-SupportedContent">
+                                    <ul class="facility-navbar-nav facility-ml-auto">
+                                        <div class="facility-hori-selector"><div class="left"></div><div class="right"></div></div>
+                                        <li class="active">
+                                            <a href="javascript:void(0);" id="Atype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-medical"></i>A-Type</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="javascript:void(0);" id="Btype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-user"></i>B-Type</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="javascript:void(0);" id="Ctype" class="nav-link" onclick="typeSelect(this);"><i class="fa-solid fa-house-chimney-window"></i>C-Type</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                            <div class="row g-3 facility_fancy_box_wrap">  
+                                <div class="facilityFancy">
+                                    <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
+                                        <div class="carousel__slide" data-src="/assets/img/blog-1.jpg" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
+                                            <img src="/assets/img/blog-1.jpg" />
+                                        </div>
+                                        <div class="carousel__slide" data-src="https://lipsum.app/id/2/900x600" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
+                                            <img src="https://lipsum.app/id/2/600x400" />
+                                        </div>
+                                        <div class="carousel__slide" data-src="https://lipsum.app/id/3/900x600" data-fancybox="gallery" data-caption="Hello 🖐">
+                                            <img src="https://lipsum.app/id/3/600x400" />
+                                        </div>
+                                        <div class="carousel__slide" data-src="https://lipsum.app/id/4/900x600" data-fancybox="gallery" data-caption="Another caption">
+                                            <img src="https://lipsum.app/id/4/600x400" />
+                                        </div>
+                                        <div class="carousel__slide" data-src="https://lipsum.app/id/5/900x600" data-fancybox="gallery">
+                                            <img data-lazy-src="https://lipsum.app/id/5/600x400" />
+                                        </div>
+                                        <div class="carousel__slide" data-src="https://lipsum.app/id/6/900x600" data-fancybox="gallery">
+                                            <img src="https://lipsum.app/id/6/600x400" />
+                                        </div>
+                                        <div class="carousel__slide" data-src="https://lipsum.app/id/7/900x600" data-fancybox="gallery">
+                                            <img src="https://lipsum.app/id/7/600x400" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="/assets/img/blog-1.jpg" />
+                                        </div>
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="https://lipsum.app/id/2/100x100" />
+                                        </div>
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="https://lipsum.app/id/3/100x100" />
+                                        </div>
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="https://lipsum.app/id/4/100x100" />
+                                        </div>
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="https://lipsum.app/id/5/100x100" />
+                                        </div>
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="https://lipsum.app/id/6/100x100" />
+                                        </div>
+                                        <div class="carousel__slide">
+                                            <img class="panzoom__content" src="https://lipsum.app/id/7/100x100" />
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
                     </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/2/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/3/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/4/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/5/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/6/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/7/100x100" />
-                    </div> 
                 </div>
             </div>
         </div>
     </div>
-    <!-- Pricing Plan Start -->
+    <!-- 시설 종류 End -->
+
+    <!-- 시설 타입 가격 Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Pricing Plans</h5>
-                <h1 class="mb-0">We are Offering Competitive Prices for Our Clients</h1>
+                <h5 class="fw-bold text-primary text-uppercase">地域によって価格差がある場合があります。</h5>
+                <h1 class="mb-0">施設の価格</h1>
             </div>
             <div class="row g-0">
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
                     <div class="bg-light rounded">
                         <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Basic Plan</h4>
-                            <small class="text-uppercase">For Small Size Business</small>
+                            <h4 class="text-primary mb-1">A-Type</h4>
+                            <small class="text-uppercase">一人で住みやすい</small>
                         </div>
                         <div class="p-5 pt-0">
                             <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>49.00<small
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">¥</small>50,000<small
                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
                             </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
-                            <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>option</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <a href="" class="btn btn-primary py-2 px-4 mt-4"></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
                     <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
                         <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Standard Plan</h4>
-                            <small class="text-uppercase">For Medium Size Business</small>
+                            <h4 class="text-primary mb-1">B-Type</h4>
+                            <small class="text-uppercase">部屋二つ</small>
                         </div>
                         <div class="p-5 pt-0">
                             <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>99.00<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">¥</small>60,000<small
+                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">部屋三つ</small>
                             </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-times text-danger pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span>option</span><i class="fa fa-times text-danger pt-1"></i></div>
                             <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
                         </div>
                     </div>
@@ -164,18 +182,18 @@ layout:decorate="~{layouts/main}"
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
                     <div class="bg-light rounded">
                         <div class="border-bottom py-4 px-5 mb-4">
-                            <h4 class="text-primary mb-1">Advanced Plan</h4>
+                            <h4 class="text-primary mb-1">C-Type</h4>
                             <small class="text-uppercase">For Large Size Business</small>
                         </div>
                         <div class="p-5 pt-0">
                             <h1 class="display-5 mb-3">
-                                <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>149.00<small
+                                <small class="align-top" style="font-size: 22px; line-height: 45px;">¥</small>70,000<small
                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
                             </h1>
-                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-3"><span>option</span><i class="fa fa-check text-primary pt-1"></i></div>
+                            <div class="d-flex justify-content-between mb-2"><span></span><i class="fa fa-check text-primary pt-1"></i></div>
                             <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
                         </div>
                     </div>
@@ -183,15 +201,14 @@ layout:decorate="~{layouts/main}"
             </div>
         </div>
     </div>
-    <!-- Pricing Plan End -->
-    </div>
+    <!-- 시설 타입 가격End -->
+</div>
 </html>
 
 <script type="text/javascript">
 $(function() {
     $("#inquiryA").click(function(){
         location.href = '/#test';
-        mainInquiry();
     });
     
     setTimeout(function(){ navbarActive(); });
@@ -207,16 +224,6 @@ $(function() {
 
     facilityFancybox();
 });
-
-function officeTel(e) {
-    var tel = e.value;
-    $(".finderTel").text(tel);
-}
-
-function mainInquiry() {
-    var offset = $(".inquiry").offset(); //해당 위치 반환
-    $("html, body").animate({scrollTop: offset.top},500); 
-}
 
 function typeSelect(e) {
     var typeCheck = $(e).attr("id");

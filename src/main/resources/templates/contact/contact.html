@@ -2,7 +2,7 @@
 <html
 xmlns:th="http//www.thymeleaf.org"
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layouts/default}"
+layout:decorate="~{layouts/main}"
 >
 
 <link
@@ -12,19 +12,10 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 crossorigin="anonymous"
 />
 
-
-<!-- index.html 고유 CSS 추가 -->
+<!-- contact.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/saiyou.css">
-</th:block> 
-<!-- index.html 고유 스크립트 추가 -->
-<th:block layout:fragment="script">
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/saiyou.css"/>
 </th:block>
-
 
 <th:block layout:fragment="content">
     
