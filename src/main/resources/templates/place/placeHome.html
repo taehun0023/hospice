@@ -11,7 +11,7 @@ layout:decorate="~{layouts/main}"
     </th:block>
     <!-- index.html 고유 스크립트 추가 -->
     <th:block layout:fragment="script">
-
+        
     </th:block>
 
     <div layout:fragment="content" class="hospiceContent">
@@ -40,30 +40,27 @@ layout:decorate="~{layouts/main}"
                         defer>
                         </script>
                     </div>
+                    <div>
+                        <button class="col-lg-1">
+                            <i class="fa-solid fa-chevrons-left" style="--fa-primary-opacity:0.7;"></i>
+                        </button>
+                    </div>
                 </div>
                 <!-- google-map end -->
 
                 <!-- map-info start -->
                 <div class="col-lg-4">
                     <div id="mapInfo" class="p-4 cols-2" style="min-height: 350px; border:0; background-color: var(--lt-gray);">
-                        <div class="row mb-3" onclick="" id="info1">
-                            <div class="col-lg-3">
-                                <i class="fa-solid fa-location-check" id="iconMap"></i>
-                            </div>
-                            <div class="col-lg-9 ">
-                                <h4>西芝</h4>
-                                <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
-                            </div>
-                        <div class="row mb-3" onclick="" id="info2">
-                            <div class="col-lg-3">
-                                <i class="fa-solid fa-location-check" id="iconMap"></i>
-                            </div>
-                            <div class="col-lg-9">
-                                <h4>埼玉県｜医修館</h4>
-                                <p>埼玉県鶴ヶ島市上広谷383</p>
-                            </div>
-                        </div>
+                        <div class="row mb-3" style="cursor: pointer;" onclick="location.href='https://www.google.co.jp/maps/dir//%E3%80%92101-0021+Tokyo,+Chiyoda+City,+Sotokanda,+5-ch%C5%8Dme%E2%88%922%E2%88%9211+%EC%84%B8%EC%9D%B4%ED%82%A4+%EC%A0%9C2%EB%B9%8C%EB%94%A9+2%E9%9A%8E/@35.7040555,139.7702527,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x60188c1e2f6307e3:0x27ad411d8c2a60fe!2m2!1d139.7724414!2d35.7040512?hl=ko'" id="info1">
+                            <i class="fa-solid fa-location-check" style="color:red;"></i>
+                            <h4>西芝</h4>
+                            <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
                             
+                        </div>    
+                        <div class="row mb-3" style="cursor: pointer;" onclick="location.href='https://www.google.co.jp/maps/dir//383+Kamihiroya,+Tsurugashima,+Saitama+350-2203/@35.9391854,139.4178015,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6018d710bd4737b5:0x85124df463eb5d0b!2m2!1d139.4199902!2d35.9391811?hl=ko'" id="info2" >
+                            <i class="fa-solid fa-location-check" style="color:red;"></i>
+                            <h4>埼玉県｜医修館</h4>
+                            <p>埼玉県鶴ヶ島市上広谷383</p>
                         </div>
                     </div>
                 </div>
@@ -106,7 +103,7 @@ layout:decorate="~{layouts/main}"
                             </div>
                         </div>
                     </div>
-                    <!-- placeSapporo -->
+                    <!-- placeYokohama -->
                     <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
                         <a href="">
                             <div class="blog-item bg-light rounded overflow-hidden">
@@ -118,7 +115,7 @@ layout:decorate="~{layouts/main}"
                                         <small class="me-3"><i class="far fa-user text-primary me-2"></i>John Doe</small>
                                         <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
                                     </div>
-                                    <h4 class="mb-3">札幌｜医修館</h4>
+                                    <h4 class="mb-3">横浜｜医修館</h4>
                                     <p>address</p>
                                 </div>
                             </div>
@@ -183,7 +180,8 @@ layout:decorate="~{layouts/main}"
     //Place List
     const isyuukans = [
         ["Nishiba", 35.70410420663528, 139.77242657030774, 1],
-        ["埼玉｜医修館", 35.93933743697428, 139.4200116547968, 2 ]
+        ["埼玉｜医修館", 35.93933743697428, 139.4200116547968, 2 ],
+        ["横浜", 35.45806460812385, 139.5777527942403]
     ];
 
     //multiple markers& open direction
@@ -205,23 +203,44 @@ layout:decorate="~{layouts/main}"
         for (let i = 0; i < isyuukans.length; i++) {
             const isyuukan = isyuukans[i];
 
-            new google.maps.Marker({
-            position: { lat: isyuukan[1], lng: isyuukan[2] },
-            map,
-            // icon: image,
-            // shape: shape,
-            title: isyuukan[0],
-            // label: {
-            //     text: isyuukan[0],
-            //     color: "#000000",
-            //     fontweight: "bold",
-            // },
-            zIndex: isyuukan[3],
+            var marker = new google.maps.Marker({
+                position: { lat: isyuukan[1], lng: isyuukan[2] },map,
+                // icon: image,
+                // shape: shape,
+                title: isyuukan[0],
+                // label: {
+                //     text: isyuukan[0],
+                //     color: "#000000",
+                //     fontweight: "bold",
+                // },
+                zIndex: isyuukan[3],
+                animation: google.maps.Animation.BOUNCE,
+                
             });
-        }
+            
+            google.maps.event.addListener(marker, 'click',(function(marker,i){
+                return function(){
+                    // 마커 click event
+                    // focus change
+                    var focusChange = new google.maps.Map(document.getElementById("mapBox"), {
+                        zoom: 15,
+                        center: { lat: isyuukan[1], lng: isyuukan[2] },
+                    });
 
-        
+                    // new focus marker
+                    var markerFocus = new google.maps.Marker({
+                        position: { lat: isyuukan[1], lng: isyuukan[2] },focusChange,
+                        title: isyuukan[0],
+                        zIndex: isyuukan[3],
+                        animation: google.maps.Animation.BOUNCE,
+                    });
+
+                    markerFocus.setMap(focusChange);
+                };    
+            })(marker, i));
+        }
     }
+
     window.initMap = initMap;
 
 </script>
