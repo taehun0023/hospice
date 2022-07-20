@@ -27,7 +27,7 @@
     border: 1px solid #ddd;
     color: #333;
     padding: 20px;
-    width: auto;
+    width: 300px;
     float: left;
     display: inline; /* IE6 double margin fix */
     position: relative;

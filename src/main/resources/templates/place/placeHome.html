@@ -214,7 +214,6 @@ layout:decorate="~{layouts/main}"
                 //     fontweight: "bold",
                 // },
                 zIndex: isyuukan[3],
-                animation: google.maps.Animation.BOUNCE,
                 
             });
             
@@ -232,7 +231,6 @@ layout:decorate="~{layouts/main}"
                         position: { lat: isyuukan[1], lng: isyuukan[2] },focusChange,
                         title: isyuukan[0],
                         zIndex: isyuukan[3],
-                        animation: google.maps.Animation.BOUNCE,
                     });
 
                     markerFocus.setMap(focusChange);
@@ -240,6 +238,7 @@ layout:decorate="~{layouts/main}"
             })(marker, i));
         }
     }
+
 
     window.initMap = initMap;
 
