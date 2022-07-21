@@ -11,7 +11,7 @@ layout:decorate="~{layouts/main}"
     </th:block>
     <!-- index.html 고유 스크립트 추가 -->
     <th:block layout:fragment="script">
-        
+        <script type="text/javascript" src="/assets/js/map.js"></script>
     </th:block>
 
     <div layout:fragment="content" class="hospiceContent">
@@ -163,87 +163,6 @@ layout:decorate="~{layouts/main}"
     </div>
 </html>
 
-
-<script>
-    // google-map
-    // Initialize and add the map
-    function initMap() {
-        // The map, centered at myLatLng
-        const map = new google.maps.Map(document.getElementById("mapBox"), {
-            zoom: 8,
-            center: { lat: 35.70410420663528, lng: 139.77242657030774 },
-        });
-        
-        setMarKers(map);
-    }
-    
-    //Place List
-    const isyuukans = [
-        ["Nishiba", 35.70410420663528, 139.77242657030774, 1],
-        ["埼玉｜医修館", 35.93933743697428, 139.4200116547968, 2 ],
-        ["横浜", 35.45806460812385, 139.5777527942403]
-    ];
-
-    //multiple markers& open direction
-    function setMarKers(map){
-        // const image = {
-        //     url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-        //     // This marker is 20 pixels wide by 32 pixels high.
-        //     size: new google.maps.Size(20, 32),
-        //     // The origin for this image is (0, 0).
-        //     origin: new google.maps.Point(0, 0),
-        //     // The anchor for this image is the base of the flagpole at (0, 32).
-        //     anchor: new google.maps.Point(0, 32),
-        // };
-        // const shape = {
-        //     coords: [1, 1, 1, 20, 18, 20, 18, 1],
-        //     type: "poly",
-        // };
-
-        for (let i = 0; i < isyuukans.length; i++) {
-            const isyuukan = isyuukans[i];
-
-            var marker = new google.maps.Marker({
-                position: { lat: isyuukan[1], lng: isyuukan[2] },map,
-                // icon: image,
-                // shape: shape,
-                title: isyuukan[0],
-                // label: {
-                //     text: isyuukan[0],
-                //     color: "#000000",
-                //     fontweight: "bold",
-                // },
-                zIndex: isyuukan[3],
-                animation: google.maps.Animation.BOUNCE,
-                
-            });
-            
-            google.maps.event.addListener(marker, 'click',(function(marker,i){
-                return function(){
-                    // 마커 click event
-                    // focus change
-                    var focusChange = new google.maps.Map(document.getElementById("mapBox"), {
-                        zoom: 15,
-                        center: { lat: isyuukan[1], lng: isyuukan[2] },
-                    });
-
-                    // new focus marker
-                    var markerFocus = new google.maps.Marker({
-                        position: { lat: isyuukan[1], lng: isyuukan[2] },focusChange,
-                        title: isyuukan[0],
-                        zIndex: isyuukan[3],
-                        animation: google.maps.Animation.BOUNCE,
-                    });
-
-                    markerFocus.setMap(focusChange);
-                };    
-            })(marker, i));
-        }
-    }
-
-    window.initMap = initMap;
-
-</script>
 
 <script type="text/javascript">
     
