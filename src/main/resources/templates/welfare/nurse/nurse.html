@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http//www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layouts/main}"
+>
+<head>
+    <!-- index.html 고유 CSS 추가 -->
+    <link rel="stylesheet" href="/assets/css/welfare/nurse.css">
+    <link rel="stylesheet" href="https://demo.voidcoders.com/htmldemo/fitgear/main-files/assets/css/animate.css">
+</head>
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+</th:block>
+
+<div layout:fragment="content" class="hospiceContent">
+    <!-- Full Screen Search Start -->
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">サービス</h1>
+                <h5 class="text-white">施設</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+    <!-- 3D Slideshow Section --> 
+    <section id="slideshow" class="wow fadeInUp">
+        <div class="entire-content">
+            <div class="content-carrousel">
+                <figure class="shadow"><img src="https://images.pexels.com/photos/758733/pexels-photo-758733.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/21261/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/567973/pexels-photo-567973.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/776653/pexels-photo-776653.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/54630/japanese-cherry-trees-flowers-spring-japanese-flowering-cherry-54630.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/131046/pexels-photo-131046.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/302515/pexels-photo-302515.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/301682/pexels-photo-301682.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+                <figure class="shadow"><img src="https://images.pexels.com/photos/933054/pexels-photo-933054.jpeg?w=940&h=650&auto=compress&cs=tinysrgb"/></figure>
+            </div>
+        </div>
+    </section>
+    <section id="service" class="wow fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section_title text-center">
+                        <h2>Our Services</h2>
+                        <div class="brand_border">
+                        <i class="fa fa-minus" aria-hidden="true"></i> 
+                        <i class="fas fa-handshake"></i>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. <br>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="single_service hvr-curl-top-right">
+                <div class="single_service-left">
+                <div class="icon">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+                </div>
+                <div class="single_service-body">
+                <h4 class="single_service-heading">web Design</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing                                      elit. Aenean commodo ligula.</p>
+                </div>
+                </div>
+                </div><!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="single_service hvr-curl-top-right">
+                <div class="single_service-left">
+                <div class="icon">
+                    <i class="fa-solid fa-briefcase-medical"></i>
+                </div>
+                </div>
+                <div class="single_service-body">
+                    <h4 class="single_service-heading">Logo Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing                                     elit. Aenean commodo ligula.</p>
+                </div>
+                </div>
+            </div>
+            <!--/END SINGLE SERVICE AREA-->
+            
+            <!--START SINGLE SERVICE AREA-->
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="single_service hvr-curl-top-right">
+                <div class="single_service-left">
+                <div class="icon">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                </div>
+                <div class="single_service-body">
+                <h4 class="single_service-heading">Ui & Ux Design</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing                               elit. Aenean commodo ligula.</p>
+                </div>
+                </div>
+            </div><!--/END SINGLE SERVICE AREA-->
+            <!--START SINGLE SERVICE AREA-->
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="single_service hvr-curl-top-right">
+                <div class="single_service-left">
+                <div class="icon">
+                    <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                </div>
+                <div class="single_service-body">
+                <h4 class="single_service-heading">Branding</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing                                   elit. Aenean commodo ligula.</p>
+                </div>
+                </div>
+            </div><!--/END SINGLE SERVICE AREA-->
+            <!--START SINGLE SERVICE AREA-->
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="single_service hvr-curl-top-right">
+                <div class="single_service-left">
+                <div class="icon">
+                    <i class="fa-solid fa-bed-pulse"></i>
+                </div>
+                </div>
+                <div class="single_service-body">
+                    <h4 class="single_service-heading">Devlopment</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing                            elit. Aenean commodo ligula.</p>
+                </div>
+                </div>
+            </div><!--/END SINGLE SERVICE AREA-->
+            <!--START SINGLE SERVICE AREA-->
+            <div class="col-md-6 col-lg-4 col-sm-12">
+                <div class="single_service hvr-curl-top-right">
+                <div class="single_service-left">
+                <div class="icon">
+                    <i class="fa-solid fa-wheelchair"></i>
+                </div>
+                </div>
+                <div class="single_service-body">
+                <h4 class="single_service-heading">Security System</h4>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing                                       elit. Aenean commodo ligula.</p>
+                </div>
+                </div>
+            </div><!--/END SINGLE SERVICE AREA-->
+        </div>
+    </div>
+    </section><!--/END SERVICE AREA--> 
+</div>
+</html>
+
+<script type="text/javascript">
+$(function() {
+    $("#inquiryA").click(function(){
+        location.href = '/#test';
+        mainInquiry();
+    });
+    
+
+});
+
+</script>

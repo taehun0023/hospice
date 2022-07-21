@@ -4,21 +4,89 @@ xmlns:th="http//www.thymeleaf.org"
 xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 layout:decorate="~{layouts/main}"
 >
-
+<head>
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
-    <link rel="stylesheet" href="/assets/css/fancybox/fancybox.css"/>
-    <link rel="stylesheet" href="/assets/css/facility.css">
-
+    <link rel="stylesheet" href="/assets/css/welfare/equipment.css">
 </th:block>
+</head>
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
-    <script type="text/javascript" src="/assets/js/fancybox/fancybox.js"></script>
-    <script type="text/javascript" src="/assets/js/slick/slick.js"></script>
 </th:block>
 
 <div layout:fragment="content" class="hospiceContent">
-
+    <!-- Full Screen Search Start -->
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">サービス</h1>
+                <h5 class="text-white">施設</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+    
+    <div class="container">
+        <div class="row">
+            <div class="heading-title text-center">
+                <h3 class="text-uppercase">クリニック案内</h3>
+                <p class="p-top-30 half-txt">Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. Nam pulvinar vitae neque et porttitor. Praesent sed nisi eleifend. </p>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://lipsum.app/id/3/600x400" alt="team member" class="img-responsive">
+                        <div class="team-intro light-txt">
+                            <h5>腰の痛みクリニック</h5>
+                        </div>
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <h4>Hi There !</h4>
+                            <p>I love to introduce myself as a hardcore Web Designer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://lipsum.app/id/3/600x400" alt="team member" class="img-responsive">
+                        <div class="team-intro light-txt">
+                            <h5>腰の痛みクリニック</h5>
+                        </div>
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <h4>Hi There !</h4>
+                            <p>I love to introduce myself as a hardcore Web Designer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="https://lipsum.app/id/3/600x400" alt="team member" class="img-responsive">
+                        <div class="team-intro light-txt">
+                            <h5>腰の痛みクリニック</h5>
+                        </div>
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <h4>Hi There !</h4>
+                            <p>I love to introduce myself as a hardcore Web Designer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 </html>
+<script>
+$("#inquiryA").click(function(){
+    location.href = '/#test';
+    mainInquiry();
+});
+</script>

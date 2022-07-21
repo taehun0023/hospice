@@ -23,7 +23,21 @@ public class WelfareController {
         } else if (typeCheck.equals("Ctype")) {
             return viewLocation + "facility/facilityCtype_inview";
         }
-
         return viewLocation + "facility/facilityAtype_inview";
+    }
+
+    @GetMapping(value = "/equipment")
+    public String equipment() {
+        return viewLocation + "equipment/equipment";
+    }
+
+    @GetMapping(value = "/nurse")
+    public String nurse() {
+        return viewLocation + "nurse/nurse";
+    }
+
+    @PostMapping(value = "pdfInview")
+    public String pdfInview() {
+        return "test_inview";
     }
 }
