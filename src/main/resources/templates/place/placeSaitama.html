@@ -7,6 +7,8 @@ layout:decorate="~{layouts/main}"
 
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/css/facility.css">
     <link rel="stylesheet" href="/assets/css/place.css">
 </th:block>
@@ -28,15 +30,61 @@ layout:decorate="~{layouts/main}"
     </div>
     <!-- Full Screen Search End -->
 
-    <div class="container-fluid">
+    <div class="container">
         <!-- image slide start -->
         <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.1s">
             <h2 class="mb-4 text-center">
                 <i class="fa-solid fa-circle-dot" style="color:green;"></i>
                 埼玉｜医修館の内部
             </h2>
-            <div>
-
+            <div class="col-mg-10">
+                <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/1/900x600" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
+                        <img src="https://lipsum.app/id/1/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/2/900x600" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
+                        <img src="https://lipsum.app/id/2/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/3/900x600" data-fancybox="gallery" data-caption="Hello 🖐">
+                        <img src="https://lipsum.app/id/3/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/4/900x600" data-fancybox="gallery" data-caption="Another caption">
+                        <img src="https://lipsum.app/id/4/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/5/900x600" data-fancybox="gallery">
+                        <img data-lazy-src="https://lipsum.app/id/5/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/6/900x600" data-fancybox="gallery">
+                        <img src="https://lipsum.app/id/6/600x400" />
+                    </div>
+                    <div class="carousel__slide" data-src="https://lipsum.app/id/7/900x600" data-fancybox="gallery">
+                        <img src="https://lipsum.app/id/7/600x400" />
+                    </div>
+                </div>
+                
+                <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/1/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/2/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/3/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/4/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/5/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/6/100x100" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="panzoom__content" src="https://lipsum.app/id/7/100x100" />
+                    </div> 
+                </div>
             </div>
         </div>
         <!-- image slide end -->
@@ -48,23 +96,29 @@ layout:decorate="~{layouts/main}"
                     <i class="fa-solid fa-circle-dot" style="color:green;"></i>
                     埼玉｜医修館の概要
                 </h2>
-                <div id="tableInfo" class="col-lg-12">
+                <div id="tableInfo" class="col-mg-10">
                     <div class="row">
                         <div class="infoT infoT1">
                             <div class="infoT-Header">ホスピスケア住宅<br>医修館鶴ヶ島</div>
-                            <div class="infoT-body">埼玉県鶴ヶ島市上広谷383</div>  
-                            <div class="infoT-body">call</div>      
+                            <div class="infoT-body">
+                                <div class="infoT-body">埼玉県鶴ヶ島市上広谷383</div>
+                                <div class="infoT-body">call</div>
+                            </div>  
                         </div>
                         <div class="infoT infoT2">
                             <div class="infoT-Header">建物</div>
-                            <div class="infoT-body">開設年・月:2022年</div>
-                            <div class="infoT-body">階数4階建</div>
-                            <div class="infoT-body">鉄筋コンクリート造</div>
-                        </div>
+                            <div>
+                                <div class="infoT-body">開設年・月:2022年</div>
+                                <div class="infoT-body">階数4階建</div>
+                                <div class="infoT-body">鉄筋コンクリート造</div>
+                            </div>
+                        </div>    
                         <div class="infoT infoT3">
                             <div class="infoT-Header">入居定員</div>
-                            <div class="infoT-body">48名</div>
+                            <div>
+                                <div class="infoT-body">48名</div>
                             <div class="infoT-body">現在:</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -73,23 +127,24 @@ layout:decorate="~{layouts/main}"
         <!-- table info end -->
 
         <!-- access start -->
-        <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.4s">
-            <h2 class="text-center">
-                <i class="fa-solid fa-circle-dot" style="color:green;"></i>
-                アクセス
-            </h2>
-            
-            <!-- google-map start -->
-            <div class="container-fluid col-lg-6">
-                <div id="mapBox" class="col-lg-12" style="min-height: 350px; border:0;">
-                    <script
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM3EkIRxquQ5P4oVMeucj_UlVJCTO3-uA&callback=initMap&v=weekly"
-                    defer>
-                    </script>
+        <div class="container">
+            <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.4s">
+                <h2 class="text-center">
+                    <i class="fa-solid fa-circle-dot" style="color:green;"></i>
+                    アクセス
+                </h2>
+                
+                <!-- google-map start -->
+                <div class="container-fluid col-md-10">
+                    <div id="mapBox" class="col-lg-12" style="min-height: 350px; border:0;">
+                        <script
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM3EkIRxquQ5P4oVMeucj_UlVJCTO3-uA&callback=initMap&v=weekly"
+                        defer>
+                        </script>
+                    </div>
                 </div>
+                <!-- google-map end -->
             </div>
-            <!-- google-map end -->
-
         </div>
         <!-- access end -->
 
@@ -109,39 +164,10 @@ layout:decorate="~{layouts/main}"
             center: { lat: 35.93933743697428, lng: 139.4200116547968 },
         });
         
-        setMarKers(map);
-    }
-    
-    function setMarKers(map){
-        // const image = {
-        //     url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
-        //     // This marker is 20 pixels wide by 32 pixels high.
-        //     size: new google.maps.Size(20, 32),
-        //     // The origin for this image is (0, 0).
-        //     origin: new google.maps.Point(0, 0),
-        //     // The anchor for this image is the base of the flagpole at (0, 32).
-        //     anchor: new google.maps.Point(0, 32),
-        // };
-        // const shape = {
-        //     coords: [1, 1, 1, 20, 18, 20, 18, 1],
-        //     type: "poly",
-        // };
-
         var marker = new google.maps.Marker({
-                position: { lat: 35.93933743697428, lng: 139.4200116547968 },map,
-                // icon: image,
-                // shape: shape,
-                title:　saitama,
-                // label: {
-                //     text: isyuukan[0],
-                //     color: "#000000",
-                //     fontweight: "bold",
-                // },
-                animation: google.maps.Animation.BOUNCE,
-                
-            });
+            position: { lat: 35.93933743697428, lng: 139.4200116547968 },map,
+        });
     }
-
     window.initMap = initMap;
 
 </script>
@@ -149,7 +175,7 @@ layout:decorate="~{layouts/main}"
 <script type="text/javascript">
 $(function() {
     $("#inquiryA").click(function(){
-        location.href = '/#placeSaitama';
+        location.href = '/#test';
         mainInquiry();
     });
     
