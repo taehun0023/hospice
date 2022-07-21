@@ -7,11 +7,15 @@ layout:decorate="~{layouts/main}"
 
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
+    <link rel="stylesheet" href="/assets/css/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/facility.css">
     <link rel="stylesheet" href="/assets/css/place.css">
 </th:block>
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
-    
+    <script type="text/javascript" src="/assets/js/fancybox/fancybox.js"></script>
+    <script type="text/javascript" src="/assets/js/slick/slick.js"></script>
 </th:block>
 
 <div layout:fragment="content" class="hospiceContent">
@@ -20,19 +24,18 @@ layout:decorate="~{layouts/main}"
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
                 <h1 class="display-4 text-white animated zoomIn">施設探し</h1>
-                <h5 class="text-white">埼玉県｜医修館</h5>
+                <h5 class="text-white">西芝</h5>
             </div>
         </div>
     </div>
     <!-- Full Screen Search End -->
 
-    <!-- image slide start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        
+    <div class="container">
+        <!-- image slide start -->
         <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.1s">
             <h2 class="mb-4 text-center">
                 <i class="fa-solid fa-circle-dot" style="color:green;"></i>
-                埼玉｜医修館の内部
+                西芝の内部
             </h2>
             <div class="col-mg-10">
                 <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
@@ -84,16 +87,14 @@ layout:decorate="~{layouts/main}"
                 </div>
             </div>
         </div>
-    </div>    
-    <!-- image slide end -->    
+        <!-- image slide end -->
 
-    <!-- table info start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
+        <!-- table info start -->
+        <div class="container">
             <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.3s">
                 <h2 class="mb-4 text-center">
                     <i class="fa-solid fa-circle-dot" style="color:green;"></i>
-                    埼玉｜医修館の概要
+                    西芝の概要
                 </h2>
                 <div id="tableInfo" class="col-mg-10">
                     <div class="row">
@@ -123,11 +124,9 @@ layout:decorate="~{layouts/main}"
                 </div>
             </div>
         </div>
-    </div>        
-    <!-- table info end -->
+        <!-- table info end -->
 
-    <!-- access start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <!-- access start -->
         <div class="container">
             <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.4s">
                 <h2 class="text-center">
@@ -143,8 +142,10 @@ layout:decorate="~{layouts/main}"
                 <!-- google-map end -->
             </div>
         </div>
+        <!-- access end -->
+
     </div>
-    <!-- access end -->
+
 </div>
 
 </html>

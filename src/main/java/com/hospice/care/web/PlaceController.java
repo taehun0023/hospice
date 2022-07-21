@@ -26,4 +26,10 @@ public class PlaceController {
         return "place/placeTokyo";
     }
 
+    @GetMapping(value = "/placeNishiba")
+    public String placeNishiba(){
+        System.out.println("/place/placeNishiba");
+        return "place/placeNishiba";
+    }
+
 }
