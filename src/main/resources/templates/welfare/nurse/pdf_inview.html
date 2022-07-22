@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="euc-jp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <div class="edit_popup">
+        <ul class="popup_con">
+            <iframe src="/assets/img/test2.pdf" style="width:1340px;height:700px;" id="pdfPreview"></iframe>
+        </ul>
+        <div class="popup_btn_wrap">
+            <button type="button" class="cancel">닫기</button>
+        </div>
+    </div>
+<script type="text/javascript">
+$('.cancel').click(function(){
+    $('.pdf_popup_wrap').css('display','none');
+    $('body').css('overflow-y','visible');
+});
+</script>
+</html>

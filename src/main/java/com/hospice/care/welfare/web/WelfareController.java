@@ -38,6 +38,7 @@ public class WelfareController {
 
     @PostMapping(value = "pdfInview")
     public String pdfInview() {
-        return "test_inview";
+        return viewLocation + "nurse/pdf_inview";
     }
+
 }
