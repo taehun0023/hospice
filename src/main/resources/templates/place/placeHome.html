@@ -6,12 +6,11 @@ layout:decorate="~{layouts/main}"
 >
     <!-- index.html 고유 CSS 추가 -->
     <th:block layout:fragment="css">
-        <link rel="stylesheet" href="/assets/css/facility.css">
-        <link rel="stylesheet" href="/assets/css/place.css">
+        <link rel="stylesheet" href="/assets/css/place/place.css">
     </th:block>
     <!-- index.html 고유 스크립트 추가 -->
     <th:block layout:fragment="script">
-        <script type="text/javascript" src="/assets/js/map.js"></script>
+        <script type="text/javascript" src="/assets/js/place/map.js"></script>
     </th:block>
 
     <div layout:fragment="content" class="hospiceContent">
@@ -26,50 +25,52 @@ layout:decorate="~{layouts/main}"
         </div>
         <!-- Full Screen Search End -->
 
-
-        <!-- placeHome Start -->
-        <div class="container wow fadeInUp" data-wow-delay="0.1s">
-            
-            <!-- map-contents start -->
-            <div class="col-lg-12 row wow slideInUp" data-wow-delay="0.3s">
-                <!-- google-map start -->
-                <div class="col-lg-8">
-                    <div id="mapBox" class="cols-2" style="min-height: 350px; border:0;">
-                        <script
-                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM3EkIRxquQ5P4oVMeucj_UlVJCTO3-uA&callback=initMap&v=weekly"
-                        defer>
-                        </script>
-                    </div>
-                    <div>
-                        <button class="col-lg-1">
-                            <i class="fa-solid fa-chevrons-left" style="--fa-primary-opacity:0.7;"></i>
-                        </button>
-                    </div>
+        <!-- map-contents start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h1 class="mb-0">施設マップ</h1>
                 </div>
-                <!-- google-map end -->
-
-                <!-- map-info start -->
-                <div class="col-lg-4">
-                    <div id="mapInfo" class="p-4 cols-2" style="min-height: 350px; border:0; background-color: var(--lt-gray);">
-                        <div class="row mb-3" style="cursor: pointer;" onclick="location.href='https://www.google.co.jp/maps/dir//%E3%80%92101-0021+Tokyo,+Chiyoda+City,+Sotokanda,+5-ch%C5%8Dme%E2%88%922%E2%88%9211+%EC%84%B8%EC%9D%B4%ED%82%A4+%EC%A0%9C2%EB%B9%8C%EB%94%A9+2%E9%9A%8E/@35.7040555,139.7702527,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x60188c1e2f6307e3:0x27ad411d8c2a60fe!2m2!1d139.7724414!2d35.7040512?hl=ko'" id="info1">
-                            <i class="fa-solid fa-location-check" style="color:red;"></i>
-                            <h4>西芝</h4>
-                            <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
-                            
-                        </div>    
-                        <div class="row mb-3" style="cursor: pointer;" onclick="location.href='https://www.google.co.jp/maps/dir//383+Kamihiroya,+Tsurugashima,+Saitama+350-2203/@35.9391854,139.4178015,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6018d710bd4737b5:0x85124df463eb5d0b!2m2!1d139.4199902!2d35.9391811?hl=ko'" id="info2" >
-                            <i class="fa-solid fa-location-check" style="color:red;"></i>
-                            <h4>埼玉県｜医修館</h4>
-                            <p>埼玉県鶴ヶ島市上広谷383</p>
+                <div class="row g-5">
+                    <!-- google-map start -->
+                    <div class="col-lg-8">
+                        <div id="mapBox" class="cols-2" style="min-height: 350px; border:0;">
+                            <script
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM3EkIRxquQ5P4oVMeucj_UlVJCTO3-uA&callback=initMap&v=weekly"
+                            defer>
+                            </script>
                         </div>
                     </div>
-                </div>
-                <!-- map-info end -->
-            </div>
-            <!-- map-contents End -->
+                    <!-- google-map end -->
 
-            <!-- placeHome list Start -->
-            <div class="col-lg-12 py-5">
+                    <!-- map-info start -->
+                    <div class="col-lg-4">
+                        <div id="mapInfo" class="p-4 cols-2" style="min-height: 350px; border:0; background-color: var(--lt-gray);">
+                            <div class="row mb-3" style="cursor: pointer;" onclick="location.href='https://www.google.co.jp/maps/dir//%E3%80%92101-0021+Tokyo,+Chiyoda+City,+Sotokanda,+5-ch%C5%8Dme%E2%88%922%E2%88%9211+%EC%84%B8%EC%9D%B4%ED%82%A4+%EC%A0%9C2%EB%B9%8C%EB%94%A9+2%E9%9A%8E/@35.7040555,139.7702527,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x60188c1e2f6307e3:0x27ad411d8c2a60fe!2m2!1d139.7724414!2d35.7040512?hl=ko'" id="info1">
+                                <i class="fa-solid fa-location-check" style="color:red;"></i>
+                                <h4>西芝</h4>
+                                <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
+                                
+                            </div>    
+                            <div class="row mb-3" style="cursor: pointer;" onclick="location.href='https://www.google.co.jp/maps/dir//383+Kamihiroya,+Tsurugashima,+Saitama+350-2203/@35.9391854,139.4178015,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6018d710bd4737b5:0x85124df463eb5d0b!2m2!1d139.4199902!2d35.9391811?hl=ko'" id="info2" >
+                                <i class="fa-solid fa-location-check" style="color:red;"></i>
+                                <h4>埼玉県｜医修館</h4>
+                                <p>埼玉県鶴ヶ島市上広谷383</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- map-info end -->
+                </div>
+            </div>
+        </div>
+        <!-- map-contents End -->
+
+        <!-- placeHome list Start -->
+        <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                    <h1 class="mb-0">施設リスト</h1>
+                </div>
                 <div class="row g-5">
                     <!-- placeSaitama -->
                     <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s" onclick="location.href='/place/placeSaitama'" style="cursor: pointer;">
@@ -104,7 +105,7 @@ layout:decorate="~{layouts/main}"
                         </div>
                     </div>
                     <!-- placeYokohama -->
-                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s">
+                    <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0.4s" onclick="location.href=''" style="cursor: pointer;">
                         <a href="">
                             <div class="blog-item bg-light rounded overflow-hidden">
                                 <div class="blog-img position-relative overflow-hidden">
@@ -156,80 +157,8 @@ layout:decorate="~{layouts/main}"
                     </div>
                 </div>
             </div>
-            <!-- placeHome list End -->
-
         </div>
-        <!-- placeHome End -->
+        <!-- placeHome list End -->
+
     </div>
 </html>
-
-
-<script type="text/javascript">
-    
-    $(function() {
-        $("#inquiryA").click(function(){
-            location.href = '/#test';
-            mainInquiry();
-        });
-        
-    });
-
-    $('.thumb-nav').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: true,
-        centerPadding: '0px',
-        asNavFor: '.main-img-slider',
-        dots: false,
-        centerMode: false,
-        draggable: true,
-        speed:200,
-        focusOnSelect: true,
-        prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
-        nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'  
-    });
-
-    function officeTel(e) {
-        var tel = e.value;
-        $(".finderTel").text(tel);
-    }
-
-    function mainInquiry() {
-        var offset = $(".inquiry").offset(); //해당 위치 반환
-        $("html, body").animate({scrollTop: offset.top},500); 
-    }
-
-    /*--------------*/
-
-    // Initialise Carousel
-    const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-        Dots: false,
-    });
-
-    // Thumbnails
-    const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-        Sync: {
-            target: mainCarousel,
-            friction: 0,
-        },
-        Dots: false,
-        Navigation: false,
-        center: true,
-        slidesPerPage: 1,
-        infinite: false,
-    });
-
-    // Customize Fancybox
-    Fancybox.bind('[data-fancybox="gallery"]', {
-        Carousel: {
-            on: {
-            change: (that) => {
-                mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-                friction: 0,
-                });
-            },
-            },
-        },
-    });
-
-</script>
