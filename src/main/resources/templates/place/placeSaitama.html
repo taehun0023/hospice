@@ -8,16 +8,20 @@ layout:decorate="~{layouts/main}"
 <!-- index.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assets/css/welfare/facility.css">
 >>>>>>> master
     <link rel="stylesheet" href="/assets/css/place.css">
+=======
+    <link rel="stylesheet" href="/assets/css/place/place.css">
+>>>>>>> brkim2
 </th:block>
 <!-- index.html 고유 스크립트 추가 -->
 <th:block layout:fragment="script">
-    
+
 </th:block>
 
 <div layout:fragment="content" class="hospiceContent">
@@ -34,59 +38,74 @@ layout:decorate="~{layouts/main}"
 
     <!-- image slide start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        
-        <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.1s">
-            <h2 class="mb-4 text-center">
-                <i class="fa-solid fa-circle-dot" style="color:green;"></i>
-                埼玉｜医修館の内部
-            </h2>
-            <div class="col-mg-10">
-                <div id="mainCarousel" class="carousel w-10/12 max-w-5xl mx-auto">
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/1/900x600" data-fancybox="gallery" data-caption="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum lobortis ultricies ipsum, a maximus ligula dignissim in. Sed consectetur tellus egestas, consequat dolor at, tempus augue. Morbi quis ipsum quis velit.">
-                        <img src="https://lipsum.app/id/1/600x400" />
+        <div class="contaienr py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">西芝の内部</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-12">
+                    <div class="gallery-box">
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/blog-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="">
+                        </div>
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/blog-2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="">
+                        </div>
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/blog-3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="">
+                        </div>
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/carousel-1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="">
+                        </div>
                     </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/2/900x600" data-fancybox="gallery" data-caption="Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris">
-                        <img src="https://lipsum.app/id/2/600x400" />
+                    
+                    <div class="gallery-modal" id="gallery-modal">
+                        
+                        <div class="gallery-modal-content">
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 4</div>
+                                <img class="gallery-modal-img" src="/assets/img/blog-1.jpg" style="width:100%">
+                            </div>
+    
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 4</div>
+                                <img class="gallery-modal-img" src="/assets/img/blog-2.jpg" style="width:100%">
+                            </div>
+    
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 4</div>
+                                <img class="gallery-modal-img" src="/assets/img/blog-3.jpg" style="width:100%">
+                            </div>
+    
+                            <div class="mySlides">
+                                <div class="numbertext">4 / 4</div>
+                                <img class="gallery-modal-img" src="/assets/img/carousel-1.jpg" style="width:100%">
+                            </div>
+    
+                            <!-- Next/previous controls -->
+                            <a class="gallery-modal-prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="gallery-modal-next" onclick="plusSlides(1)">&#10095;</a>
+    
+                            <!-- Thumbnail image controls -->
+                            <div class="gallery-box-modal-item">
+                                <img class="gallery-box-thumbImg" src="/assets/img/blog-1.jpg" onclick="currentSlide(1)" alt="img1">
+                            </div>
+                        
+                            <div class="gallery-box-modal-item">
+                                <img class="gallery-box-thumbImg" src="/assets/img/blog-2.jpg" onclick="currentSlide(2)" alt="img2">
+                            </div>
+                        
+                            <div class="gallery-box-modal-item">
+                                <img class="gallery-box-thumbImg" src="/assets/img/blog-3.jpg" onclick="currentSlide(3)" alt="img3">
+                            </div>
+                        
+                            <div class="gallery-box-modal-item">
+                                <img class="gallery-box-thumbImg" src="/assets/img/carousel-1.jpg" onclick="currentSlide(4)" alt="img4">
+                            </div>
+
+                            <span class="gallery-modal-close cursor" onclick="closeModal()">&times;</span>
+                        </div>    
                     </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/3/900x600" data-fancybox="gallery" data-caption="Hello 🖐">
-                        <img src="https://lipsum.app/id/3/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/4/900x600" data-fancybox="gallery" data-caption="Another caption">
-                        <img src="https://lipsum.app/id/4/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/5/900x600" data-fancybox="gallery">
-                        <img data-lazy-src="https://lipsum.app/id/5/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/6/900x600" data-fancybox="gallery">
-                        <img src="https://lipsum.app/id/6/600x400" />
-                    </div>
-                    <div class="carousel__slide" data-src="https://lipsum.app/id/7/900x600" data-fancybox="gallery">
-                        <img src="https://lipsum.app/id/7/600x400" />
-                    </div>
-                </div>
-                
-                <div id="thumbCarousel" class="carousel max-w-xl mx-auto">
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/1/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/2/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/3/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/4/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/5/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/6/100x100" />
-                    </div>
-                    <div class="carousel__slide">
-                        <img class="panzoom__content" src="https://lipsum.app/id/7/100x100" />
-                    </div> 
                 </div>
             </div>
         </div>
@@ -94,37 +113,32 @@ layout:decorate="~{layouts/main}"
     <!-- image slide end -->    
 
     <!-- table info start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
         <div class="container py-5">
-            <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.3s">
-                <h2 class="mb-4 text-center">
-                    <i class="fa-solid fa-circle-dot" style="color:green;"></i>
-                    埼玉｜医修館の概要
-                </h2>
-                <div id="tableInfo" class="col-mg-10">
-                    <div class="row">
-                        <div class="infoT infoT1">
-                            <div class="infoT-Header">ホスピスケア住宅<br>医修館鶴ヶ島</div>
-                            <div class="infoT-body">
-                                <div class="infoT-body">埼玉県鶴ヶ島市上広谷383</div>
-                                <div class="infoT-body">call</div>
-                            </div>  
-                        </div>
-                        <div class="infoT infoT2">
-                            <div class="infoT-Header">建物</div>
-                            <div>
-                                <div class="infoT-body">開設年・月:2022年</div>
-                                <div class="infoT-body">階数4階建</div>
-                                <div class="infoT-body">鉄筋コンクリート造</div>
-                            </div>
-                        </div>    
-                        <div class="infoT infoT3">
-                            <div class="infoT-Header">入居定員</div>
-                            <div>
-                                <div class="infoT-body">48名</div>
-                            <div class="infoT-body">現在:</div>
-                            </div>
-                        </div>
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">概要</h1>
+            </div>
+            <div class="row g-5" id="tableInfo">
+                <div class="col-lg-4 infoT infoT1">
+                    <div class="infoT-Header">ホスピスケア住宅<br>医修館鶴ヶ島</div>
+                    <div class="infoT-body">
+                        <div class="infoT-body">埼玉県鶴ヶ島市上広谷383</div>
+                        <div class="infoT-body">call</div>
+                    </div>  
+                </div>
+                <div class="col-lg-4 infoT infoT2">
+                    <div class="infoT-Header">建物</div>
+                    <div>
+                        <div class="infoT-body">開設年・月:2022年</div>
+                        <div class="infoT-body">階数4階建</div>
+                        <div class="infoT-body">鉄筋コンクリート造</div>
+                    </div>
+                </div>    
+                <div class="col-lg-4 infoT infoT3">
+                    <div class="infoT-Header">入居定員</div>
+                    <div>
+                        <div class="infoT-body">48名</div>
+                    <div class="infoT-body">現在:</div>
                     </div>
                 </div>
             </div>
@@ -133,20 +147,29 @@ layout:decorate="~{layouts/main}"
     <!-- table info end -->
 
     <!-- access start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-5 wow slideInUp mb-5" data-wow-delay="0.4s">
-                <h2 class="text-center">
-                    <i class="fa-solid fa-circle-dot" style="color:green;"></i>
-                    アクセス
-                </h2>
-                
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">アクセス</h1>
+            </div>
+            <div class="row g-5">
                 <!-- google-map start -->
-                <div class="col-mg-10">
+                <div class="col-lg-8">
                     <div id="mapBox" class="align-items-center col-mg-12" style="min-height: 350px; border:0;">
                     </div>
                 </div>
                 <!-- google-map end -->
+                <!-- map-info start -->
+                <div class="col-lg-4">
+                    <div class="p-4 bg-light" style="min-height: 350px; border:0;">
+                        <div class="row">
+                            <button style="border-style: none; background-color: var(--bg-light);">
+                                <i class="fa-solid fa-map-location-dot" style="color: var(--primary); "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- map-info end -->
             </div>
         </div>
     </div>
@@ -179,70 +202,51 @@ layout:decorate="~{layouts/main}"
 </script>
 
 <script type="text/javascript">
-$(function() {
-    $("#inquiryA").click(function(){
-        location.href = '/#test';
-        mainInquiry();
+    $(function() {
+        $("#inquiryA").click(function(){
+            location.href = '/#test';
+            mainInquiry();
+        });
+        
     });
-    
-});
 
-$('.thumb-nav').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    infinite: true,
-    centerPadding: '0px',
-    asNavFor: '.main-img-slider',
-    dots: false,
-    centerMode: false,
-    draggable: true,
-    speed:200,
-    focusOnSelect: true,
-    prevArrow: '<div class="slick-prev"><i class="i-prev"></i><span class="sr-only sr-only-focusable">Previous</span></div>',
-    nextArrow: '<div class="slick-next"><i class="i-next"></i><span class="sr-only sr-only-focusable">Next</span></div>'  
-});
+    // Open the Modal
+    function openModal() {
+        document.getElementById("gallery-modal").style.display = "block";
+    }
 
-function officeTel(e) {
-    var tel = e.value;
-    $(".finderTel").text(tel);
-}
+    // Close the Modal
+    function closeModal() {
+        document.getElementById("gallery-modal").style.display = "none";
+    }
 
-function mainInquiry() {
-    var offset = $(".inquiry").offset(); //해당 위치 반환
-    $("html, body").animate({scrollTop: offset.top},500); 
-}
+    var slideIndex = 1;
+        showSlides(slideIndex);
 
-/*--------------*/
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
 
-// Initialise Carousel
-const mainCarousel = new Carousel(document.querySelector("#mainCarousel"), {
-    Dots: false,
-});
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
 
-// Thumbnails
-const thumbCarousel = new Carousel(document.querySelector("#thumbCarousel"), {
-    Sync: {
-        target: mainCarousel,
-        friction: 0,
-    },
-    Dots: false,
-    Navigation: false,
-    center: true,
-    slidesPerPage: 1,
-    infinite: false,
-});
-
-// Customize Fancybox
-Fancybox.bind('[data-fancybox="gallery"]', {
-    Carousel: {
-        on: {
-        change: (that) => {
-            mainCarousel.slideTo(mainCarousel.findPageForSlide(that.page), {
-            friction: 0,
-            });
-        },
-        },
-    },
-});
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("gallery-box-thumbImg");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
 
 </script>
