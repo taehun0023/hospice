@@ -3,7 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.hospice.care.model.dao.InquiryMapper">
+<mapper namespace="com.hospice.care.model.dao.WelfareMapper">
 
 	<!-- <resultMap type="FileDTO" id="FileVOResultMap">
 		<result property="fileUID" column="FILE_UID"/>
@@ -18,7 +18,7 @@
 		<result property="thumbImg" column="THUMB_IMG"/>
 		<result property="sort" column="SORT"/>
 	</resultMap> -->
-    <select id="getAllDataList" resultType="com.hospice.care.model.dto.InquiryDto">
+    <select id="getAllDataList" resultType="InquiryDto">
         SELECT * FROM InquiryDto;
     </select>
 

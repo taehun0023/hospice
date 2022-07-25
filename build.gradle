@@ -26,7 +26,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
-	runtimeOnly 'mysql:mysql-connector-java:8.0.25'
+	runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'mysql:mysql-connector-java:8.0.15'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation group: 'nz.net.ultraq.thymeleaf', name: 'thymeleaf-layout-dialect', version: '3.0.0'
 }
 
