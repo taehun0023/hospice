@@ -1,4 +1,4 @@
-package com.hospice.care.web;
+package com.hospice.care.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
