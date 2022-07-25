@@ -1,0 +1,296 @@
+:root{
+    --lt-gray:#eceff1;
+}
+
+
+
+
+
+/* google-map */
+#mapBox{
+    margin: auto;
+}
+
+
+
+
+
+/* table info */
+#tableInfo {
+    margin: auto;
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    zoom: 1;
+    justify-content: space-around;
+
+}
+
+/* #tableInfo:before, #tableInfo:after {
+    content: "";
+    display: table
+}
+
+#tableInfo:after {
+    clear: both
+} */
+
+.infoT {
+    font: 13px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;     
+    background: #fff;      
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 20px;
+    width: 300px;
+    float: left;
+    display: inline; /* IE6 double margin fix */
+    position: relative;
+    margin: 0 5px;
+    -moz-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+    box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
+    border-radius: 10px;    
+}
+
+.infoT:after {
+    z-index: -1; 
+    position: relative; 
+    content: "";
+    bottom: 10px;
+    right: 4px;
+    width: 80%; 
+    top: 80%; 
+    -webkit-box-shadow: 0 12px 5px rgba(0, 0, 0, .3);   
+    -moz-box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 12px 5px rgba(0, 0, 0, .3);
+    -webkit-transform: rotate(3deg);    
+    -moz-transform: rotate(3deg);   
+    -o-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    border-radius: 10px;  
+} 
+
+.infoT-Header {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: -20px -20px 20px -20px;
+    border-bottom: 8px solid;
+    background-color: #eee;
+    border-radius: 10px;
+    height: 100px;
+    /* background-image: -moz-linear-gradient(#fff,#eee);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));    
+    background-image: -webkit-linear-gradient(#fff, #eee);
+    background-image: -o-linear-gradient(#fff, #eee);
+    background-image: -ms-linear-gradient(#fff, #eee);
+    background-image: linear-gradient(#fff, #eee); */
+}
+
+/* .infoT-Header:after {
+    position: relative;
+    bottom: -8px; left: 0;
+    height: 3px; width: 100%;
+    content: '';
+} */
+
+.infoT1 .infoT-Header{
+    border-bottom-color: #B3E03F;
+    padding: 15px;
+}
+
+.infoT2 .infoT-Header{
+    border-bottom-color: #7BD553;
+    padding: 30px;
+}
+
+.infoT3 .infoT-Header{
+    border-bottom-color: #3AD5A0;
+    padding: 30px;
+}
+
+.infoT-body{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+/* gallery_box */
+
+
+.gallery-box{
+    margin: 0;
+    padding: auto;
+    width: fit-content;
+    display: flex;
+    position: relative;
+    justify-items: center;
+    
+}
+
+.gallery-box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.gallery-box-item {
+    margin: 0;
+    float: left;
+    width: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+}
+
+.gallery-box-item>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* The Modal (background) */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    overflow: unset;
+    background-color: black;
+    vertical-align: middle;
+}
+
+/* Modal Content */
+.gallery-modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 50%;
+    max-width: 1200px;
+}
+
+.gallery-box-modal-item{
+    float: left;
+    width: 25%;
+}
+
+.gallery-box-modal-item>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* The Close Button */
+.gallery-modal-close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.gallery-modal-close:hover,
+.gallery-modal-close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.gallery-modal-prev,
+.gallery-modal-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.gallery-modal-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.gallery-modal-prev:hover,
+.gallery-modal-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.gallery-modal-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.gallery-box-thumbImg {
+    opacity: 0.6;
+    object-fit: cover;
+}
+
+.active,
+.gallery-box-thumbImg:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* @media (max-width:992px){
+    #mapBox{width:}
+}
+
+@media (min-width:576px){
+    #mapBox{}
+} */
+
