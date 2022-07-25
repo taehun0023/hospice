@@ -49,8 +49,7 @@ layout:decorate="~{layouts/main}"
                         </div>
                     </div>
                     
-                    <div class="gallery-modal" id="gallery-modal">
-                        
+                    <div class="gallery-modal" id="gallery-modal" onclick="closeModal();">
                         <div class="gallery-modal-content">
                             <div class="mySlides">
                                 <div class="numbertext">1 / 4</div>
@@ -92,8 +91,6 @@ layout:decorate="~{layouts/main}"
                             <div class="gallery-box-modal-item">
                                 <img class="gallery-box-thumbImg" src="/assets/img/carousel-1.jpg" onclick="currentSlide(4)" alt="img4">
                             </div>
-
-                            <span class="gallery-modal-close cursor" onclick="closeModal()">&times;</span>
                         </div>    
                     </div>
                 </div>
@@ -207,7 +204,9 @@ layout:decorate="~{layouts/main}"
 
     // Close the Modal
     function closeModal() {
-        document.getElementById("gallery-modal").style.display = "none";
+        if(event.target==document.getElementById("gallery-modal")){
+            document.getElementById("gallery-modal").style.display = "none";
+        }
     }
 
     var slideIndex = 1;
