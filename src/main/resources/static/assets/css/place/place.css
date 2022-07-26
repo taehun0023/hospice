@@ -1,6 +1,9 @@
+
 :root{
     --lt-gray:#eceff1;
     --lt-blue:#e3f2fd;
+    --lm-blue:#64b5f6;
+
 }
 
 
@@ -10,6 +13,24 @@
 /* google-map */
 #mapBox{
     margin: auto;
+}
+
+#mapInfo{
+    min-height: 350px;
+    border:0;
+    background-color: var(--lt-gray);
+}
+
+#mapInfo>.mapInfoList{
+    cursor: pointer;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+#mapInfo>.mapInfoList:hover{
+    cursor: pointer;
+    background-color:  var(--lm-blue);
+    color: #eee;
 }
 
 #singleMapBox{
@@ -164,11 +185,13 @@
 .gallery-box{
     margin: auto;
     padding: auto;
-    width: 100%;
+    width: fit-content;
     display: flex;
     position: relative;
     justify-items: center;
     flex : 0 0 auto;
+    justify-content: space-around;
+
     
 }
 
@@ -186,6 +209,8 @@
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
+    display: flex;
+    flex : 0 0 auto;
 }
 
 .gallery-box-item>img {
