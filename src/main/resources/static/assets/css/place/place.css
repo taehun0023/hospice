@@ -1,5 +1,6 @@
 :root{
     --lt-gray:#eceff1;
+    --lt-blue:#e3f2fd;
 }
 
 
@@ -11,8 +12,43 @@
     margin: auto;
 }
 
+#singleMapBox{
+    margin: auto;
 
+}
 
+.singleMapBox-info{
+    min-height: 350px;
+    border:none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--lt-blue);
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.singleMapBtn{
+    padding: 10px;
+    border: none;
+    background-color: var(--lt-blue);
+    display: flex;
+    float: left;
+    flex: 30%;
+    justify-content: center;
+}
+
+.singleMapBtn:hover{
+    background-color: yellow;
+}
+
+.singleMapBox-info>h2{
+    padding: 10px;
+    display: flex;
+    float: left;
+    flex: 70%;
+}
 
 
 /* table info */
@@ -126,12 +162,13 @@
 
 
 .gallery-box{
-    margin: 0;
+    margin: auto;
     padding: auto;
-    width: fit-content;
+    width: 100%;
     display: flex;
     position: relative;
     justify-items: center;
+    flex : 0 0 auto;
     
 }
 
