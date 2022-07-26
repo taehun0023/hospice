@@ -14,6 +14,7 @@ layout:decorate="~{layouts/main}"
 </th:block>
 
 <div layout:fragment="content" class="hospiceContent">
+    <div class="pdf_popup_wrap"></div>
     <!-- Full Screen Search Start -->
     <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
         <div class="row py-5">
@@ -40,6 +41,7 @@ layout:decorate="~{layouts/main}"
             </div>
         </div>
     </section>
+    
     <section id="service" class="wow fadeInUp">
         <div class="container">
             <div class="row">
@@ -52,6 +54,7 @@ layout:decorate="~{layouts/main}"
                         <i class="fa fa-minus" aria-hidden="true"></i>
                         </div>
                         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. <br>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                        <a href="javascript:;" onclick="pdfInview()">월간 프로그램 보기</a>
                     </div>
                 </div>
             </div>
@@ -145,6 +148,7 @@ layout:decorate="~{layouts/main}"
         </div>
     </div>
     </section><!--/END SERVICE AREA--> 
+    
 </div>
 </html>
 
@@ -155,7 +159,15 @@ $(function() {
         mainInquiry();
     });
     
-
 });
 
+function pdfInview () {
+    $.post("/welfare/pdfInview", function(data){
+        $(".pdf_popup_wrap").html(data);
+    });
+    event.preventDefault();
+    event.stopPropagation();
+    $('.pdf_popup_wrap').css('display','flex');
+    $('body').css('overflow-y','hidden');
+}
 </script>
