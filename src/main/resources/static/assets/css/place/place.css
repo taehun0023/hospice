@@ -33,6 +33,16 @@
     color: #eee;
 }
 
+.iframeMap-wrapper{
+    max-width: 700px;
+    border: 0;
+}
+
+/* .iframeMap{
+    width:100%;
+
+} */
+
 .singleMap{
     display: flex;
     max-width: 100%;
