@@ -33,21 +33,32 @@
     color: #eee;
 }
 
-#singleMapBox{
-    margin: auto;
+.singleMap{
+    display: flex;
+    max-width: 100%;
+    margin: 0;
 
+    justify-content: center;
+}
+
+#singleMapBox{
+    min-height: 350px;
+    margin: 0;
+    border: 0;
+    position: relative;
+    display: flex;
 }
 
 .singleMapBox-info{
     min-height: 350px;
     border:none;
     margin: 0;
-    width: 100%;
     height: auto;
     background-color: var(--lt-blue);
     padding: 20px;
     display: flex;
-    align-items: flex-start;
+
+    position: relative;
 }
 
 .singleMapBtn{

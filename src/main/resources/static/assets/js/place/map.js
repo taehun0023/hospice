@@ -1,5 +1,6 @@
 // google-map
 // Initialize and add the map
+let map;
 function initMap() {
     // The map, centered at myLatLng
     const map = new google.maps.Map(document.getElementById("mapBox"), {

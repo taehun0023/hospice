@@ -138,14 +138,13 @@ layout:decorate="~{layouts/main}"
                 <h1 class="mb-0">アクセス</h1>
             </div>
             <div class="row g-5">
-                <!-- google-map start -->
-                <div class="col-lg-7">
-                    <div id="singleMapBox" class="align-items-center col-mg-12" style="min-height: 350px; border:0;">
-                    </div>
+                <div class="col-lg-8">
+                    <!-- google-map start -->
+                    <div id="singleMapBox" class=""></div>
+                    <!-- google-map end -->
                 </div>
-                <!-- google-map end -->
                 <!-- map-info start -->
-                <div class="col-lg-5">
+                <div class="col-lg-4">
                     <div class="singleMapBox-info">
                         <button class="singleMapBtn">
                             <i class="fa-solid fa-map-location-dot" style="color: var(--primary); font-size: 2em; "></i>
@@ -154,6 +153,7 @@ layout:decorate="~{layouts/main}"
                     </div>
                 </div>
                 <!-- map-info end -->
+                
             </div>
         </div>
     </div>
@@ -165,6 +165,7 @@ layout:decorate="~{layouts/main}"
 <script>
     // google-map
     // Initialize and add the map
+    let map;
     function initSingleMap() {
         // The map, centered at myLatLng
         const map = new google.maps.Map(document.getElementById("singleMapBox"), {
