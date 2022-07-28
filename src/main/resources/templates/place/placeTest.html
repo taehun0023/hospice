@@ -32,22 +32,46 @@ layout:decorate="~{layouts/main}"
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h1 class="mb-0">testの内部</h1>
             </div>
-            <div class="row g-5">
-                <div class="gallery-box mt-5">
-                    <div class="gallery-box-item">
-                        <img src="/assets/img/blog-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="">
-                    </div>
-                    <div class="gallery-box-item">
-                        <img src="/assets/img/blog-2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="">
-                    </div>
-                    <div class="gallery-box-item">
-                        <img src="/assets/img/blog-3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="">
-                    </div>
-                    <div class="gallery-box-item">
-                        <img src="/assets/img/carousel-1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="">
+            <!-- gallery-box start-->
+            <div class="row g-5" id="gallery-box">
+                <!-- video start -->
+                <div class="col-lg-6 mb-3 mt-3" >
+                    <div class="video-box" >
+                        <video controls="controls" preload="auto" muted="muted" id="video-box-item" loop="loop">
+                            <source src="/assets/img/place/testVideo-1.mp4" type="video/mp4"/>
+                        </video>
                     </div>
                 </div>
-                
+                <!-- video  end-->
+                <!-- gallery-item start -->
+                <div class="col-lg-6 row">
+                    <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/blog-1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/blog-2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/blog-3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-3">
+                        <div class="gallery-box-item">
+                            <img src="/assets/img/carousel-1.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- gallery-item end -->
+            </div>
+            <!-- gallery-box end-->
+            
+            <!-- gallery-modal start-->
+            <div class="row g-5">
                 <div class="gallery-modal" id="gallery-modal" onclick="closeModal();">
                     <div class="gallery-modal-content">
                         <div class="mySlides">
@@ -93,12 +117,13 @@ layout:decorate="~{layouts/main}"
                     </div>    
                 </div>
             </div>
+            <!-- gallery-modal end-->
         </div>
     </div>    
     <!-- image slide end -->    
 
     <!-- table info start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h1 class="mb-0">概要</h1>
@@ -132,19 +157,19 @@ layout:decorate="~{layouts/main}"
     <!-- table info end -->
 
     <!-- access start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
                 <h1 class="mb-0">アクセス</h1>
             </div>
             <div class="row g-5">
-                <div class="iframeMap-wrapper">
+                <div class="col-lg-6">
                     <!-- google-map start -->
-                    <iframe class="iframeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.3183676296226!2d139.4178015151191!3d35.93918108013496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018d710bd4737b5%3A0x85124df463eb5d0b!2s383%20Kamihiroya%2C%20Tsurugashima%2C%20Saitama%20350-2203!5e0!3m2!1sko!2sjp!4v1658906231490!5m2!1sko!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="iframeMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3230.3183676296226!2d139.4178015151191!3d35.93918108013496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018d710bd4737b5%3A0x85124df463eb5d0b!2s383%20Kamihiroya%2C%20Tsurugashima%2C%20Saitama%20350-2203!5e0!3m2!1sko!2sjp!4v1658906231490!5m2!1sko!2sjp" width="100%" height="350" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <!-- google-map end -->
                 </div>
                 <!-- map-info start -->
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <div class="singleMapBox-info">
                         <button class="singleMapBtn">
                             <i class="fa-solid fa-map-location-dot" style="color: var(--primary); font-size: 2em; "></i>
