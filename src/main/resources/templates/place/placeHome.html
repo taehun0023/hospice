@@ -46,17 +46,18 @@ layout:decorate="~{layouts/main}"
 
                     <!-- map-info start -->
                     <div class="col-lg-4">
-                        <div id="mapInfo" class="p-4" >
-                            <div class="row mb-3 mapInfoList"  onclick="location.href='https://www.google.co.jp/maps/dir//%E3%80%92101-0021+Tokyo,+Chiyoda+City,+Sotokanda,+5-ch%C5%8Dme%E2%88%922%E2%88%9211+%EC%84%B8%EC%9D%B4%ED%82%A4+%EC%A0%9C2%EB%B9%8C%EB%94%A9+2%E9%9A%8E/@35.7040555,139.7702527,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x60188c1e2f6307e3:0x27ad411d8c2a60fe!2m2!1d139.7724414!2d35.7040512?hl=ko'" id="info1">
-                                <i class="fa-solid fa-location-check" style="color:red;"></i>
-                                <h4>西芝</h4>
-                                <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
-                                
+                        <div id="mapInfo">
+                            <div class="row mapInfoList"  onclick="window.open('http://nishiba.jp/')" id="info1">
+                                <div class="mapInfoList-text">
+                                    <h4><i class="fa-solid fa-globe" style="color: var(--lm-blue);"></i> 西芝</h4>
+                                    <p>東京都千代田区外神田五丁目2番11号 セイキ第2ビル2階</p>
+                                </div>
                             </div>    
-                            <div class="row mb-3 mapInfoList"  onclick="location.href='https://www.google.co.jp/maps/dir//383+Kamihiroya,+Tsurugashima,+Saitama+350-2203/@35.9391854,139.4178015,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6018d710bd4737b5:0x85124df463eb5d0b!2m2!1d139.4199902!2d35.9391811?hl=ko'" id="info2" >
-                                <i class="fa-solid fa-location-check" style="color:red;"></i>
-                                <h4>埼玉県｜医修館</h4>
-                                <p>埼玉県鶴ヶ島市上広谷383</p>
+                            <div class="row mapInfoList"  onclick="window.open('https://goo.gl/maps/aKcgR8th7dAVN5178')" id="info2" >
+                                <div class="mapInfoList-text">
+                                    <h4><i class="fa-solid fa-globe" style="color: var(--lm-blue);"></i> 埼玉県｜医修館</h4>
+                                    <p>埼玉県鶴ヶ島市上広谷383</p>
+                                </div>
                             </div>
                         </div>
                     </div>
