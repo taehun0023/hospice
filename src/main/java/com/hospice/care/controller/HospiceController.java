@@ -43,4 +43,16 @@ public class HospiceController {
         return "information/greetings";
     }
 
+    @GetMapping(value = "/team")
+    public String team() {
+        return "information/team";
+    }
+
+    @GetMapping(value = "team/team")
+    public String team2() {
+        return "information/team";
+    }
+
+
+
 }
