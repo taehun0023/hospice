@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hospice.care.model.dao.InquiryMapper">
+
+	<resultMap type="InquiryDto" id="InquiryDtoResultMap">
+		<result property="inqUID" column="INQ_UID"/>
+		<result property="place" column="PLACE"/>
+		<result property="userName" column="USER_NAME"/>
+		<result property="userEmail" column="PHONE"/>
+		<result property="phone" column="USER_EMAIL"/>
+		<result property="ingMessage" column="INQ_MESSAGE"/>
+		<result property="inqDate" column="INQ_DATE"/>
+	</resultMap>
+
+    <insert id="insertInquiryDto" parameterType="InquiryDto">
+        INSERT INTO hospice_inquiry_user (
+			PLACE,
+			USER_NAME,
+			USER_EMAIL,
+			PHONE,
+			INQ_MESSAGE,
+			INQ_DATE	
+		) VALUES (
+			#{place},
+			#{userName},
+			#{userEmail},
+			#{phone},
+			#{ingMessage},
+			#{inqDate}
+		)
+    </insert>
+
+</mapper>

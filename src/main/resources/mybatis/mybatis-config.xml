@@ -6,8 +6,6 @@
         <typeAlias alias="InquiryDto" type="com.hospice.care.model.dto.InquiryDto"/>
     </typeAliases>
     <mappers>
-        <mapper resource="WelfareMapper.xml"/>
-
-        <mapper resource="TestMapper.xml"/>
+        <mapper resource="InquiryMapper.xml"/>
     </mappers>
 </configuration>
