@@ -129,7 +129,6 @@
         $(".email-signup").delay(100).fadeIn(100);
         $("#login-box-link").removeClass("active");
         $("#signup-box-link").addClass("active");
-        e.preventDefault();
     });
     
     $("#login-box-link").click(function(){
@@ -137,7 +136,6 @@
         $(".email-signup").fadeOut(100);
         $("#login-box-link").addClass("active");
         $("#signup-box-link").removeClass("active");
-        e.preventDefault();
     });
 })(jQuery);
 

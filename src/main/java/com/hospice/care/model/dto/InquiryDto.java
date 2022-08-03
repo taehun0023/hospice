@@ -12,9 +12,9 @@ import lombok.Setter;
 public class InquiryDto {
     private int inqUID;
     private String place;
-    private String name;
+    private String userName;
+    private String userEmail;
     private String phone;
-    private String email;
-    private String message;
+    private String ingMessage;
     private String inqDate;
 }

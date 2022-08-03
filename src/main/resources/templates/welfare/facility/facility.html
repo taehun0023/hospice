@@ -213,7 +213,6 @@ $(function() {
     facilityFancybox();
     
 });
-
 function typeSelect(e) {
     var typeCheck = $(e).attr("id");
     $.post('/welfare/typeInview', {typeCheck:typeCheck}, function(data){
@@ -221,7 +220,6 @@ function typeSelect(e) {
         $('.facility_fancy_box_wrap').html(data);
     });
 }
-
 // ---------Responsive-navbar-active-animation-----------
 function navbarActive(){
 	var tabsNewAnim = $('#facility-SupportedContent');
