@@ -10,27 +10,56 @@
 
 
 
+
 /* google-map */
 #mapBox{
     margin: auto;
+
+    border-radius: 10px;
 }
 
 #mapInfo{
     min-height: 350px;
-    border:0;
-    background-color: var(--lt-gray);
+    border:3px solid var(--lt-blue);
+
+    border-radius: 10px;
+
+    margin: 0;
+    padding: 0;
 }
 
 #mapInfo>.mapInfoList{
     cursor: pointer;
-    padding-top: 10px;
     border-radius: 10px;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    height: 100%;
 }
 
-#mapInfo>.mapInfoList:hover{
+.mapInfoList:hover{
     cursor: pointer;
-    background-color:  var(--lm-blue);
-    color: #eee;
+    
+    background-color: var(--lm-blue);
+    color: white;
+
+}
+
+.mapInfoList-text{
+    padding-top: 10px;
+}
+
+.iframeMap-wrapper{
+    max-width: 700px;
+    border: 0;
+}
+
+.iframeMap{
+    border: 0;
+    border-radius: 10px;
+
 }
 
 .singleMap{
@@ -58,6 +87,7 @@
     padding: 20px;
     display: flex;
 
+    border-radius: 10px;
     position: relative;
 }
 
@@ -83,13 +113,16 @@
 }
 
 
+
+
+
 /* table info */
 #tableInfo {
     margin: auto;
     display: flex;
     position: relative;
     text-align: center;
-    width: fit-content;
+    width: 100%;
     zoom: 1;
     justify-content: space-around;
 
@@ -110,11 +143,12 @@
     border: 1px solid #ddd;
     color: #333;
     padding: 20px;
-    width: 300px;
+    width: 100%;
+    height: 100%;
     float: left;
     display: inline; /* IE6 double margin fix */
     position: relative;
-    margin: 0 5px;
+    margin: 0;
     -moz-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
     -webkit-box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
     box-shadow: 0 2px 2px -1px rgba(0,0,0,.3);
@@ -181,6 +215,12 @@
 }
 
 .infoT-body{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.infoT-body-item{
     font-size: 15px;
     padding-bottom: 10px;
 }
@@ -193,17 +233,41 @@
 /* gallery_box */
 
 
-.gallery-box{
-    margin: 0;
-    padding: auto;
+.video-box{
+    margin: auto;
     width: 100%;
     height: auto;
+
+    display: flex;
+    position: relative;
+
+    justify-content: space-around;
+    border-radius: 10px;
+
+}
+
+#video-box-item{
+    width:100%;
+    height:auto;
+    
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+#video-box-item:hover{
+    cursor: pointer;
+}
+
+#gallery-box{
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
     display: flex;
     position: relative;
 
     flex : 0 0 auto;
-    justify-content: center;
-
+    justify-content: space-around;
     
 }
 
@@ -217,17 +281,22 @@
 .gallery-box-item {
     margin: 0;
     float: left;
-    width: 25%;
+    width: 100%;
+    height: 100%;
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
     display: flex;
     flex : 0 0 auto;
+
+    border-radius: 10px;
 }
 
 .gallery-box-item>img {
     width: 100%;
     height: 100%;
+
+    border-radius: 10px;
 }
 
 
@@ -235,40 +304,39 @@
 .gallery-modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    margin: 0;
+    z-index: 9999;
     left: 0;
     top: 0;
-    padding-top: 100px;
+    /* padding-top: 100px; */
     width: 100%;
     height: 100%;
-    overflow: unset;
-    background-color: black;
+    overflow: visible;
+    background-color: rgba(0, 0, 0, .8);
     vertical-align: middle;
 }
 
 /* Modal Content */
 .gallery-modal-content {
     position: relative;
-    background-color: #fefefe;
+    /* background-color: rgba(0, 0, 0, .8); */
     margin: auto;
-    padding: 0;
-    width: 50%;
-    max-width: 1200px;
+    width: 70%;
+    height: 70%;
+    max-width: 992px;
+    padding-top: 50px;
 }
 
 .gallery-box-modal-item{
     float: left;
     width: 25%;
-}
+    height: 20%;
 
-.gallery-box-modal-item>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    padding-top: 10px;
 }
 
 /* The Close Button */
-.gallery-modal-close {
+/* .gallery-modal-close {
     color: white;
     position: absolute;
     top: 10px;
@@ -282,11 +350,15 @@
     color: #999;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 /* Hide the slides by default */
 .mySlides {
     display: none;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
 }
 
 /* Next & previous buttons */
@@ -296,11 +368,11 @@
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
-    margin-top: -50px;
+    padding: 4%;
+    margin-top: 15%;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1em;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -320,24 +392,29 @@
 }
 
 /* Number text (1/3 etc) */
-.numbertext {
+/* .numbertext {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
-}
+} */
 
 .gallery-modal-img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 
+    object-fit: cover;
 }
 
 .gallery-box-thumbImg {
     opacity: 0.6;
     object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
 }
 
 .active,
@@ -357,14 +434,24 @@ img.hover-shadow {
 
 
 
+@media screen and (max-width: 700px) {
+    .gallery-modal-content {
+        position: relative;
+        margin: auto;
+        width: 100%;
+        height: 50%;
 
+    }
 
-
-/* @media (max-width:992px){
-    #mapBox{width:}
+    .gallery-modal-img {
+        object-fit: contain;
+    }
 }
 
-@media (min-width:576px){
-    #mapBox{}
-} */
-
+@media screen and (min-width:1200px) {
+    .gallery-modal-content {
+        position: relative;
+        margin: auto;
+        width: 50%;
+    }
+}
