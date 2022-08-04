@@ -13,11 +13,12 @@ build/
 .settings
 .springBeans
 .sts4-cache
+application.properties
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 test.css
-test.pdf
+test.pdf    
 test.html
 test/
 
@@ -39,3 +40,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+**/application.properties
+src/main/resources/static/assets/css/place/place.css.rej

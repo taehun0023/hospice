@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http//www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layouts/main}"
+>
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" href="/assets/css/place/place.css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+
+</th:block>
+
+<div layout:fragment="content" class="hospiceContent">
+    <!-- Full Screen Search Start -->
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">施設探し</h1>
+                <h5 class="text-white">西芝</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+    <!-- image slide start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="contaienr py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">西芝の内部</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-mg-10">
+                    <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="testimonial-item bg-light my-4">
+                            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                                <img class="img-fluid rounded" src="/assets/img/carousel-1.jpg" style="height: 300px;" >
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light my-4">
+                            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                                <img class="img-fluid rounded" src="/assets/img/carousel-2.jpg" style="height: 300px;" >
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light my-4">
+                            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                                <img class="img-fluid rounded" src="/assets/img/team-1.jpg" style="height: 300px;" >
+                            </div>
+                        </div>
+                        <div class="testimonial-item bg-light my-4">
+                            <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                                <img class="img-fluid rounded" src="/assets/img/team-2.jpg" style="height: 300px;" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>    
+    <!-- image slide end -->    
+
+    <!-- table info start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">概要</h1>
+            </div>
+            <div class="row g-5" id="tableInfo">
+                <div class="col-lg-4 infoT infoT1">
+                    <div class="infoT-Header">ホスピスケア住宅<br>医修館鶴ヶ島</div>
+                    <div class="infoT-body">
+                        <div class="infoT-body">埼玉県鶴ヶ島市上広谷383</div>
+                        <div class="infoT-body">call</div>
+                    </div>  
+                </div>
+                <div class="col-lg-4 infoT infoT2">
+                    <div class="infoT-Header">建物</div>
+                    <div>
+                        <div class="infoT-body">開設年・月:2022年</div>
+                        <div class="infoT-body">階数4階建</div>
+                        <div class="infoT-body">鉄筋コンクリート造</div>
+                    </div>
+                </div>    
+                <div class="col-lg-4 infoT infoT3">
+                    <div class="infoT-Header">入居定員</div>
+                    <div>
+                        <div class="infoT-body">48名</div>
+                    <div class="infoT-body">現在:</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+    <!-- table info end -->
+
+    <!-- access start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.2s">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                <h1 class="mb-0">アクセス</h1>
+            </div>
+            <div class="row g-5">
+                <!-- google-map start -->
+                <div class="col-mg-10">
+                    <div id="mapBox" class="align-items-center col-mg-12" style="min-height: 350px; border:0;">
+                    </div>
+                </div>
+                <!-- google-map end -->
+            </div>
+        </div>
+    </div>
+    <!-- access end -->
+</div>
+
+</html>
+
+<script>
+
+    // google-map
+    // Initialize and add the map
+    function initMap() {
+        // The map, centered at myLatLng
+        const map = new google.maps.Map(document.getElementById("mapBox"), {
+            zoom: 15,
+            center: { lat: 35.93933743697428, lng: 139.4200116547968 },
+        });
+        
+        var marker = new google.maps.Marker({
+            position: { lat: 35.93933743697428, lng: 139.4200116547968 },map,
+        });
+    }
+    window.initMap = initMap;
+
+</script>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM3EkIRxquQ5P4oVMeucj_UlVJCTO3-uA&callback=initMap&v=weekly"
+    defer>
+</script>
