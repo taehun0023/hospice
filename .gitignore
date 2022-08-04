@@ -41,5 +41,5 @@ out/
 ### VS Code ###
 .vscode/
 
-application.properties
+**/application.properties
 src/main/resources/static/assets/css/place/place.css.rej
