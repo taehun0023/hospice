@@ -18,9 +18,8 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 test.css
-test.pdf    
 test.html
-test/
+
 
 ### IntelliJ IDEA ###
 .idea

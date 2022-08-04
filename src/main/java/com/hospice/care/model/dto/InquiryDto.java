@@ -15,6 +15,7 @@ public class InquiryDto {
     private String userName;
     private String userEmail;
     private String phone;
-    private String ingMessage;
+    private String inqContent;
+    private String inqMessage;
     private String inqDate;
 }

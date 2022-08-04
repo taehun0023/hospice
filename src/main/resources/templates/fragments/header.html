@@ -3,7 +3,7 @@
 
 <!-- Navbar & Carousel Start -->
 <div th:fragment="header" class="body-wrapper">
-<header>
+<header id="header">
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
@@ -13,7 +13,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="margin-right: 70px;">
                 <div class="navbar-nav ms-auto py-0">
                     <div class="nav-item dropdown">
                         <a href="/welfare/facility" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">サービス案内</a>
@@ -24,7 +24,8 @@
                         </div>
                     </div>
                     <a href="/place/placeHome" class="nav-item nav-link">施設探し</a>
-                    <a href="javascript:;" id="inquiryA" class="nav-item nav-link">お問い合わせ</a>
+                    <a href="/#inquiryA" id="inquiryA" class="nav-item nav-link">お問い合わせ</a>
+                    <a href="/#moveInA" id="moveInA" class="nav-item nav-link">入居流れ</a>
                     <a href="/contact" class="nav-item nav-link">採用広告</a>
                     <div class="nav-item dropdown">
                         <a href="/facility" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">会社概要</a>
@@ -33,66 +34,6 @@
                             <a href="/information" class="dropdown-item">情報</a>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="/facility" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">회원가입</a>
-                        <div class="dropdown-menu m-0 login-box" aria-labelledby="dropdownMenuOffset">
-                            <div class="lb-header">
-                                <a href="javascript:;" class="active" id="login-box-link">Login</a>
-                                <a href="javascript:;" id="signup-box-link">Sign Up</a>
-                            </div>
-                            <div class="social-login">
-                                <a href="javascript:;">
-                                    <i class="fab fa-facebook fa-lg"></i>
-                                </a>
-                                <a href="javascript:;">
-                                    <i class="fab fa-google-plus fa-lg"></i>
-                                </a>
-                            </div>
-                            <form class="email-login">
-                                <div class="u-form-group">
-                                    <input type="email" placeholder="Email"/>
-                                </div>
-                                <div class="u-form-group">
-                                    <input type="password" placeholder="Password"/>
-                                </div>
-                                <div class="u-form-group">
-                                    <button>Log in</button>
-                                </div>
-                                <div class="u-form-group">
-                                    <a href="#" class="forgot-password">Forgot password?</a>
-                                </div>
-                            </form>
-                            <form class="email-signup">
-                                <div class="u-form-group">
-                                    <input type="email" placeholder="Email"/>
-                                </div>
-                                <div class="u-form-group">
-                                    <input type="password" placeholder="Password"/>
-                                </div>
-                                <div class="u-form-group">
-                                    <input type="password" placeholder="Confirm Password"/>
-                                </div>
-                                <div class="u-form-group">
-                                    <button>Sign Up</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-2 top-social text-center text-md-right">
-                    <ul class="list-unstyled">
-                    <li>
-                        <a class="sns" title="Facebook" href="https://facebbok.com/themefisher.com">
-                            <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-                        </a>
-                        <a class="sns" title="Twitter" href="https://twitter.com/themefisher.com">
-                            <span class="social-icon"><i class="fab fa-twitter"></i></span>
-                        </a>
-                        <a class="sns" title="Instagram" href="https://instagram.com/themefisher.com">
-                            <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                        </a>
-                    </li>
-                    </ul>
                 </div>
             </div>
         </nav>
