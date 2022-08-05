@@ -24,7 +24,10 @@
                             <input type="text" id="phone" class="form-control bg-light border-0" th:value="${inquriyDto.phone}"style="height: 55px;" readonly>
                         </div>
                         <div class="col-12">
-                            <textarea id="ingMessage" class="form-control bg-light border-0" rows="3" th:text="${inquriyDto.ingMessage}" readonly="readonly"></textarea>
+                            <input type="text" id="inqContent" class="form-control bg-light border-0" th:value="${inquriyDto.inqContent}"style="height: 55px;" readonly>
+                        </div>
+                        <div class="col-12">
+                            <textarea id="inqMessage" class="form-control bg-light border-0" rows="3" th:text="${inquriyDto.inqMessage}" readonly="readonly"></textarea>
                         </div>
                     </div>
                 </div>
@@ -45,9 +48,6 @@ $(function(){
     });
 });
 function inquriySubmit() {
-    // if (!IsValid()){
-    //     return;
-    // }
     
     wrapWindowByMask();
 

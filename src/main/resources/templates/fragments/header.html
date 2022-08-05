@@ -3,7 +3,7 @@
 
 <!-- Navbar & Carousel Start -->
 <div th:fragment="header" class="body-wrapper">
-<header>
+<header id="header">
     <!-- Navbar & Carousel Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
@@ -24,13 +24,15 @@
                         </div>
                     </div>
                     <a href="/place/placeHome" class="nav-item nav-link">施設探し</a>
-                    <a href="javascript:;" id="inquiryA" class="nav-item nav-link">お問い合わせ</a>
-                    <a href="/team" class="nav-item nav-link">社員紹介</a>
+                    <a href="/#inquiryA" id="inquiryA" class="nav-item nav-link">お問い合わせ</a>
+                    <a href="/#moveInA" id="moveInA" class="nav-item nav-link">入居流れ</a>
                     <a href="/contact" class="nav-item nav-link">採用広告</a>
                     <div class="nav-item dropdown">
                         <a href="/facility" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">会社概要</a>
                         <div class="dropdown-menu m-0">
                             <a href="/greetings" class="dropdown-item">ご挨拶</a>
+                            <a href="/greetings" class="dropdown-item">社長あいさつ</a>
+                            <a href="/team" class="dropdown-item">社員紹介</a>
                             <a href="/information" class="dropdown-item">情報</a>
                         </div>
                     </div>
