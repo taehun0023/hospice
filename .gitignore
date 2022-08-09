@@ -18,9 +18,8 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 test.css
-test.pdf    
 test.html
-test/
+
 
 ### IntelliJ IDEA ###
 .idea
@@ -43,3 +42,4 @@ out/
 
 **/application.properties
 src/main/resources/static/assets/css/place/place.css.rej
+git-ftp.git

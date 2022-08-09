@@ -31,7 +31,7 @@
 </head>
 
 <body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000">
-    <table style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%" cellpadding="0" cellspacing="0">
+    <table style="border-collapse: collapse;table-layout: fixed;border-spacing: 0; vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%" cellpadding="0" cellspacing="0">
         <tbody>
             <tr style="vertical-align: top">
                 <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
@@ -109,7 +109,7 @@
                                                             <div class="v-text-align v-line-height" style="line-height: 160%; text-align: left; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 160%;"><strong><span th:text="${place}+'点のお間に合わせです。'" style="font-size: 16px; line-height: 25.6px; font-family: Montserrat, sans-serif;"></span></strong></p>
                                                                 <p style="font-size: 14px; line-height: 160%;"> </p>
-                                                                <p style="font-size: 14px; line-height: 160%;"><span th:text="${ingMessage}" style="font-size: 14px; line-height: 22.4px; font-family: Montserrat, sans-serif;"></span></p>
+                                                                <p style="font-size: 14px; line-height: 160%;"><span th:text="${inqMessage}" style="font-size: 14px; line-height: 22.4px; font-family: Montserrat, sans-serif;"></span></p>
                                                                 <p style="font-size: 14px; line-height: 160%;"> </p>
                                                             </div>
                                                         </td>
@@ -124,6 +124,7 @@
                                                                 <p style="font-size: 14px; line-height: 140%;"><span style="font-size: 16px; line-height: 22.4px; font-family: Montserrat, sans-serif;"></span></p>
                                                                 <p style="font-size: 14px; line-height: 140%;"><strong>Email : <span th:text="${userEmail}" style="font-size: 16px; line-height: 22.4px; font-family: Montserrat, sans-serif;"></span>
                                                                 <p style="font-size: 14px; line-height: 140%;">Tel : <a th:href="'tel:'+${phone}">[[${phone}]]</a></p>
+                                                                <p style="font-size: 14px; line-height: 140%;">[[${inqContent}]]</p>
                                                                 </strong></p>
                                                             </div>
                                                         </td>
@@ -189,7 +190,7 @@
                                                     <tr>
                                                         <td class="v-container-padding-padding" style="overflow-wrap:break-word;word-break:break-word;padding:10px 119px 10px 10px;font-family:arial,helvetica,sans-serif;" align="left">
                                                             <div class="v-text-align" align="right">
-                                                                <a th:href="'mailto:'+${userEmail}" target="_blank" class="v-size-width" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #000000; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:29%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;">
+                                                                <a th:href="'mailto:'+${userEmail}" target="_blank" class="v-size-width" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #000000; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:29%; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word;">
                                                                     <span class="v-line-height v-padding" style="display:block;padding:10px 20px;line-height:120%;"><span style="font-size: 14px; line-height: 16.8px; font-family: Montserrat, sans-serif;">答える</span></span>
                                                                 </a>
                                                             </div>

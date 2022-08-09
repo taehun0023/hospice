@@ -1,18 +1,13 @@
 package com.hospice.care.service;
 
-import java.util.Random;
-
 import javax.mail.internet.MimeMessage;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
-
 import com.hospice.care.model.dao.InquiryMapper;
 import com.hospice.care.model.dto.InquiryDto;
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -31,7 +26,7 @@ public class EmailService {
         message.setFrom(inquiryDto.getUserEmail());
         message.addRecipients(MimeMessage.RecipientType.TO, "rhwlffk486@gmail.com"); // 보낼 이메일 설정
         // message.addRecipients(MimeMessage.RecipientType.TO, "imfo@i-syukan.com");
-        message.setSubject("["+ inquiryDto.getUserName() +"] 様のお間に合わせ", "utf-8" ); // 이메일 제목
+        message.setSubject("[" + inquiryDto.getInqContent() + "]["+ inquiryDto.getUserName() +"]", "utf-8" ); // 이메일 제목
         message.setText(setContext(inquiryDto), "utf-8", "html"); // 내용 설정(Template Process)
         
         // 보낼 때 이름 설정하고 싶은 경우
@@ -48,7 +43,8 @@ public class EmailService {
         context.setVariable("userEmail", inquiryDto.getUserEmail());
         context.setVariable("phone", inquiryDto.getPhone());
         context.setVariable("place", inquiryDto.getPlace());
-        context.setVariable("ingMessage", inquiryDto.getIngMessage());
+        context.setVariable("inqContent", inquiryDto.getInqContent());
+        context.setVariable("inqMessage", inquiryDto.getInqMessage());
 
         return templateEngine.process("sendEmail/mail", context); // mail.html 
     }

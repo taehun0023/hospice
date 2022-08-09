@@ -12,16 +12,16 @@ layout:decorate="~{layouts/main}"
 </th:block>    
 <th:block layout:fragment="content">
     <div class="inquriyCheck_pupup"></div>
+
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="w-100" src="/assets/img/carousel-1.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの特別なサービス</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">豊かな黄昏期</h1>
+                        <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの特別なサービス</h5> -->
+                        <h3 class="display-1 text-white mb-md-4 animated zoomIn">あなたに相応しい<br>「家」と「暮らし」を<br>届けたい</h3>
                         <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">もっと見る</a>
-                        <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">もっと見る</a>
                     </div>
                 </div>
             </div>
@@ -29,10 +29,9 @@ layout:decorate="~{layouts/main}"
                 <img class="w-100" src="/assets/img/carousel-2.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの愛の巣</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">安全な環境</h1>
+                        <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの愛の巣</h5> -->
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">安らかな環境を<br>提供します</h1>
                         <a href="quote.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">もっと見る</a>
-                        <a href="" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">もっと見る</a>
                     </div>
                 </div>
             </div>
@@ -154,8 +153,58 @@ layout:decorate="~{layouts/main}"
             </div>
         </div>
     </div>
+
     <!-- Testimonial End -->
-    <div class="inquiry"><br><br><br></div>
+    <div class="moveInA"><br><br><br></div>
+    <section class="ps-timeline-sec wow fadeInUp">
+        <div class="container">
+            <h1 class="mb-0" style="text-align: center; margin-top: 100px;">入居流れ</h1>
+            <ol class="ps-timeline">
+                <li>
+                    <div class="img-handler-top">
+                        <img src="/assets/img/index/Interview.png" class="procedure_img"/>
+                    </div>
+                    <div class="ps-bot">
+                        <h4 class="ps-timeline-h5">面接</h4>
+                        <p>Do you have a recent injury or long term pain?</p>
+                    </div>
+                    <span class="ps-sp-top">1</span>
+                </li>
+                <li>
+                    <div class="img-handler-bot">
+                        <img src="/assets/img/index/calendar.png" class="procedure_img"/>
+                    </div>
+                    <div class="ps-top">
+                        <h4 class="ps-timeline-h5">プラン</h4>
+                        <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
+                    </div>
+                    <span class="ps-sp-bot">2</span>
+                </li>
+                <li>
+                    <div class="img-handler-top">
+                        <img src="/assets/img/index/agreement.png" class="procedure_img"/>
+                    </div>
+                    <div class="ps-bot">
+                        <h4 class="ps-timeline-h5">契約</h4>
+                        <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
+                    </div>
+                    <span class="ps-sp-top">3</span>
+                </li>
+                <li>
+                    <div class="img-handler-bot">
+                        <img src="/assets/img/index/house.png" class="procedure_img"/>
+                    </div>
+                    <div class="ps-top">
+                        <h4 class="ps-timeline-h5">入居</h4>
+                        <p>Join our happy family of pain free clients.</p>
+                    </div>
+                    <span class="ps-sp-bot">4</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="inquiryA"><br><br><br></div>
     <!-- Quote Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -163,11 +212,11 @@ layout:decorate="~{layouts/main}"
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
                         <h5 class="fw-bold text-primary text-uppercase">相談</h5>
-                        <h1 class="mb-0">いつでも楽にお問い合わせください。</h1>
+                        <h1 class="mb-0">いつでもお問い合わせください。</h1>
                     </div>
                     <div class="row gx-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>09：00  ~  18：00</h5>
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>08：00  ~  18：00</h5>
                         </div>
                     </div>
                     <p class="mb-4">電話でお問い合わせするお客様は下の支店選択を、<br>メールでお問い合わせするお客様は右のメールサービスを利用してください。
@@ -210,7 +259,14 @@ layout:decorate="~{layouts/main}"
                                     <input type="text" id="phone" class="form-control bg-light border-0" name="phone" placeholder="テレホン" maxlength="13" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea id="ingMessage" class="form-control bg-light border-0" name="ingMessage" rows="3" placeholder="メッセージ"></textarea>
+                                    <div class="form-control bg-light border-0">
+                                    <span class="mb-4" style="margin-right: 20px;">お間に合わせ内容 &nbsp; -></span>
+                                    <label><input type="radio" name="inqContent" value="資料"/>資料&nbsp;&nbsp;</label>
+                                    <label><input type="radio" name="inqContent" value="見学"/>見学</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <textarea id="inqMessage" class="form-control bg-light border-0" name="inqMessage" rows="3" placeholder="メッセージ"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="button" class="btn btn-dark w-100 py-3" onclick="inqFormCheck()">確認後、メール送信</button>
@@ -223,29 +279,33 @@ layout:decorate="~{layouts/main}"
         </div>
     </div>
     <!-- Quote End -->
+
 <div id="mask"></div>
 </th:block>
 </html>
 
 <script type="text/javascript">
 $(function() {
-    $("#inquiryA").click(function(){
-        var offset = $(".inquiry").offset(); //해당 위치 반환
-        $("html, body").animate({scrollTop: offset.top},500); 
-    });
-    inquiryCheck();
-});
-
-function inquiryCheck() {
     var page_url = window.location.href;
     var page_id = page_url.substring(page_url.lastIndexOf("#") + 1);
-    console.log(page_id);
-    if (page_id != 'http://localhost:8800/') {
-        var offset = $(".inquiry").offset(); //해당 위치 반환
-        $("html, body").animate({scrollTop: offset.top},500);
-        history.pushState(null, null, '/')
-    }
-}
+    
+    if (page_id == 'inquiryA') {
+        $('html, body').animate({scrollTop: $(".inquiryA").offset().top}, 500);
+    } else if (page_id == 'moveInA') {
+        $('html, body').animate({scrollTop: $(".moveInA").offset().top}, 500);
+    };
+
+});
+
+    $("#inquiryA").click(function(){
+        var offset = $(".inquiryA").offset(); //해당 위치 반환
+        $("html, body").animate({scrollTop: offset.top},500); 
+    });
+
+    $("#moveInA").click(function(){
+        var offset = $(".moveInA").offset(); //해당 위치 반환
+        $("html, body").animate({scrollTop: offset.top},500); 
+    });
 
 function officeTel(e) {
     var tel = e.value;
@@ -289,48 +349,62 @@ cellPhone.onkeyup = function(event){
 
 function IsValid() {
     var blank_pattern = /^\s+|\s+$/g;
-    var jpRegex = /[ぁ-ゔ]+|[ァ-ヴー]+[々〆〤]+[一-龥/]+$/;
+    var jpRegex = /^[\u30a0-\u30ff\u3040-\u309f\u3005-\u3006\u30e0-\u9fcf]+$/;
     var emailRegex = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
     var phRegex = /^0\d{1,3}-\d{2,4}-\d{3,4}$/;
 
-    if ($("#place").val() == 0) {
+    const frm = document.forms[0];
+    const place = frm.place.value;
+    const username = frm.userName.value;
+    const useremail = frm.userEmail.value;
+    const phone = frm.phone.value;
+    const inqmessage = frm.inqMessage.value;
+
+    if (place == 0) {
         alert("場所を選択してください。")
         return false;
     }
 
-    if ($('#userName').val().replace(blank_pattern, '') == '') {
+    if (username == '') {
         alert("名前を入力してください。");
         $("#userName").focus();
         return false;
-    } else { 
-        if (!$('#userName').val().match(jpRegex)) {
-            alert("日本語で入力してください。");
-            $("#userName").focus();
-            return false;
-        } 
     }
+    
+    if (!jpRegex.test(username)) {
+        alert("名前を日本語で入力してください。");
+        $("#userName").focus();
+        return false;
+    } 
 
-    if ($("#userEmail").val().replace(blank_pattern, '') == '') {
+    if (useremail == '') {
         alert("メールを入力してください。");
+        $("#userEmail").focus();
         return false;
     } else {
-        if (!$('#userEmail').val().match(emailRegex)) {
+        if (!emailRegex.test(useremail)) {
             alert("メール形式で入力してください。");
+            $("#userEmail").focus();
             return false;
         }
     }
 
-    if ($("#phone").val().replace(blank_pattern, '') == '') {
+    if (phone == '') {
         alert("携帯番号を入力してください。");
         return false;
     } else {
-        if (!$('#phone').val().match(phRegex)) {
+        if (!phRegex.test(phone)) {
             alert("携帯番号を正確に入力してください。");
             return false;
         }
     }
 
-    if ($('#ingMessage').val().replace(blank_pattern, '') == '') {
+    if ($("input[name=inqContent]:radio:checked").length < 1) {
+        alert("お間に合わせの内容を選択してください。");
+        return false;
+    }
+
+    if (inqmessage == '') {
         alert("お間に合わせを入力してください。");
         return false;
     }
@@ -352,15 +426,11 @@ function wrapWindowByMask(){
 	$('#mask').fadeTo("slow",0.6);    
 }
 
-
-
 function inqFormCheck() {
 
-// if (!IsValid()){
-//     return;
-// }
-
-
+    if (!IsValid()){
+        return;
+    }
     let inquiryDto = new FormData($("#inquiry")[0]);
 
     $.ajax({
@@ -376,20 +446,6 @@ function inqFormCheck() {
         },
     });
 
-// Pace.track(function(){
-//     $.ajax({
-//         type : "POST",
-//         url : "./welfare/inquiry",
-//         data : inquiryDTO,
-//         processData: false,
-//         contentType: false,
-//         success : function (data) {
-//             $('#mask').hide();
-//             alert(data);
-//         },
-        
-//     });
-// });
 }
 
 </script>

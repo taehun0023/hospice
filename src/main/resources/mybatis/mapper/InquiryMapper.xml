@@ -11,7 +11,7 @@
 		<result property="userName" column="USER_NAME"/>
 		<result property="userEmail" column="PHONE"/>
 		<result property="phone" column="USER_EMAIL"/>
-		<result property="ingMessage" column="INQ_MESSAGE"/>
+		<result property="inqMessage" column="INQ_MESSAGE"/>
 		<result property="inqDate" column="INQ_DATE"/>
 	</resultMap>
 
@@ -28,7 +28,7 @@
 			#{userName},
 			#{userEmail},
 			#{phone},
-			#{ingMessage},
+			#{inqMessage},
 			#{inqDate}
 		)
     </insert>

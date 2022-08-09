@@ -91,7 +91,7 @@
     position: relative;
 }
 
-.singleMapBtn{
+/* .singleMapBtn{
     padding: 10px;
     border: none;
     background-color: var(--lt-blue);
@@ -99,11 +99,7 @@
     float: left;
     flex: 30%;
     justify-content: center;
-}
-
-.singleMapBtn:hover{
-    background-color: yellow;
-}
+} */
 
 .singleMapBox-info>h2{
     padding: 10px;
