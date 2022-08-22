@@ -1,5 +1,9 @@
 /********** Template CSS **********/
-:root { --primary: rgb(14, 152, 158); --secondary: #34AD54; --light: #EEF9FF; --dark: #091E3E; } 
+:root { --primary: rgb(14, 152, 158); --secondary: #34AD54; --light: #EEF9FF; --dark: #091E3E; }
+.bg-lt-green{background-color: #e0f2f1 !important; }
+.text-green{color: rgb(14, 152, 158) !important;}
+.text-d-green{color: #306266 !important;}
+
 /*** Spinner ***/
 .spinner { width: 40px; height: 40px; background: var(--primary); margin: 100px auto; -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out; animation: sk-rotateplane 1.2s infinite ease-in-out; } 
 @-webkit-keyframes sk-rotateplane { 

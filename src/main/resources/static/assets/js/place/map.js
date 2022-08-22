@@ -5,7 +5,7 @@ function initMap() {
     // The map, centered at myLatLng
     const map = new google.maps.Map(document.getElementById("mapBox"), {
         zoom: 8,
-        center: { lat: 35.70410420663528, lng: 139.77242657030774 },
+        center: { lat: 35.93933743697428, lng: 139.4200116547968 },
     });
     
     setMarKers(map);
@@ -13,7 +13,6 @@ function initMap() {
 
 //Place List
 const isyuukans = [
-    ["Nishiba", 35.70410420663528, 139.77242657030774, 1],
     ["埼玉｜医修館", 35.93933743697428, 139.4200116547968, 2 ]
 ];
 
