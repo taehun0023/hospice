@@ -63,7 +63,7 @@ h5,h6,.fw-medium { font-weight: 600 !important; }
 } 
 
 /*** Carousel ***/
-.carousel-caption { top: 0; left: 0; right: 0; bottom: 0; background: rgba(9, 30, 62, .7); z-index: 1; } 
+.carousel-caption { top: 0; left: 0; right: 0; bottom: 0; z-index: 1; } 
 @media (max-width: 576px) {.carousel-caption h5 { font-size: 14px; font-weight: 500 !important; } 
 .carousel-caption h1 { font-size: 30px; font-weight: 600 !important; } 
 } 
