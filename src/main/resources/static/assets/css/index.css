@@ -163,6 +163,11 @@
 
 
 #index-carousel{height: 80vh;}
+#main-photo{height: 80vh;}
 @media (min-width: 1024px){
     #index-carousel{ height: 100vh; }
+}
+
+@media(max-width:767px){
+    #main-photo{height: 40vh;}
 }

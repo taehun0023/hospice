@@ -1,7 +1,8 @@
 /********** Template CSS **********/
 :root { --primary: rgb(14, 152, 158); --secondary: #34AD54; --light: #EEF9FF; --dark: #091E3E; }
 .bg-lt-green{background-color: #e0f2f1 !important; }
-.text-green{color: rgb(14, 152, 158) !important;}
+.bg-lt-beige{background-color:#ffffeb !important;}
+.text-green{color: #0e989e !important;}
 .text-d-green{color: #306266 !important;}
 
 /*** Spinner ***/
