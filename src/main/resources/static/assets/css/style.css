@@ -1,5 +1,9 @@
 /********** Template CSS **********/
-:root { --primary: #06A3DA; --secondary: #34AD54; --light: #EEF9FF; --dark: #091E3E; } 
+:root { --primary: rgb(14, 152, 158); --secondary: #34AD54; --light: #EEF9FF; --dark: #091E3E; }
+.bg-lt-green{background-color: #e0f2f1 !important; }
+.text-green{color: rgb(14, 152, 158) !important;}
+.text-d-green{color: #306266 !important;}
+
 /*** Spinner ***/
 .spinner { width: 40px; height: 40px; background: var(--primary); margin: 100px auto; -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out; animation: sk-rotateplane 1.2s infinite ease-in-out; } 
 @-webkit-keyframes sk-rotateplane { 
@@ -35,11 +39,11 @@ h5,h6,.fw-medium { font-weight: 600 !important; }
 .btn-lg-square { padding-left: 0; padding-right: 0; text-align: center; } 
 
 /*** Navbar ***/
-.navbar-dark .navbar-nav .nav-link { font-family: 'Nunito', sans-serif; position: relative; margin-left: 25px; padding: 35px 0; color: #FFFFFF; font-size: 18px; font-weight: 600; outline: none; transition: .5s; } 
-.sticky-top.navbar-dark .navbar-nav .nav-link { padding: 20px 0; color: var(--dark); } 
+.navbar-dark .navbar-nav .nav-link { font-family: 'Nunito', sans-serif; position: relative; margin-left: 25px; padding: 35px 0; color: rgb(14, 152, 158); font-size: 18px; font-weight: 600; outline: none; transition: .5s; } 
+.sticky-top.navbar-dark .navbar-nav .nav-link { padding: 20px 0; color: rgb(14, 152, 158); } 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active { color: var(--primary); } 
-.navbar-dark .navbar-brand h1 { color: #FFFFFF; } 
+.navbar-dark .navbar-brand h1 { color: rgb(14, 152, 158); } 
 .navbar-dark .navbar-toggler { color: var(--primary) !important; border-color: var(--primary) !important; } 
 
 @media (max-width: 991.98px) {.sticky-top.navbar-dark { position: relative; background: #FFFFFF; } 
@@ -55,7 +59,7 @@ h5,h6,.fw-medium { font-weight: 600 !important; }
 .navbar-dark .navbar-nav .nav-link:hover::before,
 .navbar-dark .navbar-nav .nav-link.active::before { width: 100%; left: 0; } 
 .navbar-dark .navbar-nav .nav-link.nav-contact::before { display: none; } 
-.sticky-top.navbar-dark .navbar-brand h1 { color: var(--primary); } 
+.sticky-top.navbar-dark .navbar-brand h1 { color: rgb(14, 152, 158); } 
 } 
 
 /*** Carousel ***/

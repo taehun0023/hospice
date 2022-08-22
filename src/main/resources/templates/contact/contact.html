@@ -1,24 +1,17 @@
 <!DOCTYPE html>
-<html
-xmlns:th="http//www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layouts/main}"
->
+<html xmlns:th="http//www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layouts/main}">
 
-<link
-rel="stylesheet"
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-crossorigin="anonymous"
-/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
 <!-- contact.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
-    <link rel="stylesheet" href="/assets/css/contact.css"/>
+    <link rel="stylesheet" href="/assets/css/contact.css" />
 </th:block>
 
 <th:block layout:fragment="content">
-    
+
     <!-- Full Screen Search Start -->
     <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
         <div class="row py-5">
@@ -32,7 +25,8 @@ crossorigin="anonymous"
 
 
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
@@ -42,97 +36,78 @@ crossorigin="anonymous"
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <img height="300px" width="300px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover;">
-                        </div>
-                        <br>
-                        <h4 class="shokushu">看護師<br>（正看護師、准看護師）</h4><br>
+                    <div
+                        class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="shokushu">介護職・ヘルパー</h4><br>
+                        <p class="saiyou_setsumei">医修館 鶴ヶ島では<br>「訪問介護職・ヘルパー」を募集しています</p>
                         <p class="saiyou_naiyou">
-                            土曜 日勤パート（9～18時）<br>
-                            夜勤（17～9時30分）<br><br>
-                            主な業務内容<br><br>
-                            ◆バイタルサイン測定<br>
-                            ◆フィジカルアセスメント<br>
-                            ◆個別的なケア<br>
-                            ◆排せつ介助、保清、食事介助等<br>
-                            ◆医師の指示による医療処置<br>
-                            ◆訪問診療時の医師への対応<br>
-                            ◆看護記録の記載<br>
-                            ◆意思決定支援、グリーフケアなど、ご家族を含めたケア<br>
-                            ＊	日勤パート 時給：2,000円～　夜勤 日給：3万円
+                            <span class="koumoku">募集職種：</span>介護職・ヘルパー<br>
+                            <span class="koumoku">施設種別：</span>訪問介護<br>
+                            <span class="koumoku">メリット：</span>車通勤OK、自転車通勤OK、社会保険完備、交通費全額支給、男性活躍中、中高年齢活躍中、制服あり<br>
+                            <span class="koumoku">必要資格：</span>介護職員初任者研修（ヘルパー2級）、介護職員実務者研修（ヘルパー1級）、介護福祉士<br>
+                            <span class="koumoku">勤務時間：</span>08:00-17:00、08:30-17:30、16:30-09:30（勤務時間要相談、仮眠、休憩有）<br>
+                            <span class="koumoku">仕事内容：</span>食事、移乗活動、更衣、入浴、排せつなどの身体介護と生活介護全般<br>
+                            <span class="koumoku">雇用形態：</span>正社員<br>
+                            <span class="koumoku">給与：</span>年俸制：4,210,000円～4,450,000円(当社規定12分割にて毎月支払い)<br>
+                            <span class="koumoku">待遇及び福利厚生：</span>交通費全支給 昇給年1回、各種社会保険完備<br>
+                            <span class="koumoku">休日・休暇：</span>完全週休2日制、シフト制<br>
                         </p>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">応募する</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <img height="300px" width="300px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover;">
-                        </div>
-                        <br>
-                        <h4 class="shokushu">介護士<br>（初任者研修または実務者研修修了者）</h4><br>
+                    <div
+                        class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="shokushu">看護師</h4><br>
+                        <p class="saiyou_setsumei">医修館 鶴ヶ島では「訪問看護師」を募集しています</p>
                         <p class="saiyou_naiyou">
-                            <span>
-                            現在募集しておりません<br><br>
-                            主な業務内容<br><br>
-                            ◆移乗、食事、入浴、排泄、体位交換、口腔ケアなどの身体介護<br>
-                            ◆居室の掃除、洗濯物管理、厨房の補助などの生活援助<br>
-                            ＊	
-                            </span>
+                            <span class="koumoku">募集職種：</span>看護師<br>
+                            <span class="koumoku">施設種別：</span>訪問看護<br>
+                            <span class="koumoku">メリット：</span>車通勤OK、自転車通勤OK、社会保険完備、交通費全額支給、中高年齢活躍中、制服あり<br>
+                            <span class="koumoku">必要資格：</span>看護師資格<br>
+                            <span class="koumoku">勤務時間：</span>08:00-17:00、08:30-17:30、16:30-09:30（勤務時間要相談、仮眠、休憩有）<br>
+                            <span class="koumoku">仕事内容：</span>訪問診療の補助、バイタルサインの測定、服薬管理、医療処置、口腔ケア、経管栄養管理、心身状態の観察<br>
+                            <span class="koumoku">雇用形態：</span>正社員<br>
+                            <span class="koumoku">給与：</span>年俸制：4,800,000円～5,200,000円(当社規定12分割にて毎月支払い)<br>
+                            <span class="koumoku">待遇及び福利厚生：</span>交通費全支給 昇給年1回、各種社会保険完備<br>
+                            <span class="koumoku">休日・休暇：</span>週休2日制、シフト制<br>
                         </p>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">応募する</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <img height="300px" width="300px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover;">
-                        </div>
-                        <br>
-                        <h4 class="shokushu">サービス提供責任者<br>（実務者研修修了者、介護福祉士）</h4><br>
+                    <div
+                        class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <h4 class="shokushu">地域診療連携室スタッフ</h4><br>
+                        <p class="saiyou_setsumei">医修館 鶴ヶ島では地域の診療施設や病院と連携を行うスタッフを募集しています</p>
                         <p class="saiyou_naiyou">
-                            現在募集しておりません<br><br>
-                            主な業務内容<br><br>
-                            ◆ケアプランに基づいた訪問介護計画書の作成<br>
-                            ◆サービス提供実績の管理<br>
-                            ◆介護職への指導、アドバイス<br>
-                            ◆利用者様やご家族、関係者との連絡調整業務<br>
-                            ◆サービス担当者会議への出席、多職種との連携<br>
-                            ◆身体介護、生活援助業務（事務業務だけでなく介護業務もあり）</p>
+                            <span class="koumoku">募集職種：</span>ケアマネージャー<br>
+                            <span class="koumoku">施設種別：</span>訪問看護<br>
+                            <span class="koumoku">メリット：</span>車通勤OK、自転車通勤OK、社会保険完備、交通費全額支給、中高年齢活躍中、制服あり<br>
+                            <span class="koumoku">必要資格：</span>ケアマネージャー資格<br>
+                            <span class="koumoku">勤務時間：</span>08:00-17:00、08:30-17:30、16:30-09:30（勤務時間要相談、仮眠、休憩有）<br>
+                            <span class="koumoku">仕事内容：</span>ご入居者のケアプランの作成やアセスメント・カンファレンスの開催、介護請求等、幅広く担当していただきます。<br>
+                            <span class="koumoku">雇用形態：</span>正社員<br>
+                            <span class="koumoku">給与：</span>年俸制：3,600,000円～4,200,000円(当社規定12分割にて毎月支払い)<br>
+                            <span class="koumoku">待遇及び福利厚生：</span>交通費全支給 昇給年1回、各種社会保険完備<br>
+                            <span class="koumoku">休日・休暇：</span>週休2日制、シフト制<br>
+                        </p>
+                        <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">応募する</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="saiyou bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <img height="300px" width="300px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover;">
-                        </div>
-                        <br>
-                        <h4 class="shokushu">その他</h4><br>
-                        <p class="saiyou_naiyou">
-                            アルバイト・パート<br>
-                            （6～10時または15時～19時）<br><br>
-                            主な業務内容<br><br>
-                            ◆	早朝または夕方から短時間（月・水・金・土曜）<br>
-                            ◆	簡単な調理・配膳・盛付け<br>
-                            ◆	掃除・洗濯<br>
-                            ＊	時給：1,200円</p>
+
+                <!-- <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+                    <div
+                        class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                        <h2 class="text-white mb-3" style="font-family: 'M PLUS rounded 1c'; font-size: 30px;">
+                            まずはお気軽にお問合せ下さい</h3>
+                            <h3 class="text-white mb-3" style="font-family: 'M PLUS rounded 1c'; font-size: 30px;">
+                                〒350-2203<br>埼玉県鶴ヶ島市上広谷383</h3>
+                            <h2 class="text-white mb-0" style="font-family: 'M PLUS rounded 1c'; font-size: 30px;"><span
+                                    style="font-family: 'M PLUS rounded 1c'; font-size: 25px;">TEL</span>049-271-5588
+                            </h2>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-search text-white"></i>
-                        </div>
-                        <h4 class="mb-3">SEO Optimization</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                        <h2 class="text-white mb-3" style="font-family: 'M PLUS rounded 1c'; font-size: 30px;">まずはお気軽にお問合せ下さい</h3>
-                        <h3 class="text-white mb-3" style="font-family: 'M PLUS rounded 1c'; font-size: 30px;">〒350-2203<br>埼玉県鶴ヶ島市上広谷383</h3>
-                        <h2 class="text-white mb-0" style="font-family: 'M PLUS rounded 1c'; font-size: 30px;"><span style="font-family: 'M PLUS rounded 1c'; font-size: 25px;">TEL</span>049-271-5588</h2>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
