@@ -12,7 +12,6 @@ layout:decorate="~{layouts/main}"
 </th:block>    
 <th:block layout:fragment="content">
     <div class="inquriyCheck_pupup"></div>
-
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -291,8 +290,10 @@ $(function() {
     
     if (page_id == 'inquiryA') {
         $('html, body').animate({scrollTop: $(".inquiryA").offset().top}, 500);
+        history.pushState(state, title, "url");
     } else if (page_id == 'moveInA') {
         $('html, body').animate({scrollTop: $(".moveInA").offset().top}, 500);
+        history.pushState(state, title, "ur2l");
     };
 
 });
