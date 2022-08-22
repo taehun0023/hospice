@@ -15,7 +15,7 @@ img { max-width: 100%; height: auto; }
 .brand_border .fas.fa-handshake { font-size: 14px; color:#000000; } 
 .section_title p { color: #333333; font-size: 14px; line-height: 25px; padding: 14px 0; } 
 .choose_us .section_title { margin-top: 45px; } 
-#service .single_service { padding: 32px; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); margin-bottom: 50px; } 
+#service .single_service { padding: 32px; box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); margin-bottom: 50px; height: -webkit-fill-available; } 
 #service .single_service:hover { box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4); } 
 #service .icon { border: 1px solid #666; border-radius: 5%; color: #333333; font-size: 35px; line-height: 65px; overflow: hidden; text-align: center; text-decoration: none; width: 70px; } 
 #service .single_service .single_service-left { padding-right: 25px; } 

@@ -75,6 +75,6 @@ public class WelfareController {
     @PostMapping(value = "/inquriyCheck")
     public String inquriyCheck(Model model, InquiryDto inquiryDto) {
         model.addAttribute("inquriyDto", inquiryDto);
-        return "/inquriyCheck_inview";
+        return "sendEmail/inquriyCheck_inview";
     }
 }

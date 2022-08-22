@@ -197,7 +197,7 @@
 
 .infoT1 .infoT-Header{
     border-bottom-color: #B3E03F;
-    padding: 15px;
+    padding: 30px;
 }
 
 .infoT2 .infoT-Header{
@@ -217,7 +217,7 @@
 }
 
 .infoT-body-item{
-    font-size: 15px;
+    font-size: 1rem;
     padding-bottom: 10px;
 }
 

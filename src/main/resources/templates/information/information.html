@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html
-xmlns:th="http//www.thymeleaf.org"
-xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layouts/main}"
->
+<html xmlns:th="http//www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layouts/main}">
 
-<link
-rel="stylesheet"
-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-crossorigin="anonymous"
-/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
 <!-- information.html 고유 CSS 추가 -->
 <th:block layout:fragment="css">
@@ -18,8 +11,8 @@ crossorigin="anonymous"
 </th:block>
 
 <th:block layout:fragment="content">
-    
-    <!-- Full Screen Search Start -->
+
+    <!-- Full Screen Search  -->
     <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
@@ -30,85 +23,81 @@ crossorigin="anonymous"
     </div>
     <!-- Full Screen Search End -->
 
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <!-- Spinner  -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
 
-    <!-- About Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-6">
+                <!-- <div class="col-lg-6"> -->
+                <div class="col-lg-12">
                     <div class="section-title position-relative pb-3 mb-5">
-                        <h1 class="daimei">がん患者、難病患者の深刻な看取り難民化</h1>
+                        <h1 class="daimei">70歳以上の高齢者が2025年には529万人増</h1>
                     </div>
-                    <p class="naiyou">死因者数1位のがん患者、難病患者（331疾病）は増加する一方「慢性的、終末期医療を必要とする患者の受け入れ先が不足している」という事実。</p>
-                    <p class="naiyou">自宅と病院のいいころだけを取り入れた住宅が必要とされています。</p>
-                </div>
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover; display:block; margin: auto">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-    
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h1 class="daimei">看護師を中心とした多職種チームでホスピスケア</h1>
-                    </div>
-                    <p class="naiyou">ホスピスケア住宅の安心感を支えているのは、看護師を中心とした多職種のスペシャリストたちです。</p>
-                    <p class="naiyou">看護師、介護士、各種療法士、調理師、事務職員、外部の在宅医がチームとなり患者さん一人ひとりと向き合っています。</p>
-                    <p class="naiyou">看護師が24時間共に生活する事で、病状の変化にもいち早く気づき、細やかな緩和ケアをおこなうことができます。</p>
-                </div>
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover; display:block; margin: auto">
+                    <div class="naiyou">
+                        <p>
+                            厚生労働省の出した今後増えるだろう70歳以上の高齢者は2016と比べ2025年には529万人増えると推測を立てています。駒カム見ていくと2016年の70歳人口は2432万人、2025年になると2961万人まで膨れ上がる推計です。<br>
+                            高齢者が増えればそれだけ需要が高まるのが看取り。介護施設における看取りを希望する家族が、特養で46.6％、老人保健施設で18.4％、介護療養病床（※2017年に廃止）で75.4％の割合※1で考えているという統計が出ています。<br>
+                            この結果から分かるように終末医療に近い状態の高齢者を受け入れている施設ほど、病院などの医療機関に入れずそのまま看取ってほしいという希望があることがわかりました。<br>
+                            厚生労働省が提出した「平成27年度介護報酬改定の効果検証及び調査研究に係る調査（平成27年度査）」によると、特別養護老人ホームの76.1％、老人保健施設の64.0％、介護療養型医療施設の81.9％が「終末期に入った入居者に対して看取りを行っている」と回答しています。<br>
+                            これは前年度の調査より増加傾向にあります。病院のように医師が常駐する必要がないため、比較的実施しやすいのが増加の理由と考えられます。
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div>
-                    <div class="section-title position-relative pb-3 mb-5">
-                        <h1 class="daimei">ホスピスケア住宅とは？</h1>
+                <div class="col-lg-12">
+                    <div class="naiyou">
+                        <p>
+                            高齢化社会と言われる昨今、年間死亡者数は年々増加しており国の出す推計では、高齢者がピークになる2040年にもっとも死亡数が出る　※1　厚生労働省：【テーマ1】　看取り参考資料　と公表されています。<br>
+                            現在は病院で高齢者の看取りをすることが主になっていますが、今後は介護施設での対応も求められておくでしょう。では、まず高齢化社会の実情と病院でおこなう看取りとの違い、看取り介護の需要についてお話します。<br>
+                            ターミナルケアと看取り介護との違いは「医療対応か、介護対応か」という点が大きく異なります。<br>
+                            ターミナルケアが「終末期医療」や「終末期看護」と訳されることからもわかる通り、点滴や酸素吸入などの医療的ケアを中心とするのに対し、「看取り介護」は、食事や排せつの介助や、褥瘡の防止など、日常生活のケアが中心になります。
+                        </p>
                     </div>
-                    <p class="naiyou">がんや難病など専門的なホスピスケアを必要とする患者さんが集まって住む療養型共同住宅。</p>
-                    <br><br>
-                    <img height="500px" width="500px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover; float: left;">
-                    <img height="500px" width="500px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover; float: right;">
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title position-relative pb-3 mb-5">
-                <h1 class="daimei">難民化する日本の終末ケア</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-6">
-                    <img height="500px" width="500px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover; display:block; margin: auto;">
-                    <br><br>
-                    <p class="naiyou mb-4">推定によると、「医療機関以外での看取り先確保が困難」とされ、死亡場所の推定が明示されていません。厚生労働省の「全国在宅医療会議」では、<span style="color: cornflowerblue;">自宅や非医療機関での看取り率25％を目標</span>としています。<span style="color: cornflowerblue;">訪問看護事業所は、自宅あるいは介護施設での最期を安心して看取れるよう、努力していく必要があります。</span></p>
+                <div class="col-lg-12">
+                    <div class="naiyou">
+                        <p>
+                            〇終末期を迎える患者が増加する傾向にある一方で、終末期を迎える人向けの入居施設の伸びが低く患者の受け入れ先がなく難民化しつつある（新規事業）<br>
+                            末期がんによる死亡者数は年間37万人おり、それに対して終末期を受け入れる緩和病床は9400余りである。さらに政府は今後、患者のフェーズを細分化し医療機関全体で約20万床のベッドを削減し党としている。今後、さらに在宅医療が推進される。（下図参照）
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-6" style="min-height: 500px;">
-                    <p class="naiyou" style="text-align: center; color: red;">増加するがんと難病死亡者数</p>
-                    <div class="position-relative h-100">
-                        <br>
-                        <img height="500px" width="500px" data-wow-delay="0.9s" src="/assets/img/about.jpg" style="object-fit: cover; display:block; margin: auto;">
+
+                <div class="col-lg-12">
+                    <div class="naiyou">
+                        <p>
+                            〇日本では多くの方が自宅での看取りを望んでいる<br>
+                            終末期の迎え方は依然、日本社会にとって大きな課題です。<br>
+                            4人のうち3人の方が窮屈な入院生活を過ごしたまま亡くなっています。<br>
+                            その一方で入院している方の大多数は自宅での看取りを望んでいます。<br>
+                            しかしながら、医療的な介護の対応が家族では難しく経済的、時間的負担が大きく、<br>
+                            当然、一人暮らしお年寄りや老夫婦の方々は事実上、看取りはできません。<br>
+                            かと言え、介護保険施設（特別養護老人ホームや有料老人ホーム）では、医療対応が難しく入所を断られることが多く、<br>
+                            そのため、否応なく入院してもらうことを選択することとなります。<br>
+                            こうした中で、現在、注目されているのが「医療」「看護」「介護」を「集合住宅」で提供する「ホスピスケア住宅」です。<br>
+                            規則でがんじからめ病院に代わり、柔軟なスタンスで入居される方に「ごく普通な生活」を遅れることを目指しています。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="naiyou">
+                        <p>
+                            〇終末期のケアの現状とホスピスケア住宅への高まる期待<br>
+                            1．末期がん患者、難行患者を受け入れる施設が不足<br>
+                            2．年間死亡者数の増加（2039年には年間167万人が死亡する）<br>
+                            3．無限に増大する社会保障費?病床機能の見直し<br>
+                            4．末期がん患者、難病患者の増加により、受け入れ先が見つからない「難民」が増大している<br>
+                            5．死に対する価値観の変化<br><br>
+                            ➀新たな社会的なインフラの構築に期待が高まっている<br>
+                            ➁ホスピスケア住宅という社会インフラを構築することで期待に答えなければならない
+                        </p>
                     </div>
                 </div>
             </div>
