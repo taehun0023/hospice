@@ -53,6 +53,11 @@ public class WelfareController {
         return viewLocation + "nurse/pdf_inview";
     }
 
+    @GetMapping(value = "/money")
+    public String money() {
+        return viewLocation + "money";
+    }
+
     @PostMapping(value ="/inquiry")
     public String inquiry(Model model, @RequestBody InquiryDto inquiryDto) throws Exception {
         
