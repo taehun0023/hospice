@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http//www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{layouts/main}"
+>
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+    <link rel="stylesheet" href="/assets/css/fancybox/fancybox.css"/>
+    <link rel="stylesheet" href="/assets/css/welfare/facility.css">
+    <link rel="stylesheet" href="/assets/css/information.css">
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <script type="text/javascript" src="/assets/js/fancybox/fancybox.js"></script>
+    <script type="text/javascript" src="/assets/js/slick/slick.js"></script>
+</th:block>
+
+<div layout:fragment="content" class="hospiceContent">
+    <!-- Full Screen Search Start -->
+    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+        <div class="row py-5">
+            <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                <h1 class="display-4 text-white animated zoomIn">利用料金</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+ <!-- 시설 타입 가격 Start -->
+ <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h5 class="fw-bold text-primary text-uppercase">地域によって価格差がある場合があります。</h5>
+            <h1 class="mb-0">施設の価格</h1>
+        </div>
+        <div class="row g-0">
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="bg-light rounded">
+                    <div class="border-bottom py-4 px-5 mb-4">
+                        <h4 class="text-primary mb-1">プランA</h4>
+                        <!-- <small class="text-uppercase">一人で住みやすい</small> -->
+                    </div>
+                    <div class="p-5 pt-0">
+                        <h1 class="display-5 mb-3">
+                            <small class="align-top" style="font-size: 22px; line-height: 45px;">¥</small>98,000
+                            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                        </h1>
+                        <div class="d-flex justify-content-between mb-3"><span>家賃：35,000円</div>
+                        <div class="d-flex justify-content-between mb-3"><span>管理費：23,000円</div>
+                        <div class="d-flex justify-content-between mb-3"><span>食費：40,000円</div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                    <div class="border-bottom py-4 px-5 mb-4">
+                        <h4 class="text-primary mb-1">プランB</h4>
+                        <small class="text-uppercase">/ Month</small>
+                    </div>
+                    <div class="p-5 pt-0">
+                        <h1 class="display-5 mb-3">
+                            <small class="align-top" style="font-size: 22px; line-height: 45px;">¥</small>108,000
+                            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                        </h1>
+                        <div class="d-flex justify-content-between mb-3"><span>家賃：45,000円</div>
+                        <div class="d-flex justify-content-between mb-3"><span>管理費：23,000円</div>
+                        <div class="d-flex justify-content-between mb-3"><span>食費：40,000円</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                <div class="bg-light rounded">
+                    <div class="border-bottom py-4 px-5 mb-4">
+                        <h4 class="text-primary mb-1">プランC</h4>
+                        <!-- <small class="text-uppercase">一人で住みやすい</small> -->
+                    </div>
+                    <div class="p-5 pt-0">
+                        <h1 class="display-5 mb-3">
+                            <small class="align-top" style="font-size: 22px; line-height: 45px;">¥</small>118,000
+                            <small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                        </h1>
+                        <div class="d-flex justify-content-between mb-3"><span>家賃：55,000円</div>
+                            <div class="d-flex justify-content-between mb-3"><span>管理費：23,000円</div>
+                            <div class="d-flex justify-content-between mb-3"><span>食費：40,000円</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="g-0">
+            <div class="mt-5 col-lg-12 wow slideInUp" data-wow-delay="0.9s">
+                <div class="rounded" style="background-color: #edf2f2;">
+                    <div class="p-5">
+                        <div class="d-flex justify-content-between mb-3"><span>●医修館鶴ヶ島は賃貸住宅ですので、ご自身で私物の持ち込みも可能です。<span></div>
+                        <div class="d-flex justify-content-between mb-3"><span>●多彩なオプションをご用意してます。</span></div>
+                        <div class="d-flex justify-content-between mb-3"><span>●リネン、日用品などの月額レンタル契約も可能です。</span></div>
+                        <div class="d-flex justify-content-between mb-2"><span>その他、お気軽にご相談ください。</span></div>
+                        <div class="d-flex justify-content-between mb-2"><span>入居日についても、ご相談承ります。</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 시설 타입 가격End -->
+</div>
