@@ -12,6 +12,7 @@
     font-weight: bold;
     font-size: 20px;
     color: black;
+    text-align: left;
 }
 
 .shokushu{
@@ -19,4 +20,18 @@
     font-weight: bold;
     font-size: 30px;
     color: rgb(14, 152, 158);
+}
+
+.koumoku{
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(14, 152, 158);
+}
+
+.saiyou_setsumei{
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
 }
