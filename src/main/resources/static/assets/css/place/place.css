@@ -1,8 +1,9 @@
 
 :root{
+    --lt-green:#e0f2f1;
     --lt-gray:#eceff1;
-    --lt-blue:#e3f2fd;
-    --lm-blue:#64b5f6;
+    --lt-blue:#80cbc4;
+    --lm-blue:#009688;
 
 }
 
@@ -83,7 +84,7 @@
     border:none;
     margin: 0;
     height: auto;
-    background-color: var(--lt-blue);
+    background-color: var(--lt-green);
     padding: 20px;
     display: flex;
 
