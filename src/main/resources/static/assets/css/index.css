@@ -165,17 +165,6 @@
 #index-carousel{height: 600px;}
 #main-photo{height: 80vh;}
 
-@media(max-width:767px){
-    #main-photo{height: 40vh;}
-}
-
-@media(min-width:1025px){
-    #index-carousel{height: 700px;}
-}
-
-
-
-
 .flow_main{
     width: 100%;
     float: left;
@@ -221,7 +210,7 @@
 .flow_text_2{
     width: 100%;
     float: left;
-    text-align: center;
+    text-align: left;
     color: #2b3436;
     font-size: 20px;
     margin-left: 0px;
@@ -229,7 +218,19 @@
 
 .flow_img{
     width: 100%;
-    float: left;
     text-align: center;
 
+}
+
+@media(max-width:767px){
+    #main-photo{height: 40vh;}
+    .flow_main{height: 700px;}
+}
+
+@media(min-width:992px){
+    .flow_main{height: 600px;}
+}
+
+@media(min-width:1025px){
+    #index-carousel{height: 700px;}
 }
