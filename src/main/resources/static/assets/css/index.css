@@ -162,12 +162,13 @@
 
 
 
-#index-carousel{height: 80vh;}
+#index-carousel{height: 600px;}
 #main-photo{height: 80vh;}
-@media (min-width: 1024px){
-    #index-carousel{ height: 100vh; }
-}
 
 @media(max-width:767px){
     #main-photo{height: 40vh;}
+}
+
+@media(min-width:1025px){
+    #index-carousel{height: 700px;}
 }
