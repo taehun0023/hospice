@@ -172,3 +172,64 @@
 @media(min-width:1025px){
     #index-carousel{height: 700px;}
 }
+
+
+
+
+.flow_main{
+    width: 100%;
+    float: left;
+    
+    height: 500px;
+    margin-top: 70px;
+
+    padding-right: 30px;
+    padding-left: 30px;
+
+    border-radius: 10px;
+    box-shadow: 3px 8px 15px #b1b1b1;;
+
+}
+
+.flow_round {
+    width: 20%;
+    margin: 0 auto;
+    font-size: 24px;
+    color: #fefefe;
+    font: bold;
+    height: 70px;
+    background: #f8ca11;
+    display: block;
+    text-align: center;
+    border-radius: 100px;
+    padding-top: 12px;
+    position: relative;
+    top: -35px;
+
+    z-index: 5;
+}
+
+.flow_text{
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #2b3436;
+    font: bold;
+    font-size: 24px;
+}
+
+.flow_text_2{
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #2b3436;
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+.flow_img{
+    width: 100%;
+    float: left;
+    text-align: center;
+
+}
