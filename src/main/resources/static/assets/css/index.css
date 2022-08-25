@@ -187,6 +187,7 @@
     width: 20%;
     margin: 0 auto;
     font-size: 24px;
+    font-family: "M PLUS Rounded 1c";
     color: #fefefe;
     font: bold;
     height: 70px;
@@ -206,6 +207,7 @@
     float: left;
     text-align: center;
     color: #2b3436;
+    font-family: "M PLUS Rounded 1c";
     font: bold;
     font-size: 24px;
 }
@@ -215,6 +217,7 @@
     float: left;
     text-align: left;
     color: #2b3436;
+    font-family: "M PLUS Rounded 1c";
     font-size: 20px;
     margin-left: 0px;
 }

@@ -9,7 +9,6 @@
 
 .saiyou_naiyou{
     font-family: "M PLUS Rounded 1c";
-    font-weight: bold;
     font-size: 20px;
     color: black;
     text-align: center;
@@ -17,14 +16,12 @@
 
 .shokushu{
     font-family: "M PLUS Rounded 1c";
-    font-weight: bold;
     font-size: 30px;
     color: rgb(14, 152, 158);
 }
 
 .koumoku{
     font-family: "M PLUS Rounded 1c";
-    font-weight: bold;
     font-size: 20px;
     color: rgb(14, 152, 158);
     width: 100px;
@@ -32,7 +29,6 @@
 
 .saiyou_setsumei{
     font-family: "M PLUS Rounded 1c";
-    font-weight: bold;
     font-size: 20px;
     color: red;
 }
