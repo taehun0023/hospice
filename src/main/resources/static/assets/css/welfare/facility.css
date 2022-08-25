@@ -15,7 +15,7 @@ img, video { max-width: 100%; height: auto; border-style: solid; }
 *, ::after, ::before { box-sizing: border-box; border-width: 0; border-style: solid; border-color: currentColor; } 
 *, ::after, ::before { box-sizing: border-box; } 
 .mx-auto { margin-left: auto; margin-right: auto; } 
-body { font-family: 'Roboto', sans-serif; } 
+body { font-family: "M PLUS Rounded 1c",'Roboto', sans-serif; } 
 * { margin: 0; padding: 0; } 
 .row.g-5 {justify-content: center;}
 /*----------bootstrap-navbar-css------------*/
@@ -28,7 +28,7 @@ body { font-family: 'Roboto', sans-serif; }
 #facility-SupportedContent li { list-style-type: none; float: left; } 
 #facility-SupportedContent ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 15px; display: block; padding: 20px 20px; transition-duration:0.6s; transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); position: relative; } 
 #facility-SupportedContent>ul>li.active>a { color: #5161ce; background-color: transparent; transition: all 0.7s; } 
-#facility-SupportedContent a:not(:only-child):after { content: "\f105"; position: absolute; right: 20px; top: 10px; font-size: 14px; font-family: "Font Awesome 5 Free"; display: inline-block; padding-right: 3px; vertical-align: middle; font-weight: 900; transition: 0.5s; } 
+#facility-SupportedContent a:not(:only-child):after { content: "\f105"; position: absolute; right: 20px; top: 10px; font-size: 14px; font-family: "M PLUS Rounded 1c","Font Awesome 5 Free"; display: inline-block; padding-right: 3px; vertical-align: middle; font-weight: 900; transition: 0.5s; } 
 #facility-SupportedContent .active>a:not(:only-child):after { transform: rotate(90deg); } 
 .facility-hori-selector { display:inline-block; position:absolute; height: 100%; top: 0px; left: 0px; transition-duration:0.6s; transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); background-color: #fff; border-top-left-radius: 15px; border-top-right-radius: 15px; margin-top: 10px; } 
 .facility-hori-selector .right,
@@ -42,14 +42,14 @@ body { font-family: 'Roboto', sans-serif; }
 .facilityNavbar { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; } 
 .facility-navbar-toggler { padding: 0.25rem 0.75rem; font-size: 1.25rem; line-height: 1; background-color: transparent; border: 1px solid transparent; border-radius: 0.25rem; -webkit-appearance: button; overflow:visible; text-transform: none; } 
 facility-navbar-toggler:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) { cursor: pointer; } 
-.facility-fas { font-family: 'Font Awesome 5 Free'; font-weight: 900; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; } 
+.facility-fas { font-family: "M PLUS Rounded 1c",'Font Awesome 5 Free'; font-weight: 900; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; } 
 .facility-text-white { color: #fff!important; } 
 .facility-navbar-toggler:focus:not(:focus-visible) { outline: 0; } 
 .facility-fa-bars:before { content: "\f0c9"; } 
 .facility-ml-auto, .facility-mx-auto { margin-left: auto!important; } 
 .facility-navbar-nav { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none; } 
 dl, ol, ul { margin-top: 0; margin-bottom: 1rem; } 
-.facility-far { font-family: 'Font Awesome 5 Free'; font-weight: 400; } 
+.facility-far { font-family: "M PLUS Rounded 1c",'Font Awesome 5 Free'; font-weight: 400; } 
 @media(min-width: 471px) {.facility-navbar-expand-custom { flex-flow: row nowrap; -ms-flex-pack: start; justify-content: center; width: 600px; margin: auto; margin-bottom: 10px; height: 63px; } 
  }
 .facility-navbar-expand-custom .facility-navbar-nav { -ms-flex-direction: row; flex-direction: row; } 
@@ -89,7 +89,7 @@ dl, ol, ul { margin-top: 0; margin-bottom: 1rem; }
 .ftbg-primary { background: var(--primary-color); } 
 .ftmt-6 { margin-top: 1.5rem !important; } 
 .ftfas { font-weight: 900; } 
-.ftfas { font-family: "Font Awesome 5 Free"; } 
+.ftfas { font-family: "M PLUS Rounded 1c","Font Awesome 5 Free"; } 
 .ftfa-user:before { content: ""; } 
 .ftfas { -moz-osx-font-smoothing: grayscale; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; } 
 .ftmr-5 { margin-right: 1.25rem !important; } 
@@ -101,7 +101,7 @@ dl, ol, ul { margin-top: 0; margin-bottom: 1rem; }
 .carousel__viewport { position: relative; overflow: hidden; max-width: 100%; max-height: 100%; } 
 .carousel__slide { flex: 0 0 auto; width: var(--carousel-slide-width, 60%); max-width: 100%; padding: 1rem; position: relative; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; } 
 .facility-text-white { color: #fff!important; } 
-.facility-fas { font-family: 'Font Awesome 5 Free'; font-weight: 900; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; } 
+.facility-fas { font-family: "M PLUS Rounded 1c",'Font Awesome 5 Free'; font-weight: 900; -webkit-font-smoothing: antialiased; display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; } 
 .facility-navbar-toggler { padding: 0.25rem 0.75rem; font-size: 1.25rem; line-height: 1; background-color: transparent; border: 1px solid transparent; border-radius: 0.25rem; -webkit-appearance: button; overflow: visible; text-transform: none; } 
 .facilityNavbar { position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; } 
 .facility-navbar-mainbg { background-color: #06A3DA !important; padding: 0px; } 
