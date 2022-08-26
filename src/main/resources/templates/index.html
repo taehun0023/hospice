@@ -275,16 +275,16 @@ layout:decorate="~{layouts/main}"
                     <div class="rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s" style="background-color: #0e989e;">
                         <form id="inquiry" method="post">
                             <div class="row g-3 inquiryDiv">
-                                <div class="col-12">
+                                <!-- <div class="col-12">
                                     <select id="place" class="form-select bg-lt-green border-0" name="place" style="height: 55px;">
                                         <option value="0"selected>場所選択</option>
                                         <option value="東京">東京</option>
                                         <option value="大阪">大阪</option>
                                         <option value="札幌">札幌</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="col-xl-12">
-                                    <input type="text" id="userName" class="form-control bg-lt-green border-0" name="userName" placeholder="フルネーム" style="height: 55px;">
+                                    <input type="text" id="userName" class="form-control bg-lt-green border-0" name="userName" placeholder="名前" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
                                     <input type="text" id="userEmail" class="form-control bg-lt-green border-0" name="userEmail" placeholder="メール" style="height: 55px;">
@@ -294,13 +294,12 @@ layout:decorate="~{layouts/main}"
                                 </div>
                                 <div class="col-12">
                                     <div class="form-control bg-lt-green border-0">
-                                    <span class="mb-4" style="margin-right: 20px;">お問い合わせ内容 &nbsp; -></span>
-                                    <label><input type="radio" name="inqContent" value="資料"/>資料&nbsp;&nbsp;</label>
-                                    <label><input type="radio" name="inqContent" value="見学"/>見学</label>
+                                        <label><input type="checkbox" name="inqContent" value="資料"/>資料請求&nbsp;&nbsp;</label>
+                                        <label><input type="checkbox" name="inqContent" value="見学"/>見学希望</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <textarea id="inqMessage" class="form-control bg-lt-green border-0" name="inqMessage" rows="3" placeholder="メッセージ"></textarea>
+                                    <textarea id="inqMessage" class="form-control bg-lt-green border-0" name="inqMessage" rows="3" placeholder="お問い合わせ内容"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="button" class="btn btn-dark w-100 py-3" onclick="inqFormCheck()">確認後、メール送信</button>
