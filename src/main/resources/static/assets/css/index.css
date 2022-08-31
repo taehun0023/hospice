@@ -226,7 +226,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-
+    margin:auto;
 }
 
 @media(min-width:484px) and (max-width:767px){
