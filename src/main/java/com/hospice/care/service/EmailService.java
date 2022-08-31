@@ -24,8 +24,8 @@ public class EmailService {
         MimeMessage message = emailSender.createMimeMessage();
 
         message.setFrom(inquiryDto.getUserEmail());
-        message.addRecipients(MimeMessage.RecipientType.TO, "rhwlffk486@gmail.com"); // 보낼 이메일 설정
-        // message.addRecipients(MimeMessage.RecipientType.TO, "imfo@i-syukan.com");
+        // 보낼 이메일 설정
+        message.addRecipients(MimeMessage.RecipientType.TO, "imfo@i-syukan.com");
         message.setSubject("[" + inquiryDto.getInqContent() + "]["+ inquiryDto.getUserName() +"]", "utf-8" ); // 이메일 제목
         message.setText(setContext(inquiryDto), "utf-8", "html"); // 내용 설정(Template Process)
         
