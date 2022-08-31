@@ -13,14 +13,14 @@ public class HospiceController {
         return "test";
     }
 
-    @GetMapping(value = "/contact")
+    @GetMapping(value = "/recruit")
     public String contact() {
-        return "contact/contact";
+        return "recruit/recruit";
     }
 
-    @GetMapping(value = "contact/contact")
+    @GetMapping(value = "recruit/recruit")
     public String contact2() {
-        return "contact/contact";
+        return "recruit/recruit";
     }
 
     @GetMapping(value = "/information")

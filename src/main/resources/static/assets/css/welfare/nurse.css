@@ -27,7 +27,7 @@ img { max-width: 100%; height: auto; }
 #service .single_service:hover { background: #F8C01B none repeat scroll 0 0; } 
 
 /* 3D Slideshow */ 
-.slideshow-title {font-family: 'Allerta Stencil';font-size: 62px;color: #fff;margin: 0 auto;text-align: center;margin-top: 25%;letter-spacing: 3px;font-weight: 300; } 
+.slideshow-title {font-family: "M PLUS Rounded 1c";font-size: 62px;color: #fff;margin: 0 auto;text-align: center;margin-top: 25%;letter-spacing: 3px;font-weight: 300; } 
 .sub-heading {padding-top: 50px;font-size: 18px; } .sub-heading-two {font-size: 15px; } .sub-heading-three {font-size: 13px; } .sub-heading-four {font-size: 11px; } .sub-heading-five {font-size: 9px; } .sub-heading-six {font-size: 7px; } .sub-heading-seven {font-size: 5px; } .sub-heading-eight {font-size: 3px; } .sub-heading-nine {font-size: 1px; } 
 .entire-content {margin: auto;width: 190px;perspective: 1000px;position: relative;padding-top: 80px; } 
 .content-carrousel {width: 100%;position: absolute;float: right;animation: rotar 15s infinite linear;transform-style: preserve-3d; } 

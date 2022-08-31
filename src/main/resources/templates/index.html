@@ -15,7 +15,7 @@ layout:decorate="~{layouts/main}"
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="/assets/img/introduce/main.jpg" style="height: 80vh;" alt="Image">
+                <img class="w-100" src="/assets/img/introduce/main.jpg" id="main-photo" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの特別なサービス</h5> -->
@@ -24,7 +24,7 @@ layout:decorate="~{layouts/main}"
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="/assets/img/introduce/room_c1.jpg" style="height: 80vh;" alt="Image">
+                <img class="w-100" src="/assets/img/introduce/room_c1.jpg" id="main-photo" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの愛の巣</h5> -->
@@ -45,10 +45,6 @@ layout:decorate="~{layouts/main}"
         </button>
     </div>
 
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-
-    </div>
-
     <!-- Blog Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
@@ -56,7 +52,7 @@ layout:decorate="~{layouts/main}"
                 <h5 class="fw-bold text-green text-uppercase">サービス</h5>
                 <h1 class="mb-0">いつも最善を尽くしてそばで<br>守って差し上げます。</h1>
             </div>
-            <div class="row g-5">
+            <div class="row g-5" style="justify-content: space-around;">
                 <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
                     <div class="blog-item bg-lt-green rounded overflow-hidden">
                         <div class="blog-img position-relative overflow-hidden">
@@ -64,7 +60,7 @@ layout:decorate="~{layouts/main}"
                         </div>
                         <div class="p-4">
                             <h4 class="mb-3">施設</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                            <p>| Atype | Btype | Ctype |</p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +71,7 @@ layout:decorate="~{layouts/main}"
                         </div>
                         <div class="p-4">
                             <h4 class="mb-3">看護</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                            <p>サービス</p>
                         </div>
                     </div>
                 </div>
@@ -89,10 +85,10 @@ layout:decorate="~{layouts/main}"
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
                 <h5 class="fw-bold text-green text-uppercase">サービス</h5>
-                <h1 class="mb-0">皆様に安心で安全な安らぎをご提供します。</h1>
+                <h1 class="mb-0">皆様に安心で安全な安らぎを<br>ご提供します</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                <div class="testimonial-item bg-lt-green my-4" id="index-carousel">
+                <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
                     <div class="row d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
                             <h4 class="text-d-green text-center mb-2">看護師による<br>24時間安心・安全ケア</h4>
@@ -103,7 +99,7 @@ layout:decorate="~{layouts/main}"
                         夜間にも看護師1名＋介護職員1名以上が対応いたします。<br>入居者お一人おひとりに常にケアの目が行き届く安心をお約束いたします。
                     </div>
                 </div>
-                <div class="testimonial-item bg-lt-green my-4" id="index-carousel">
+                <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
                     <div class="row d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
                             <h4 class="text-d-green text-center mb-2">最期まで<br>責任あるケア</h4>
@@ -114,7 +110,7 @@ layout:decorate="~{layouts/main}"
                         最期までご自宅のようなぬくもりある環境で過ごせます。<br>ご本人、ご家族の意思を第一に考えて対応いたします。
                     </div>
                 </div>
-                <div class="testimonial-item bg-lt-green my-4" id="index-carousel">
+                <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
                     <div class="row d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
                             <h4 class="text-d-green text-center mb-2">主治医による<br>継続診療が可能</h4>
@@ -125,7 +121,7 @@ layout:decorate="~{layouts/main}"
                         主治医による訪問診療、急変時の対応が可能です。<br>主治医がいない場合は、病状に適した在宅医療の医師をご紹介いたします。
                     </div>
                 </div>
-                <div class="testimonial-item bg-lt-green my-4" id="index-carousel">
+                <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
                     <div class="row d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
                             <h4 class="text-d-green text-center mb-2">ケアマネジャーの<br>継続利用可能</h4>
@@ -136,7 +132,7 @@ layout:decorate="~{layouts/main}"
                         現在の担当ケアマネジャーをそのままご継続していただけます。<br>ケアマネジャーがいない場合は当館でご紹介いたします。
                     </div>
                 </div>
-                <div class="testimonial-item bg-lt-green my-4" id="index-carousel">
+                <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
                     <div class="row d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
                             <h4 class="text-d-green text-center mb-2">24時間365日<br>ご家族様の面会が可能</h4>
@@ -150,20 +146,26 @@ layout:decorate="~{layouts/main}"
             </div>
         </div>
     </div>
-
     <!-- Testimonial End -->
-    <div class="moveInA"><br><br><br></div>
+
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container" style="display:grid; place-content: center;">
+            <a href="" class="col-lg-12 btn btn-primary py-md-3 px-md-5 animated slideInLeft" style="width:300px;">資料請求・見学希望</a>
+        </div>
+    </div>
+
+    <!-- <div class="moveInA"><br><br><br></div>
     <section class="ps-timeline-sec wow fadeInUp">
         <div class="container">
-            <h1 class="mb-0" style="text-align: center; margin-top: 100px;">入居流れ</h1>
+            <h1 class="mb-0" style="text-align: center; margin-top: 100px;">入居までの流れ</h1>
             <ol class="ps-timeline">
                 <li>
                     <div class="img-handler-top">
                         <img src="/assets/img/index/Interview.png" class="procedure_img"/>
                     </div>
                     <div class="ps-bot">
-                        <h4 class="ps-timeline-h5">面接</h4>
-                        <p>Do you have a recent injury or long term pain?</p>
+                        <h4 class="ps-timeline-h5">お問い合わせ</h4>
+                        <p>まずは、お問合せください。<br>施設環境や⽣活の様⼦、医療対応・医療連携などパンフレットでは判らないことをご説明いたします。<br>また⾒学予約も承ります。</p>
                     </div>
                     <span class="ps-sp-top">1</span>
                 </li>
@@ -172,8 +174,8 @@ layout:decorate="~{layouts/main}"
                         <img src="/assets/img/index/calendar.png" class="procedure_img"/>
                     </div>
                     <div class="ps-top">
-                        <h4 class="ps-timeline-h5">プラン</h4>
-                        <p>Have you tried Physiotherapy, Chiropractor or your GP without the pain free results?</p>
+                        <h4 class="ps-timeline-h5">施設見学</h4>
+                        <p>館内をご⾒学いただきます。<br>ご⾒学の際、パンフレットや重要事項説明書をもとに施設利⽤についてご説明いたします。<br>また現在お困りのことなどを確認させていただきます。</p>
                     </div>
                     <span class="ps-sp-bot">2</span>
                 </li>
@@ -182,8 +184,8 @@ layout:decorate="~{layouts/main}"
                         <img src="/assets/img/index/agreement.png" class="procedure_img"/>
                     </div>
                     <div class="ps-bot">
-                        <h4 class="ps-timeline-h5">契約</h4>
-                        <p>Let Physology assess and treat your pain with our trusted revolusionary approach.</p>
+                        <h4 class="ps-timeline-h5">事前面談</h4>
+                        <p>施設管理者や看護師がご本⼈様やご家族様と⾯談を⾏います。<br>病院に⼊院している場合は病院へ伺わせていただきます。<br>⼼⾝のご状態などを確認させていただき、その後ご⼊居可否のご連絡を差し上げます。</p>
                     </div>
                     <span class="ps-sp-top">3</span>
                 </li>
@@ -192,14 +194,56 @@ layout:decorate="~{layouts/main}"
                         <img src="/assets/img/index/house.png" class="procedure_img"/>
                     </div>
                     <div class="ps-top">
-                        <h4 class="ps-timeline-h5">入居</h4>
-                        <p>Join our happy family of pain free clients.</p>
+                        <h4 class="ps-timeline-h5">ご契約</h4>
+                        <p>サービス付き⾼齢者向け住宅との契約の他、利⽤する事業所（訪問診療・訪問看護・訪問介護・薬局他）と個別に契約を結んでいただきます。<br>指定医療費（指定難病）受給者証をお持ちの場合、指定医療機関にクリニック・薬局・訪問看護を⼊居⽇までに⼊れてもらうよう⾏政（保健所）へご依頼ください。</p>
                     </div>
                     <span class="ps-sp-bot">4</span>
                 </li>
             </ol>
         </div>
-    </section>
+    </section> -->
+
+    <div class="moveInA"><br><br><br></div>
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="mb-5" style="text-align: center;">入居までの流れ</h1>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                <div class="flow_main">
+                    <div class="flow_round">01</div>
+                    <h2 class="flow_text mb-3">お問い合わせ</h2>
+                    <p class="flow_text_2">まずは、お問合せください。<br>施設環境や⽣活の様⼦、医療対応・医療連携などパンフレットでは判らないことをご説明いたします。<br>また⾒学予約も承ります。</p>
+                    <div class="flow_img mb-5"><a href="#"><img src="/assets/img/index/calendar.png"></a></div>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                <div class="flow_main">
+                    <div class="flow_round">02</div>
+                    <h2 class="flow_text mb-3">施設見学</h2>
+                    <p class="flow_text_2">館内をご⾒学いただきます。<br>ご⾒学の際、パンフレットや重要事項説明書をもとに施設利⽤についてご説明いたします。<br>また現在お困りのことなどを確認させていただきます。</p>
+                    <div class="flow_img mb-5"><img src="/assets/img/index/interview.png"></a></div>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                <div class="flow_main">
+                    <div class="flow_round">03</div>
+                    <h2 class="flow_text mb-3">事前面談</h2>
+                    <p class="flow_text_2">施設管理者や看護師がご本⼈様やご家族様と⾯談を⾏います。<br>病院に⼊院している場合は病院へ伺わせていただきます。<br>⼼⾝のご状態などを確認させていただき、その後ご⼊居可否のご連絡を差し上げます。</p>
+                    <div class="flow_img mb-5"><img src="/assets/img/index/agreement.png"></a></div>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="flow_main">
+                        <div class="flow_round">04</div>
+                        <h2 class="flow_text mb-3">ご契約</h2>
+                        <p class="flow_text_2">サービス付き⾼齢者向け住宅との契約の他、利⽤する事業所（訪問診療・訪問看護・訪問介護・薬局他）と個別に契約を結んでいただきます。<br>指定医療費（指定難病）受給者証をお持ちの場合、指定医療機関にクリニック・薬局・訪問看護を⼊居⽇までに⼊れてもらうよう⾏政（保健所）へご依頼ください。</p>
+                        <div class="flow_img mb-5"><a href="#"><img src="/assets/img/index/house.png"></a></div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="inquiryA"><br><br><br></div>
     <!-- Quote Start -->
@@ -213,57 +257,49 @@ layout:decorate="~{layouts/main}"
                     </div>
                     <div class="row gx-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>08：00  ~  18：00</h5>
+                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>09：30  ~  18：00</h5>
                         </div>
                     </div>
                     <p class="mb-4">電話でお問い合わせするお客様は下の支店選択を、<br>メールでお問い合わせするお客様は右のメールサービスを利用してください。
                     </p>
                     <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="bg-primary d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px; margin-bottom: 50px;">
+                        <div class="d-flex align-items-center justify-content-center rounded" style="background-color: #0e989e; width: 60px; height: 60px; margin-bottom: 50px;">
                             <i class="fa fa-phone-alt text-white"></i>
                         </div>
                         <div class="ps-4" style="height:100px">
-                            <!-- <h5 class="mb-2">電話で問い合わせ</h5> -->
-                            <select class="form-select bg-light border-1" onchange="officeTel(this)" style="height: 50px;">
-                                <option value="" selected>選択してください。</option>
-                                <option value="080-1111-1111">東京</option>
-                                <option value="080-2222-2222">大阪</option>
-                                <option value="080-3333-3333">札幌</option>
-                            </select>
-                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px"></h4>
+                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px">03-6284-2566</h4>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5" style="margin-top:0px">
-                    <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
+                    <div class="rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s" style="background-color: #0e989e;">
                         <form id="inquiry" method="post">
                             <div class="row g-3 inquiryDiv">
-                                <div class="col-12">
-                                    <select id="place" class="form-select bg-light border-0" name="place" style="height: 55px;">
+                                <!-- <div class="col-12">
+                                    <select id="place" class="form-select bg-lt-green border-0" name="place" style="height: 55px;">
                                         <option value="0"selected>場所選択</option>
                                         <option value="東京">東京</option>
                                         <option value="大阪">大阪</option>
                                         <option value="札幌">札幌</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="col-xl-12">
-                                    <input type="text" id="userName" class="form-control bg-light border-0" name="userName" placeholder="フルネーム" style="height: 55px;">
+                                    <input type="text" id="userName" class="form-control bg-lt-green border-0" name="userName" placeholder="名前" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" id="userEmail" class="form-control bg-light border-0" name="userEmail" placeholder="メール" style="height: 55px;">
+                                    <input type="text" id="userEmail" class="form-control bg-lt-green border-0" name="userEmail" placeholder="メール" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" id="phone" class="form-control bg-light border-0" name="phone" placeholder="テレホン" maxlength="13" style="height: 55px;">
+                                    <input type="text" id="phone" class="form-control bg-lt-green border-0" name="phone" placeholder="電話番号" maxlength="13" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-control bg-light border-0">
-                                    <span class="mb-4" style="margin-right: 20px;">お間に合わせ内容 &nbsp; -></span>
-                                    <label><input type="radio" name="inqContent" value="資料"/>資料&nbsp;&nbsp;</label>
-                                    <label><input type="radio" name="inqContent" value="見学"/>見学</label>
+                                    <div class="form-control bg-lt-green border-0">
+                                        <label><input type="checkbox" name="inqContent" value="資料"/>資料請求&nbsp;&nbsp;</label>
+                                        <label><input type="checkbox" name="inqContent" value="見学"/>見学希望</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <textarea id="inqMessage" class="form-control bg-light border-0" name="inqMessage" rows="3" placeholder="メッセージ"></textarea>
+                                    <textarea id="inqMessage" class="form-control bg-lt-green border-0" name="inqMessage" rows="3" placeholder="お問い合わせ内容"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="button" class="btn btn-dark w-100 py-3" onclick="inqFormCheck()">確認後、メール送信</button>

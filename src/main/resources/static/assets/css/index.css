@@ -1,5 +1,5 @@
 .pace { -webkit-pointer-events: none; pointer-events: none; -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; z-index: 2000; position: fixed; margin: auto; top: 12px; left: 0; right: 0; bottom: 0; width: 200px; height: 50px; overflow: hidden; } 
-.pace .pace-progress { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); display: block; position: absolute; right: 100%; margin-right: -7px; width: 93%; top: 7px; height: 14px; font-size: 12px; background: #29d; color: #29d; line-height: 60px; font-weight: bold; font-family: Helvetica, Arial, "Lucida Grande", sans-serif; -webkit-box-shadow: 120px 0 #fff, 240px 0 #fff; -ms-box-shadow: 120px 0 #fff, 240px 0 #fff; box-shadow: 120px 0 #fff, 240px 0 #fff; } 
+.pace .pace-progress { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; -webkit-background-clip: padding-box; -moz-background-clip: padding; background-clip: padding-box; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); display: block; position: absolute; right: 100%; margin-right: -7px; width: 93%; top: 7px; height: 14px; font-size: 12px; background: #29d; color: #29d; line-height: 60px; font-weight: bold; font-family: "M PLUS Rounded 1c"; -webkit-box-shadow: 120px 0 #fff, 240px 0 #fff; -ms-box-shadow: 120px 0 #fff, 240px 0 #fff; box-shadow: 120px 0 #fff, 240px 0 #fff; } 
 .pace .pace-progress:after { content: attr(data-progress-text); display: inline-block; position: fixed; width: 45px; text-align: right; right: 0; padding-right: 16px; top: 4px; } 
 .pace .pace-progress[data-progress-text="0%"]:after { right: -200px } 
 .pace .pace-progress[data-progress-text="1%"]:after { right: -198.14px } 
@@ -162,7 +162,87 @@
 
 
 
-#index-carousel{height: 80vh;}
-@media (min-width: 1024px){
-    #index-carousel{ height: 100vh; }
+#index-carousel{height: 600px;}
+#main-photo{height: 80vh;}
+
+.flow_main{
+    width: 100%;
+    float: left;
+    
+    height: 500px;
+    margin-top: 70px;
+
+    padding-right: 30px;
+    padding-left: 30px;
+
+    border-radius: 10px;
+    box-shadow: 3px 8px 15px #b1b1b1;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.flow_round {
+    width: 20%;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: "M PLUS Rounded 1c";
+    color: #fefefe;
+    font: bold;
+    height: 70px;
+    background: #f8ca11;
+    display: block;
+    text-align: center;
+    border-radius: 100px;
+    padding-top: 12px;
+    position: relative;
+    top: -35px;
+
+    z-index: 5;
+}
+
+.flow_text{
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: #2b3436;
+    font-family: "M PLUS Rounded 1c";
+    font: bold;
+    font-size: 24px;
+}
+
+.flow_text_2{
+    width: 100%;
+    float: left;
+    text-align: left;
+    color: #2b3436;
+    font-family: "M PLUS Rounded 1c";
+    font-size: 20px;
+    margin-left: 0px;
+}
+
+.flow_img{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+@media(min-width:484px) and (max-width:767px){
+    #index-carousel{height: 750px;}
+}
+
+@media(max-width:767px){
+    #main-photo{height: 40vh;}
+    .flow_main{height: 700px;}
+}
+
+@media(min-width:992px){
+    .flow_main{height: 600px;}
+}
+
+@media(min-width:1025px){
+    #index-carousel{height: 700px;}
+    .flow_main{height: 550px;}
 }
