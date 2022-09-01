@@ -160,7 +160,10 @@
 .ps-timeline-h5 {text-align: center;}
 
 
-
+.img-fluid-2{
+    max-width: 100%;
+    height: auto;
+}
 
 #index-carousel{height: 600px;}
 #main-photo{height: 80vh;}
@@ -240,6 +243,7 @@
 
 @media(min-width:992px){
     .flow_main{height: 600px;}
+    .img-fluid-2{height: 480px;}
 }
 
 @media(min-width:1025px){
