@@ -20,12 +20,6 @@ public class PlaceController {
         return "place/placeSaitama";
     }
 
-    @GetMapping(value = "/placeNishiba")
-    public String placeNishiba(){
-        System.out.println("/place/placeNishiba");
-        return "place/placeNishiba";
-    }
-
     @GetMapping(value = "/placeTest")
     public String placeTest(){
         System.out.println("/place/placeTest");

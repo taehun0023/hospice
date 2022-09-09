@@ -461,3 +461,130 @@ img.hover-shadow {
         width: 50%;
     }
 }
+
+
+
+
+
+/* place-carousel */
+
+#place-carousel {
+    position: relative;
+    height: 400px;
+    top: 50%;
+    overflow: hidden;
+}
+
+#place-carousel div {
+position: absolute;
+transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+opacity: 1;
+}
+
+#place-carousel div img {
+width: 400px;
+height: 400px;
+transition: width 400ms;
+-webkit-user-drag: none;
+}
+
+#place-carousel div.place-hideLeft {
+left: 0%;
+opacity: 0;
+transform: translateY(50%) translateX(-50%);
+}
+
+#place-carousel div.place-hideLeft img {
+width: 200px;
+height: 200px;
+}
+
+#place-carousel div.place-hideRight {
+left: 100%;
+opacity: 0;
+transform: translateY(50%) translateX(-50%);
+}
+
+#place-carousel div.place-hideRight img {
+width: 200px;
+width: 200px;
+}
+
+#place-carousel div.place-prev {
+z-index: 5;
+left: 30%;
+transform: translateY(50px) translateX(-50%);
+}
+
+#place-carousel img:hover {
+cursor:above;
+}
+
+#place-carousel div.place-prev img {
+width: 300px;
+height: 300px;
+}
+
+#place-carousel div.place-prevLeftSecond {
+z-index: 4;
+left: 15%;
+transform: translateY(50%) translateX(-50%);
+opacity: 0.7;
+}
+
+#place-carousel div.place-prevLeftSecond img {
+width: 200px;
+height: 200px;
+}
+
+#place-carousel div.place-selected {
+z-index: 10;
+left: 50%;
+transform: translateY(0px) translateX(-50%);
+}
+
+#place-carousel div.place-next {
+z-index: 5;
+left: 70%;
+transform: translateY(50px) translateX(-50%);
+}
+
+#place-carousel div.place-next img {
+width: 300px;
+height: 300px;
+}
+
+#place-carousel div.place-nextRightSecond {
+z-index: 4;
+left: 85%;
+transform: translateY(50%) translateX(-50%);
+opacity: 0.7;
+}
+
+#place-carousel div.place-nextRightSecond img {
+width: 200px;
+height: 200px;
+}
+
+.place-buttons {
+margin: auto;
+display: flex;
+justify-content: space-evenly;
+position: relative;
+left: 50%;
+top:50px;
+transform: translateX(-50%);
+bottom: 10px;
+
+z-index: 10;
+}
+
+.place-buttons #place-prev,
+.place-buttons #place-next{
+    width:50px;
+    height: 50px;
+    border-radius: 25px;
+    border: 0;
+    background-color: #009688;
+    color: white;
+}
