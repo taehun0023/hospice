@@ -11,7 +11,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class InquiryDto {
     private int inqUID;
-    private String place;
     private String userName;
     private String userEmail;
     private String phone;

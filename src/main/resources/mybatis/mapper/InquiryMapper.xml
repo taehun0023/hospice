@@ -7,7 +7,6 @@
 
 	<resultMap type="InquiryDto" id="InquiryDtoResultMap">
 		<result property="inqUID" column="INQ_UID"/>
-		<result property="place" column="PLACE"/>
 		<result property="userName" column="USER_NAME"/>
 		<result property="userEmail" column="PHONE"/>
 		<result property="phone" column="USER_EMAIL"/>
@@ -17,14 +16,12 @@
 
     <insert id="insertInquiryDto" parameterType="InquiryDto">
         INSERT INTO hospice_inquiry_user (
-			PLACE,
 			USER_NAME,
 			USER_EMAIL,
 			PHONE,
 			INQ_MESSAGE,
 			INQ_DATE	
 		) VALUES (
-			#{place},
 			#{userName},
 			#{userEmail},
 			#{phone},

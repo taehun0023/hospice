@@ -245,8 +245,8 @@ layout:decorate="~{layouts/main}"
                                 </div>
                                 <div class="col-12">
                                     <div class="form-control bg-lt-green border-0">
-                                        <label><input type="checkbox" name="inqContent" value="資料"/>資料請求&nbsp;&nbsp;</label>
-                                        <label><input type="checkbox" name="inqContent" value="見学"/>見学希望</label>
+                                        <label><input type="radio" name="inqContent" value="資料"/>資料請求&nbsp;&nbsp;</label>
+                                        <label><input type="radio" name="inqContent" value="見学"/>見学希望</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -340,16 +340,10 @@ function IsValid() {
     var phRegex = /^0\d{1,3}-\d{2,4}-\d{3,4}$/;
 
     const frm = document.forms[0];
-    const place = frm.place.value;
     const username = frm.userName.value;
     const useremail = frm.userEmail.value;
     const phone = frm.phone.value;
     const inqmessage = frm.inqMessage.value;
-
-    if (place == 0) {
-        alert("場所を選択してください。")
-        return false;
-    }
 
     if (username == '') {
         alert("名前を入力してください。");

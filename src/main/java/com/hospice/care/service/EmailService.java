@@ -42,7 +42,6 @@ public class EmailService {
         context.setVariable("userName", inquiryDto.getUserName()); // Template에 전달할 데이터 
         context.setVariable("userEmail", inquiryDto.getUserEmail());
         context.setVariable("phone", inquiryDto.getPhone());
-        context.setVariable("place", inquiryDto.getPlace());
         context.setVariable("inqContent", inquiryDto.getInqContent());
         context.setVariable("inqMessage", inquiryDto.getInqMessage());
 
