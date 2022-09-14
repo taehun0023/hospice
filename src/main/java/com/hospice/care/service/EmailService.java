@@ -25,7 +25,7 @@ public class EmailService {
 
         message.setFrom(inquiryDto.getUserEmail());
         // 보낼 이메일 설정
-        message.addRecipients(MimeMessage.RecipientType.TO, "imfo@i-syukan.com");
+        message.addRecipients(MimeMessage.RecipientType.TO, "info-isyukan@nishiba.jp");
         message.setSubject("[" + inquiryDto.getInqContent() + "]["+ inquiryDto.getUserName() +"]", "utf-8" ); // 이메일 제목
         message.setText(setContext(inquiryDto), "utf-8", "html"); // 내용 설정(Template Process)
         

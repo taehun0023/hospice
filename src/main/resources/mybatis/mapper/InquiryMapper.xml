@@ -8,8 +8,9 @@
 	<resultMap type="InquiryDto" id="InquiryDtoResultMap">
 		<result property="inqUID" column="INQ_UID"/>
 		<result property="userName" column="USER_NAME"/>
-		<result property="userEmail" column="PHONE"/>
-		<result property="phone" column="USER_EMAIL"/>
+		<result property="userEmail" column="USER_EMAIL"/>
+		<result property="phone" column="PHONE"/>
+		<result property="inqContent" column="INQ_CONTENT"/>
 		<result property="inqMessage" column="INQ_MESSAGE"/>
 		<result property="inqDate" column="INQ_DATE"/>
 	</resultMap>
@@ -19,12 +20,14 @@
 			USER_NAME,
 			USER_EMAIL,
 			PHONE,
+			INQ_CONTENT,
 			INQ_MESSAGE,
 			INQ_DATE	
-		) VALUES (
+		)  VALUES (
 			#{userName},
 			#{userEmail},
 			#{phone},
+            #{inqContent},
 			#{inqMessage},
 			#{inqDate}
 		)
