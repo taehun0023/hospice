@@ -14,12 +14,12 @@ public class HospiceController {
     }
 
     @GetMapping(value = "/recruit")
-    public String contact() {
+    public String recruit() {
         return "recruit/recruit";
     }
 
     @GetMapping(value = "recruit/recruit")
-    public String contact2() {
+    public String recruit2() {
         return "recruit/recruit";
     }
 
@@ -51,6 +51,11 @@ public class HospiceController {
     @GetMapping(value = "team/team")
     public String team2() {
         return "information/team";
+    }
+
+    @GetMapping(value = "/contact")
+    public String contact() {
+        return "recruit/contact";
     }
 
 
