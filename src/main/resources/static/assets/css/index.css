@@ -225,6 +225,11 @@
     font-size: 20px;
     margin-left: 0px;
 }
+.flow_text_2 ul li{
+    color: #2b3436;
+    font-family: "M PLUS Rounded 1c";
+    font-size: 20px;
+}
 
 .flow_img{
     width: 200px;
