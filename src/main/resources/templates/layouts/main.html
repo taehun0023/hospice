@@ -5,11 +5,11 @@
 <th:block th:replace="fragments/head :: head"></th:block>   
     
 <body>
-    <!-- 공통 header-->
     <th:block th:replace="fragments/header :: header"></th:block>
-
+    
     <div layout:fragment="content" class="content"></div>
-
+    <!-- 공통 header-->
+    
     <!-- 공통 footer-->
     <th:block th:replace="fragments/footer :: footer"></th:block>
 
