@@ -170,9 +170,10 @@
 
 .flow_main{
     width: 100%;
+
     float: left;
     
-    height: 500px;
+    height: auto;
     margin-top: 70px;
 
     padding-right: 30px;
@@ -226,19 +227,23 @@
 }
 
 .flow_img{
-    width: 100%;
-    display: flex;
+    width: 200px;
+    display: block;
     justify-content: space-around;
     margin: auto;
 }
 
+.flow_img img{
+    width: 100%;
+}
+
 @media(min-width:484px) and (max-width:767px){
     #index-carousel{height: 750px;}
+    .flow_img img{width:300px}
 }
 
 @media(max-width:767px){
     #main-photo{height: 40vh;}
-    .flow_main{height: 700px;}
 }
 
 @media(min-width:992px){
@@ -248,5 +253,4 @@
 
 @media(min-width:1025px){
     #index-carousel{height: 700px;}
-    .flow_main{height: 550px;}
 }
