@@ -13,15 +13,15 @@ public class HospiceController {
         return "test";
     }
 
-    @GetMapping(value = "/recruit")
-    public String recruit() {
-        return "recruit/recruit";
-    }
+    // @GetMapping(value = "/recruit")
+    // public String recruit() {
+    //     return "recruit/recruit";
+    // }
 
-    @GetMapping(value = "recruit/recruit")
-    public String recruit2() {
-        return "recruit/recruit";
-    }
+    // @GetMapping(value = "recruit/recruit")
+    // public String recruit2() {
+    //     return "recruit/recruit";
+    // }
 
     @GetMapping(value = "/information")
     public String information() {
@@ -53,10 +53,10 @@ public class HospiceController {
         return "information/team";
     }
 
-    @GetMapping(value = "/contact")
-    public String contact() {
-        return "recruit/contact";
-    }
+    // @GetMapping(value = "/contact")
+    // public String contact() {
+    //     return "recruit/contact";
+    // }
 
 
 
