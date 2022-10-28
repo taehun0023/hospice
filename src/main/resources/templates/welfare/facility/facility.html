@@ -20,15 +20,26 @@ layout:decorate="~{layouts/main}"
 
 <div layout:fragment="content" class="hospiceContent">
     <!-- Full Screen Search Start -->
-    <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+    <div class="container-fluid bg-primary py-5 bg-header">
         <div class="row py-5">
             <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                <h1 class="display-4 text-white animated zoomIn">サービス</h1>
-                <h5 class="text-white">施設</h5>
+                <h1 class="display-4 text-white animated zoomIn">施設紹介</h1>
+                <!-- <h5 class="text-white">施設</h5> -->
             </div>
         </div>
     </div>
     <!-- Full Screen Search End -->
+    <!-- top nav -->
+    <div class="top-nav">
+        <ul>
+            <li><a href="/">ホーム</a></li>
+            <li><a href="/place/placeSaitama">事務所案内</a></li>
+            <li><a href="/greetings">ご挨拶</a></li>
+            <li><a href="/welfare/facility">施設紹介</a></li>
+            <li><a href="/welfare/nurse">サービス内容</a></li>
+            <li><a href="/#inquiryA">ご対応について</a></li>
+        </ul>
+    </div>
 
     <!-- 시설 종류 Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -121,6 +132,12 @@ layout:decorate="~{layouts/main}"
         </div>
     </div>
     <!-- 시설 종류 End -->
+    
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container" style="display:grid; place-content: center;">
+            <a href="/welfare/money" class="col-lg-12 btn btn-primary py-md-3 px-md-5 animated slideInLeft" style="width:300px;">価格表</a>
+        </div>
+    </div>
 
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
