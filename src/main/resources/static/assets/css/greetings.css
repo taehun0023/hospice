@@ -3,3 +3,12 @@
   font-size: 25px;
   color: black;
 }
+
+.greerow {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-left: calc(var(--bs-gutter-x) / -2);
+}
