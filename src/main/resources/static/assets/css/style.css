@@ -205,3 +205,22 @@ h5,h6,.fw-medium { font-weight: 600 !important; }
     color: #fff;
     opacity: 1;
 }
+
+
+
+/* new facility */
+.white-card{
+    background-color: #fff;
+    border-radius: 20px;
+    display: block;
+}
+
+.white-card img{
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.white-card h4{
+    padding: 20px;
+}
