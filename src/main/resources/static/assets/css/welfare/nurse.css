@@ -20,7 +20,7 @@ img { max-width: 100%; height: auto; }
 #service .icon { border: 1px solid #666; border-radius: 5%; color: #333333; font-size: 35px; line-height: 65px; overflow: hidden; text-align: center; text-decoration: none; width: 70px; } 
 #service .single_service .single_service-left { padding-right: 25px; } 
 .single_service-heading { font-size: 30px; font-weight: 700; text-transform: uppercase; color: #000; } 
-.single_service-body p { font-size: 25px; line-height: 30px; } 
+.single_service-body p { font-size: 25px; line-height: normal; } 
 .single_service-left { display: table-cell; vertical-align: top; } 
 .single_service-body { color: #333333; display: table-cell; vertical-align: top; } 
 .hvr-curl-top-right { display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px transparent; position: relative; } 
