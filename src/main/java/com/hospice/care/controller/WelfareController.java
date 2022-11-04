@@ -82,4 +82,5 @@ public class WelfareController {
         model.addAttribute("inquriyDto", inquiryDto);
         return "sendEmail/inquriyCheck_inview";
     }
+
 }

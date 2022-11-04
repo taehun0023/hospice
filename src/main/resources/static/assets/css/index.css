@@ -161,8 +161,9 @@
 
 
 .img-fluid-2{
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 #index-carousel{height: 600px;}
@@ -253,7 +254,6 @@
 
 @media(min-width:992px){
     .flow_main{height: 600px;}
-    .img-fluid-2{height: 480px;}
 }
 
 @media(min-width:1025px){
