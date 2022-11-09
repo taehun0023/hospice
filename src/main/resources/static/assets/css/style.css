@@ -227,30 +227,63 @@ h5,h6,.fw-medium { font-weight: 600 !important; }
 
 /*** 연속숫자에 스타일을 추가 ***/
 .circle-list {
-    counter-reset: circle 0;
+    counter-reset: colorcircle 0;
 }
 .circle-list .circle-item {
 position: relative;
-list-style: none
+list-style: none;
+padding: 5px 0 5px 45px;
+font-size: 20px;
 }
 .circle-list .circle-item::before {
 position: absolute;
 top: 50%;
 left: 0.4em;
 transform: translateY(-50%);
-counter-increment: circle 1;
-content: counter(circle);
-font-size: 0.8em;
+counter-increment: colorcircle 1;
+content: counter(colorcircle);
+color: #fff;
+font-size: 1.1em;
 }
 .circle-list .circle-item::after {
-content: '';
+content: counter(colorcircle);
 position: absolute;
 top: 50%;
 left: 0;
 transform: translateY(-50%);
 display: inline-block;
-border: 1px solid #333;
+background-color: #333;
+color: #fff;
+text-align: center;
 border-radius: 50%;
-width: 1em;
-height: 1em;
+width: 1.4em;
+height: 1.5em;
+}
+
+/*** circle에 스타일을 추가 ***/
+.circle-list .circle-item2 {
+position: relative;
+list-style: none;
+padding: 5px 0 5px 45px;
+font-size: 20px;
+}
+.circle-list .circle-item2::before {
+position: absolute;
+top: 50%;
+left: 0.4em;
+transform: translateY(-50%);
+font-size: 1.1em;
+}
+.circle-list .circle-item2::after {
+position: absolute;
+top: 50%;
+left: 0;
+content: '';
+transform: translateY(-50%);
+display: inline-block;
+background-color: #333;
+text-align: center;
+border-radius: 50%;
+width: 1.4em;
+height: 1.5em;
 }
