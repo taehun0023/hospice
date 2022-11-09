@@ -224,3 +224,33 @@ h5,h6,.fw-medium { font-weight: 600 !important; }
 .white-card h4{
     padding: 20px;
 }
+
+/*** 연속숫자에 스타일을 추가 ***/
+.circle-list {
+    counter-reset: circle 0;
+}
+.circle-list .circle-item {
+position: relative;
+list-style: none
+}
+.circle-list .circle-item::before {
+position: absolute;
+top: 50%;
+left: 0.4em;
+transform: translateY(-50%);
+counter-increment: circle 1;
+content: counter(circle);
+font-size: 0.8em;
+}
+.circle-list .circle-item::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+display: inline-block;
+border: 1px solid #333;
+border-radius: 50%;
+width: 1em;
+height: 1em;
+}
