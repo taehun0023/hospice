@@ -10,7 +10,7 @@ a:focus { color: #6f6f6f; text-decoration: none; transition-timing-function: eas
 ul { margin: 0; padding: 0; list-style: none; } 
 img { max-width: 100%; height: auto; } 
 .section_title { margin-bottom: 40px; } 
-.section_title h2 { color: #333333; font-size: 25px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; } 
+.section_title h2 { color: #333333; font-size: 30px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; } 
 .brand_border .fa.fa-minus { color: #fff; font-size: 8px; height: 2px; background: #F8C01B none repeat scroll 0 0; width: 100px; } 
 .brand_border .fas.fa-handshake { font-size: 14px; color:#000000; } 
 .section_title p { color: #333333; font-size: 14px; line-height: 25px; padding: 14px 0; } 
@@ -47,3 +47,8 @@ img { max-width: 100%; height: auto; }
 .pdf_popup_wrap .edit_popup .popup_btn_wrap button{width: 150px; height: 50px; border-radius: 5px; box-sizing: border-box; font-size: 16px; font-weight: 600;}
 .pdf_popup_wrap .edit_popup .popup_btn_wrap button.cancel{border: 1px solid #d4d9dc; background: #fff; margin-right: 15px;}
   /* pdf */
+
+
+#serviceMore .serviceMore-box{
+  padding: 30px;box-shadow:5px 5px 5px #eee; border: 1.5px solid #eee;
+}
