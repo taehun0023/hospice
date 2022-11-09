@@ -12,14 +12,14 @@ layout:decorate="~{layouts/main}"
 </th:block>    
 <th:block layout:fragment="content">
     <div class="inquriyCheck_pupup"></div>
-    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
+    <div id="header-carousel" class="carousel slide carousel-fade d-flex justify-content-center" data-bs-ride="carousel">
+        <div class="carousel-inner" style="width: 50%; height: auto;">
             <div class="carousel-item active">
                 <img class="w-100" src="/assets/img/newImg/main_1.jpg" id="main-photo" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
+                    <div class="p-3">
                         <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの特別なサービス</h5> -->
-                        <h3 class="display-1 text-white mb-md-4 animated zoomIn" style="font-size: calc(1rem + 3vw); text-shadow: 2px 2px 5px black;">あなたに相応しい<br>「家」と「暮らし」を<br>届けたい</h3>
+                        <h3 class="display-1 text-white mb-md-4 animated zoomIn" style="font-size: calc(1rem + 3vw); text-shadow: 2px 2px 5px black; padding-bottom: 18rem;">あなたに相応しい<br>「家」と「暮らし」を<br>届けたい</h3>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ layout:decorate="~{layouts/main}"
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの愛の巣</h5> -->
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn" style="font-size: calc(1rem + 3vw); text-shadow: 2px 2px 5px black;">安らかな環境を<br>提供します</h1>
+                        <h1 class="display-1 text-white mb-md-4 animated zoomIn" style="font-size: calc(1rem + 3vw); text-shadow: 2px 2px 5px black; padding-top: 18rem;">安らかな環境を<br>提供します</h1>
                     </div>
                 </div>
             </div>
@@ -131,12 +131,12 @@ layout:decorate="~{layouts/main}"
                 <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
                     <div class="row d-flex align-items-center border-bottom pt-5 pb-4 px-5">
                         <div class="ps-4">
-                            <h4 class="text-d-green text-center mb-2">主治医による<br>継続診療が可能</h4>
+                            <h4 class="text-d-green text-center mb-2">訪問医による<br>継続診療が可能</h4>
                         </div>
                         <img class="img-fluid rounded" src="/assets/img/index/index-3.png" >
                     </div>
                     <div class="pt-4 pb-5 px-5">
-                        主治医による訪問診療、急変時の対応が可能です。<br>主治医がいない場合は、病状に適した在宅医療の医師をご紹介いたします。
+                        訪問医による訪問診療、急変時の対応が可能です。<br>訪問医がいない場合は、病状に適した在宅医療の医師をご紹介いたします。
                     </div>
                 </div>
                 <div class="testimonial-item bg-lt-beige my-4" id="index-carousel">
@@ -182,10 +182,10 @@ layout:decorate="~{layouts/main}"
                     <div class="flow_round">01</div>
                     <h2 class="flow_text mb-3">お問い合わせ</h2>
                     <p class="flow_text_2">ご入居についてのご相談、お問い合わせは</p>
-                    <ul>
-                        <li>電話番号：049-271-5588</li>
-                        <li>インターネットからのお問い合わせ：<a href="http://nishiba.jp">http://nishiba.jp</a></li>
-                    </ul>
+                    <div>
+                        <p style="display: inline;">電話番号：</p>
+                        <h4 style="display: inline;">049-271-5588</h4>
+                    </div>
                     <div class="flow_img mb-5"><img src="/assets/img/index/conversation.png"></div>
                 </div>
                 </div>
@@ -242,29 +242,22 @@ layout:decorate="~{layouts/main}"
                 <div class="col-lg-7">
                     <div class="section-title position-relative pb-3 mb-5">
                         <h5 class="fw-bold text-primary text-uppercase">相談</h5>
-                        <h1 class="mb-0">いつでもお問い合わせください。</h1>
+                        <h1 class="mb-0">いつでもお気軽にお問い合わせください</h1>
                     </div>
-                    <div class="row gx-3">
-                        <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
-                            <h5 class="mb-4"><i class="fa fa-phone-alt text-primary me-3"></i>09：30  ~  18：00</h5>
-                        </div>
-                    </div>
-                    <p class="mb-4">電話でお問い合わせするお客様は下の支店選択を、<br>メールでお問い合わせするお客様は右のメールサービスを利用してください。
-                    </p>
                     <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
-                        <div class="d-flex align-items-center justify-content-center rounded" style="background-color: #0e989e; width: 60px; height: 60px; margin-bottom: 50px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
                         <div class="ps-4" style="height:100px">
-                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px">049-271-5588</h4>
+                            <p class="text-primary mb-0 finderTel" style="font-size: 1.3rem;font-weight: bold;">お問い合わせ時間</p>
+                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px">09：30  ~  17：30</h4>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-2 wow zoomIn" data-wow-delay="0.6s">
+                        <div class="ps-4" style="height:100px">
+                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px">電話：049-271-5588</h4>
                         </div>
                     </div>
                     <div class="d-flex align-items-center wow zoomIn" data-wow-delay="0.6s">
-                        <div class="d-flex align-items-center justify-content-center rounded" style="margin-bottom: 50px;">
-                            <img class="fax_img" src="assets/img/fax-machine.png" style="width: 4rem;"/>
-                        </div>
                         <div class="ps-4" style="height:100px">
-                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px">049-272-7868</h4>
+                            <h4 class="text-primary mb-0 finderTel" style="padding-top:10px">MAIL：isyukan.turu.5588@i-syukan.com</h4>
                         </div>
                     </div>
                 </div>
