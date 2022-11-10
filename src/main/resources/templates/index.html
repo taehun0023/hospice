@@ -13,22 +13,22 @@ layout:decorate="~{layouts/main}"
 <th:block layout:fragment="content">
     <div class="inquriyCheck_pupup"></div>
     <div id="header-carousel" class="carousel slide carousel-fade d-flex justify-content-center" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item text-center active">
-                <img style="max-width: 600px; height: auto;" src="/assets/img/newImg/main_1.jpg" id="main-photo" alt="Image">
+        <div class="carousel-inner text-center">
+            <div class="carousel-item active">
+                <img class="w-100" src="/assets/img/newImg/new_13.jpg" id="main-photo" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div style="max-width: 900px;">
+                    <div style="max-width: 900px;position:absolute;bottom:20px;">
                         <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの特別なサービス</h5> -->
-                        <h1 class="text-white animated zoomIn" style="text-shadow: 2px 2px 5px black; padding-bottom: 15rem;">あなたに相応しい<br>「家」と「暮らし」を<br>届けたい</h1>
+                        <h3 class="text-white animated zoomIn" style="font-size: calc(1rem + 2vw); text-shadow: 2px 2px 5px black; word-wrap: break-word;">あなたに相応しい「家」と<br>「暮らし」を届けたい</h3>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item text-center">
-                <img style="max-width: 600px; height: auto;" src="/assets/img/newImg/main_2.jpg" id="main-photo" alt="Image">
+            <div class="carousel-item">
+                <img class="w-100" src="/assets/img/newImg/main_2.jpg" id="main-photo" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
+                    <div style="max-width: 900px;position:absolute;bottom:20px;">
                         <!-- <h5 class="text-white text-uppercase mb-3 animated slideInDown">ホスピスケアの愛の巣</h5> -->
-                        <h1 class="text-white animated zoomIn" style="text-shadow: 2px 2px 5px black; padding-top: 15rem;">安らかな環境を<br>提供します</h1>
+                        <h1 class="text-white animated zoomIn" style="font-size: calc(1rem + 2vw); text-shadow: 2px 2px 5px black; word-wrap: break-word;">安らかな環境を提供します</h1>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ layout:decorate="~{layouts/main}"
             <li><a href="/greetings">ご挨拶</a></li>
             <li><a href="/welfare/facility">施設紹介</a></li>
             <li><a href="/welfare/nurse">サービス内容</a></li>
-            <li><a href="/#inquiryA">ご対応について</a></li>
+            <li><a href="/#inquiryA" class="inquiryA2">ご対応について</a></li>
         </ul>
     </div>
 
@@ -72,7 +72,6 @@ layout:decorate="~{layouts/main}"
                         </div>
                         <div class="p-4">
                             <h4 class="mb-3">施設</h4>
-                            <p>| Atype | Btype | Ctype |</p>
                         </div>
                     </div>
                 </div>
@@ -83,7 +82,6 @@ layout:decorate="~{layouts/main}"
                         </div>
                         <div class="p-4">
                             <h4 class="mb-3">サービス</h4>
-                            <p>内容</p>
                         </div>
                     </div>
                 </div>
@@ -317,14 +315,11 @@ $(function() {
     if (page_id == 'inquiryA') {
         $('html, body').animate({scrollTop: $(".inquiryA").offset().top}, 500);
         history.pushState(state, title, "url");
-    } else if (page_id == 'moveInA') {
-        $('html, body').animate({scrollTop: $(".moveInA").offset().top}, 500);
-        history.pushState(state, title, "ur2l");
-    };
+    } ;
 
 });
 
-    $("#inquiryA").click(function(){
+    $(".inquiryA2").click(function(){
         var offset = $(".inquiryA").offset(); //해당 위치 반환
         $("html, body").animate({scrollTop: offset.top},500); 
     });
