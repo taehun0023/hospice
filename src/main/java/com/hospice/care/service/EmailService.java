@@ -6,7 +6,6 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
 import org.thymeleaf.spring5.SpringTemplateEngine;
-import com.hospice.care.model.dao.InquiryMapper;
 import com.hospice.care.model.dto.InquiryDto;
 import lombok.RequiredArgsConstructor;
 
@@ -14,8 +13,6 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class EmailService {
 
-    @Autowired
-    InquiryMapper mapper;
 
     private final JavaMailSender emailSender;
     private final SpringTemplateEngine templateEngine;
@@ -33,7 +30,6 @@ public class EmailService {
         // message.setFrom(new InternetAddress([이메일 계정], [설정할 이름]));
         
         emailSender.send(message); // 이메일 전송
-        mapper.insertInquiryDto(inquiryDto);
     }
 
     private String setContext(InquiryDto inquiryDto) { // 타임리프 설정하는 코드
